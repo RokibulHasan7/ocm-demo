@@ -1,0 +1,82 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.1.9
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea639250
+  targetRef:
+    kind: Pod
+    name: kube-prometheus-stack-operator-6c49c44946-cfd57
+    namespace: monitoring
+    uid: 63b7fc00-1f51-43c9-968c-ce015e2edbfa
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:43:47Z"
+  creationTimestamp: "2023-08-11T08:43:39Z"
+  generateName: kube-prometheus-stack-operator-
+  generation: 2
+  labels:
+    app: kube-prometheus-stack-operator
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 48.3.1
+    chart: kube-prometheus-stack-48.3.1
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    heritage: Helm
+    kubernetes.io/service-name: kube-prometheus-stack-operator
+    release: kube-prometheus-stack
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:heritage: {}
+          f:kubernetes.io/service-name: {}
+          f:release: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"130167d4-4096-4762-9501-a8b19e0f9510"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:43:49Z"
+  name: kube-prometheus-stack-operator-qvznl
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-prometheus-stack-operator
+    uid: 130167d4-4096-4762-9501-a8b19e0f9510
+  resourceVersion: "5528"
+  uid: 58865bac-c4c9-4487-80dd-680f87c3d636
+ports:
+- name: https
+  port: 10250
+  protocol: TCP

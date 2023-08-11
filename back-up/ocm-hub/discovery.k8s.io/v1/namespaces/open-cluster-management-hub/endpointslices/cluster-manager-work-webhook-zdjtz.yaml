@@ -1,0 +1,57 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.2.5
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124210-183840-64d5ea4d7de8
+  targetRef:
+    kind: Pod
+    name: cluster-manager-work-webhook-5d7dfbcdf6-h2n6p
+    namespace: open-cluster-management-hub
+    uid: 1b8abba8-2650-4398-a8bd-53f18ecbfb50
+kind: EndpointSlice
+metadata:
+  creationTimestamp: "2023-08-11T08:20:12Z"
+  generateName: cluster-manager-work-webhook-
+  generation: 8
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: cluster-manager-work-webhook
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"04ff5e8d-fdfe-47f1-9d7e-68c52e316015"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:41:52Z"
+  name: cluster-manager-work-webhook-zdjtz
+  namespace: open-cluster-management-hub
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: cluster-manager-work-webhook
+    uid: 04ff5e8d-fdfe-47f1-9d7e-68c52e316015
+  resourceVersion: "4489"
+  uid: 5e1e851d-8954-4693-8ddb-b5ca820f3923
+ports:
+- name: webhook
+  port: 9443
+  protocol: TCP

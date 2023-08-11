@@ -1,0 +1,62 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.1.3
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124210-183840-64d5ea4d9380
+  targetRef:
+    kind: Pod
+    name: cluster-manager-registration-webhook-847d797c6-ktjsw
+    namespace: open-cluster-management-hub
+    uid: c394d7e1-e119-48eb-b033-6ccc15a672cd
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:20:19Z"
+  creationTimestamp: "2023-08-11T08:20:12Z"
+  generateName: cluster-manager-registration-webhook-
+  generation: 3
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: cluster-manager-registration-webhook
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"49d2f3d6-f202-4cb1-878a-0712ac20f211"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:20:19Z"
+  name: cluster-manager-registration-webhook-vkjdg
+  namespace: open-cluster-management-hub
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: cluster-manager-registration-webhook
+    uid: 49d2f3d6-f202-4cb1-878a-0712ac20f211
+  resourceVersion: "2382"
+  uid: 719c9fac-eb44-495c-9e4c-fab73d3e6376
+ports:
+- name: webhook
+  port: 9443
+  protocol: TCP

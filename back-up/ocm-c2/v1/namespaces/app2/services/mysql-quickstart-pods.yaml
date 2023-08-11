@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"563d7630-0615-4e8e-8c26-9a9a3c7c566a"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":3306,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:publishNotReadyAddresses: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:02Z"
+  name: mysql-quickstart-pods
+  namespace: app2
+  ownerReferences:
+  - apiVersion: kubedb.com/v1alpha2
+    blockOwnerDeletion: true
+    controller: true
+    kind: MySQL
+    name: mysql-quickstart
+    uid: 563d7630-0615-4e8e-8c26-9a9a3c7c566a
+  resourceVersion: "8481"
+  uid: ad906197-5ce7-4494-8191-a31566ebfe49
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: db
+    port: 3306
+    protocol: TCP
+    targetPort: db
+  publishNotReadyAddresses: true
+  selector:
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

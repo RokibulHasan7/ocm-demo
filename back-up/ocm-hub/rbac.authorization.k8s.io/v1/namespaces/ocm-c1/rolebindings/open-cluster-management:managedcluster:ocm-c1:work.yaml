@@ -1,0 +1,31 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:21:15Z"
+  finalizers:
+  - cluster.open-cluster-management.io/manifest-work-cleanup
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster.open-cluster-management.io/manifest-work-cleanup": {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T08:21:15Z"
+  name: open-cluster-management:managedcluster:ocm-c1:work
+  namespace: ocm-c1
+  resourceVersion: "2550"
+  uid: d230c91a-1460-42c7-9c9f-cd693830c63c
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-cluster-management:managedcluster:work
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:open-cluster-management:ocm-c1

@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:43:02Z"
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-webhook-server
+    app.kubernetes.io/version: v0.10.0-rc.0
+    helm.sh/chart: kubedb-webhook-server-v0.10.0-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:02Z"
+  name: kubedb-kubedb-webhook-server
+  namespace: kubedb
+  resourceVersion: "4599"
+  uid: 065d4ae3-fc69-43aa-acd6-3e33136e4da2
+spec:
+  clusterIP: 10.128.7.253
+  clusterIPs:
+  - 10.128.7.253
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: operator
+    port: 443
+    protocol: TCP
+    targetPort: operator
+  selector:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/name: kubedb-webhook-server
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

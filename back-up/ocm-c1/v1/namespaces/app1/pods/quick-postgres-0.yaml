@@ -1,0 +1,614 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 54b68a8783c44739be0461f3fcc82d1b03e2aefd3f7646a45933996e71b58929
+    cni.projectcalico.org/podIP: 10.2.2.12/32
+    cni.projectcalico.org/podIPs: 10.2.2.12/32
+  creationTimestamp: "2023-08-11T09:14:59Z"
+  generateName: quick-postgres-
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: quick-postgres
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: postgreses.kubedb.com
+    controller-revision-hash: quick-postgres-5b8444c786
+    kubedb.com/role: primary
+    statefulset.kubernetes.io/pod-name: quick-postgres-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:controller-revision-hash: {}
+          f:kubedb.com/role: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"c83bddb9-abea-43de-973d-e45f07805132"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"postgres"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"CLIENT_AUTH_MODE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"DB_GID"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"DB_UID"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"INITDB"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MAJOR_PG_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"MAX_LAG_BEFORE_FAILOVER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PG_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PGDATA"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POSTGRES_PASSWORD"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"POSTGRES_USER"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"PRIMARY_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PV"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SHARED_BUFFERS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SSL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SSL_MODE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"STANDBY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"STREAMING"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:lifecycle:
+              .: {}
+              f:preStop:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":5432,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:capabilities:
+                .: {}
+                f:add: {}
+              f:privileged: {}
+              f:runAsGroup: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/dev/shm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run_scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/pv"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"postgres-init-container"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"MAJOR_PG_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SSL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"STANDALONE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/role_scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run_scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/pv"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:fsGroup: {}
+          f:runAsGroup: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:subdomain: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"data"}:
+            .: {}
+            f:name: {}
+            f:persistentVolumeClaim:
+              .: {}
+              f:claimName: {}
+          k:{"name":"role-scripts"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"run-scripts"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"scripts"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"shared-memory"}:
+            .: {}
+            f:emptyDir:
+              .: {}
+              f:medium: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:14:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:14:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cni.projectcalico.org/containerID: {}
+          f:cni.projectcalico.org/podIP: {}
+          f:cni.projectcalico.org/podIPs: {}
+    manager: calico
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:15:16Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.2.2.12"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:15:22Z"
+  name: quick-postgres-0
+  namespace: app1
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: quick-postgres
+    uid: c83bddb9-abea-43de-973d-e45f07805132
+  resourceVersion: "8679"
+  uid: 9ad3d940-1f39-4264-a7ba-7bafe787187b
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/instance: quick-postgres
+              app.kubernetes.io/managed-by: kubedb.com
+              app.kubernetes.io/name: postgreses.kubedb.com
+          namespaces:
+          - app1
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/instance: quick-postgres
+              app.kubernetes.io/managed-by: kubedb.com
+              app.kubernetes.io/name: postgreses.kubedb.com
+          namespaces:
+          - app1
+          topologyKey: failure-domain.beta.kubernetes.io/zone
+        weight: 50
+  containers:
+  - args:
+    - /scripts/run.sh
+    command:
+    - /scripts/tini
+    - --
+    env:
+    - name: NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: PRIMARY_HOST
+      value: quick-postgres
+    - name: MAX_LAG_BEFORE_FAILOVER
+      value: "67108864"
+    - name: POSTGRES_USER
+      valueFrom:
+        secretKeyRef:
+          key: username
+          name: quick-postgres-auth
+    - name: POSTGRES_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: quick-postgres-auth
+    - name: SHARED_BUFFERS
+      value: 262144kB
+    - name: PG_VERSION
+      value: "13.2"
+    - name: MAJOR_PG_VERSION
+      value: "13"
+    - name: CLIENT_AUTH_MODE
+      value: md5
+    - name: PV
+      value: /var/pv
+    - name: DB_UID
+      value: "70"
+    - name: DB_GID
+      value: "70"
+    - name: PGDATA
+      value: /var/pv/data
+    - name: INITDB
+      value: /var/initdb
+    - name: SSL_MODE
+      value: disable
+    - name: STANDBY
+      value: warm
+    - name: STREAMING
+      value: asynchronous
+    - name: SSL
+      value: "OFF"
+    image: postgres:13.2-alpine@sha256:c4c7a1585974706b5f72b8ab595e47399b23b2e03d93bbf75c1b0904be1803dc
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - pg_ctl
+          - -m
+          - fast
+          - -w
+          - stop
+    name: postgres
+    ports:
+    - containerPort: 5432
+      name: db
+      protocol: TCP
+    resources:
+      limits:
+        memory: 1Gi
+      requests:
+        cpu: 500m
+        memory: 1Gi
+    securityContext:
+      capabilities:
+        add:
+        - IPC_LOCK
+        - SYS_RESOURCE
+      privileged: false
+      runAsGroup: 70
+      runAsUser: 70
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /dev/shm
+      name: shared-memory
+    - mountPath: /var/pv
+      name: data
+    - mountPath: /run_scripts
+      name: run-scripts
+    - mountPath: /scripts
+      name: scripts
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-fhh5p
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: quick-postgres-0
+  initContainers:
+  - env:
+    - name: STANDALONE
+      value: "true"
+    - name: MAJOR_PG_VERSION
+      value: "13"
+    - name: SSL
+      value: "OFF"
+    image: ghcr.io/kubedb/postgres-init:0.7.0@sha256:1ec7b6148de5f301ceee25257274408135c5acb99be61016191458a2f6976ff8
+    imagePullPolicy: IfNotPresent
+    name: postgres-init-container
+    resources:
+      limits:
+        cpu: 200m
+        memory: 128Mi
+      requests:
+        cpu: 200m
+        memory: 128Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/pv
+      name: data
+    - mountPath: /run_scripts
+      name: run-scripts
+    - mountPath: /scripts
+      name: scripts
+    - mountPath: /role_scripts
+      name: role-scripts
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-fhh5p
+      readOnly: true
+  nodeName: lke124212-183842-64d5ea637f43
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 70
+    runAsGroup: 70
+    runAsUser: 70
+  serviceAccount: quick-postgres
+  serviceAccountName: quick-postgres
+  subdomain: quick-postgres-pods
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: data
+    persistentVolumeClaim:
+      claimName: data-quick-postgres-0
+  - emptyDir: {}
+    name: role-scripts
+  - emptyDir: {}
+    name: run-scripts
+  - emptyDir: {}
+    name: scripts
+  - emptyDir:
+      medium: Memory
+    name: shared-memory
+  - name: kube-api-access-fhh5p
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:18Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:22Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:22Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:08Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://436ba56dfe609167d0770f1d19d1fe2404c18a938a6890316a067204a0afc72b
+    image: sha256:e43172f9204f3f2ec21165200338d5d918a86e2984b2c75a36b18cffd9a948b4
+    imageID: docker.io/library/postgres@sha256:c4c7a1585974706b5f72b8ab595e47399b23b2e03d93bbf75c1b0904be1803dc
+    lastState: {}
+    name: postgres
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T09:15:22Z"
+  hostIP: 192.168.193.108
+  initContainerStatuses:
+  - containerID: containerd://847a026de049ba80dc2c3317ec0afd96255b04fba235a9eed656c527ad5445bb
+    image: sha256:3826e6505191e17b504090373470eeecdcbc60406977cf248150420e298bceaf
+    imageID: ghcr.io/kubedb/postgres-init@sha256:1ec7b6148de5f301ceee25257274408135c5acb99be61016191458a2f6976ff8
+    lastState: {}
+    name: postgres-init-container
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: containerd://847a026de049ba80dc2c3317ec0afd96255b04fba235a9eed656c527ad5445bb
+        exitCode: 0
+        finishedAt: "2023-08-11T09:15:17Z"
+        reason: Completed
+        startedAt: "2023-08-11T09:15:17Z"
+  phase: Running
+  podIP: 10.2.2.12
+  podIPs:
+  - ip: 10.2.2.12
+  qosClass: Burstable
+  startTime: "2023-08-11T09:15:08Z"

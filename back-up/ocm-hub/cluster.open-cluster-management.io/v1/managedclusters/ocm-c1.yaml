@@ -1,0 +1,106 @@
+apiVersion: cluster.open-cluster-management.io/v1
+kind: ManagedCluster
+metadata:
+  creationTimestamp: "2023-08-11T08:21:02Z"
+  finalizers:
+  - cluster.open-cluster-management.io/api-resource-cleanup
+  generation: 4
+  labels:
+    cluster.open-cluster-management.io/clusterset: app1
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster.open-cluster-management.io/api-resource-cleanup": {}
+      f:spec:
+        .: {}
+        f:leaseDurationSeconds: {}
+        f:managedClusterClientConfigs: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T08:21:02Z"
+  - apiVersion: cluster.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:allocatable:
+          .: {}
+          f:cpu: {}
+          f:ephemeral-storage: {}
+          f:hugepages-1Gi: {}
+          f:hugepages-2Mi: {}
+          f:memory: {}
+          f:pods: {}
+        f:capacity:
+          .: {}
+          f:cpu: {}
+          f:ephemeral-storage: {}
+          f:hugepages-1Gi: {}
+          f:hugepages-2Mi: {}
+          f:memory: {}
+          f:pods: {}
+        f:conditions: {}
+        f:version:
+          .: {}
+          f:kubernetes: {}
+    manager: registration
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:21:15Z"
+  - apiVersion: cluster.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:cluster.open-cluster-management.io/clusterset: {}
+      f:spec:
+        f:hubAcceptsClient: {}
+    manager: clusteradm
+    operation: Update
+    time: "2023-08-11T08:21:52Z"
+  name: ocm-c1
+  resourceVersion: "2642"
+  uid: aeb0e017-1c24-43e7-bef4-0652c545aa26
+spec:
+  hubAcceptsClient: true
+  leaseDurationSeconds: 60
+  managedClusterClientConfigs:
+  - caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    url: https://117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net:443
+status:
+  allocatable:
+    cpu: "6"
+    ephemeral-storage: "228059305197"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 11777732Ki
+    pods: "330"
+  capacity:
+    cpu: "6"
+    ephemeral-storage: 247460184Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 12084932Ki
+    pods: "330"
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:21:15Z"
+    message: Accepted by hub cluster admin
+    reason: HubClusterAdminAccepted
+    status: "True"
+    type: HubAcceptedManagedCluster
+  - lastTransitionTime: "2023-08-11T08:21:15Z"
+    message: Managed cluster joined
+    reason: ManagedClusterJoined
+    status: "True"
+    type: ManagedClusterJoined
+  - lastTransitionTime: "2023-08-11T08:21:15Z"
+    message: Managed cluster is available
+    reason: ManagedClusterAvailable
+    status: "True"
+    type: ManagedClusterConditionAvailable
+  version:
+    kubernetes: v1.26.7

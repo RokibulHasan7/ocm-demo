@@ -1,0 +1,33 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"name":"csi-controller-attacher-binding"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"external-attacher-role"},"subjects":[{"kind":"ServiceAccount","name":"csi-controller-sa","namespace":"kube-system"}]}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:01:19Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:01:19Z"
+  name: csi-controller-attacher-binding
+  resourceVersion: "276"
+  uid: a94685d6-34a3-4fde-9d0c-1c3c8d38c97a
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: external-attacher-role
+subjects:
+- kind: ServiceAccount
+  name: csi-controller-sa
+  namespace: kube-system

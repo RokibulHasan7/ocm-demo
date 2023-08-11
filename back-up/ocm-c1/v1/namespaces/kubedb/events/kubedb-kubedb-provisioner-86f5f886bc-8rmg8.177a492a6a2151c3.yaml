@@ -1,0 +1,46 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:10:56Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{operator}
+  kind: Pod
+  name: kubedb-kubedb-provisioner-86f5f886bc-8rmg8
+  namespace: kubedb
+  resourceVersion: "8162"
+  uid: 59326816-e1bd-446c-8f02-93eaf27fff79
+kind: Event
+lastTimestamp: "2023-08-11T09:10:56Z"
+message: 'Readiness probe failed: Get "http://10.2.1.12:8081/readyz": context deadline
+  exceeded (Client.Timeout exceeded while awaiting headers)'
+metadata:
+  creationTimestamp: "2023-08-11T09:10:56Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T09:10:56Z"
+  name: kubedb-kubedb-provisioner-86f5f886bc-8rmg8.177a492a6a2151c3
+  namespace: kubedb
+  resourceVersion: "8204"
+  uid: 62a6e73e-eb59-43be-ae00-2f18cfc35f6b
+reason: Unhealthy
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: lke124212-183842-64d5ea639250
+type: Warning

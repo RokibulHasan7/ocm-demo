@@ -1,0 +1,42 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:15:12Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: quick-postgres-0
+  namespace: app1
+  resourceVersion: "8638"
+  uid: 9ad3d940-1f39-4264-a7ba-7bafe787187b
+kind: Event
+lastTimestamp: "2023-08-11T09:15:12Z"
+message: 'AttachVolume.Attach succeeded for volume "pvc-42fd035af1f64053" '
+metadata:
+  creationTimestamp: "2023-08-11T09:15:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:12Z"
+  name: quick-postgres-0.177a49661a8cabd1
+  namespace: app1
+  resourceVersion: "8650"
+  uid: 83f661c7-2603-4215-8081-ac5e8f6d84cd
+reason: SuccessfulAttachVolume
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: attachdetach-controller
+type: Normal

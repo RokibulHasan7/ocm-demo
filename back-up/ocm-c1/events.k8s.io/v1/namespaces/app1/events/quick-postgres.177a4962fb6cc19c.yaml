@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:14:59Z"
+deprecatedLastTimestamp: "2023-08-11T09:14:59Z"
+deprecatedSource:
+  component: statefulset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:14:59Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:14:59Z"
+  name: quick-postgres.177a4962fb6cc19c
+  namespace: app1
+  resourceVersion: "8605"
+  uid: 47f34012-69eb-4401-9269-c542fd2961b2
+note: create Claim data-quick-postgres-0 Pod quick-postgres-0 in StatefulSet quick-postgres
+  success
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: StatefulSet
+  name: quick-postgres
+  namespace: app1
+  resourceVersion: "8602"
+  uid: c83bddb9-abea-43de-973d-e45f07805132
+type: Normal

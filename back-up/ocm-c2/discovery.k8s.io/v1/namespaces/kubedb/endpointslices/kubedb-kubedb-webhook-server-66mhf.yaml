@@ -1,0 +1,76 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.2.8
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124213-183843-64d5ea8eb6a0
+  targetRef:
+    kind: Pod
+    name: kubedb-kubedb-webhook-server-6ddbf4c468-nsqzx
+    namespace: kubedb
+    uid: 474097df-81f1-42cc-b9df-89b20693a158
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:17Z"
+  creationTimestamp: "2023-08-11T08:42:08Z"
+  generateName: kubedb-kubedb-webhook-server-
+  generation: 2
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-webhook-server
+    app.kubernetes.io/version: v0.10.0-rc.0
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: kubedb-webhook-server-v0.10.0-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    kubernetes.io/service-name: kubedb-kubedb-webhook-server
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"2f1bbc77-c403-4bf3-8ab3-97274440d593"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:17Z"
+  name: kubedb-kubedb-webhook-server-66mhf
+  namespace: kubedb
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kubedb-kubedb-webhook-server
+    uid: 2f1bbc77-c403-4bf3-8ab3-97274440d593
+  resourceVersion: "4872"
+  uid: 6703f721-a721-409e-8677-fd47e2f92b37
+ports:
+- name: operator
+  port: 8443
+  protocol: TCP

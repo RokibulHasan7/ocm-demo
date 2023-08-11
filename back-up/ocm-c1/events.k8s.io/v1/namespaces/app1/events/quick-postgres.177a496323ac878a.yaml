@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:15:00Z"
+deprecatedLastTimestamp: "2023-08-11T09:15:00Z"
+deprecatedSource:
+  component: KubeDB Operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:15:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:00Z"
+  name: quick-postgres.177a496323ac878a
+  namespace: app1
+  resourceVersion: "8619"
+  uid: 6a834d17-8ea1-4d5c-a319-7a06ea694e1e
+note: Successfully created appbinding
+reason: Successful
+regarding:
+  apiVersion: kubedb.com/v1alpha2
+  kind: Postgres
+  name: quick-postgres
+  namespace: app1
+  resourceVersion: "8580"
+  uid: 1e8afd0b-667d-4e7c-af0d-611f3d8e10cc
+type: Normal

@@ -1,0 +1,39 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"labels":{"app":"kubernetes-dashboard-lke"},"name":"kubernetes-dashboard-lke","namespace":"kube-system"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"kubernetes-dashboard-lke"},"subjects":[{"kind":"ServiceAccount","name":"kubernetes-dashboard-lke-user","namespace":"kube-system"}]}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:01:21Z"
+  labels:
+    app: kubernetes-dashboard-lke
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+        f:labels:
+          .: {}
+          f:app: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:01:21Z"
+  name: kubernetes-dashboard-lke
+  namespace: kube-system
+  resourceVersion: "320"
+  uid: bb005625-5f13-4083-994d-c1066e1123a1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubernetes-dashboard-lke
+subjects:
+- kind: ServiceAccount
+  name: kubernetes-dashboard-lke-user
+  namespace: kube-system

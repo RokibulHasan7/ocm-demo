@@ -1,0 +1,106 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kube-prometheus-stack
+    meta.helm.sh/release-namespace: monitoring
+  creationTimestamp: "2023-08-11T08:43:55Z"
+  generation: 2
+  labels:
+    app: kube-prometheus-stack-admission
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 48.3.1
+    chart: kube-prometheus-stack-48.3.1
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    heritage: Helm
+    release: kube-prometheus-stack
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:heritage: {}
+          f:release: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"prometheusrulemutate.monitoring.coreos.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:55Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"prometheusrulemutate.monitoring.coreos.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: kube-webhook-certgen
+    operation: Update
+    time: "2023-08-11T08:44:29Z"
+  name: kube-prometheus-stack-admission
+  resourceVersion: "5818"
+  uid: 08d42ef4-8945-47f3-893a-90ec22a66fb4
+webhooks:
+- admissionReviewVersions:
+  - v1
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkRENDQVJ1Z0F3SUJBZ0lRZnB6ekZ4bTQyQXpFS1YvMlJicUR4VEFLQmdncWhrak9QUVFEQWpBUE1RMHcKQ3dZRFZRUUtFd1J1YVd3eE1DQVhEVEl6TURneE1UQTRNemd5TkZvWUR6SXhNak13TnpFNE1EZ3pPREkwV2pBUApNUTB3Q3dZRFZRUUtFd1J1YVd3eE1Ga3dFd1lIS29aSXpqMENBUVlJS29aSXpqMERBUWNEUWdBRXg0M0t3L1N2Clp4L3RIUUpOYnQ4QlBjSFZFRHF6WlpZazZFN1pWUTY1TjFMdGtlRDROVWl4blVIM3JrU1plZmQxMHptWXVRaWgKL1V6Nm1FVkNQQzE1SGFOWE1GVXdEZ1lEVlIwUEFRSC9CQVFEQWdJRU1CTUdBMVVkSlFRTU1Bb0dDQ3NHQVFVRgpCd01CTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME9CQllFRlBkcWlOZDV2T2s3Q3lhcER2RnMrbGtrCmJ3OFJNQW9HQ0NxR1NNNDlCQU1DQTBjQU1FUUNJQ0VITFJHSll2YzRXM1FWeEFJUUIzUklBd2N3aE9FdVV2d0UKSXhLS0JleFdBaUFFejFUZUVudlZhNk9PbGlaVEVkYmMyUTlNa21RSWxiYVJUVmVKZkk3bHRBPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    service:
+      name: kube-prometheus-stack-operator
+      namespace: monitoring
+      path: /admission-prometheusrules/validate
+      port: 443
+  failurePolicy: Ignore
+  matchPolicy: Equivalent
+  name: prometheusrulemutate.monitoring.coreos.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - monitoring.coreos.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - prometheusrules
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

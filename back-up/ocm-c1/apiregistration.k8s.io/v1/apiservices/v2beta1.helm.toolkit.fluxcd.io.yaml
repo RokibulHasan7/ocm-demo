@@ -1,0 +1,37 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2023-08-11T08:19:11Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: "true"
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kube-aggregator.kubernetes.io/automanaged: {}
+      f:spec:
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-08-11T08:19:11Z"
+  name: v2beta1.helm.toolkit.fluxcd.io
+  resourceVersion: "1959"
+  uid: afb76ca3-ee83-43ce-bb73-92cbb2206c96
+spec:
+  group: helm.toolkit.fluxcd.io
+  groupPriorityMinimum: 1000
+  version: v2beta1
+  versionPriority: 100
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:19:11Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

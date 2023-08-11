@@ -1,0 +1,51 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2023-08-11T08:21:15Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T08:21:15Z"
+  name: open-cluster-management:managedcluster:ocm-c1
+  resourceVersion: "2544"
+  uid: b81dfec1-1e92-4aac-bf32-428c29d9d02f
+rules:
+- apiGroups:
+  - certificates.k8s.io
+  resources:
+  - certificatesigningrequests
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+- apiGroups:
+  - register.open-cluster-management.io
+  resources:
+  - managedclusters/clientcertificates
+  verbs:
+  - renew
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resourceNames:
+  - ocm-c1
+  resources:
+  - managedclusters
+  verbs:
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resourceNames:
+  - ocm-c1
+  resources:
+  - managedclusters/status
+  verbs:
+  - patch
+  - update

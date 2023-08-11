@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: v1
+eventTime: "2023-08-11T09:10:56.580824Z"
+firstTimestamp: null
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: kubedb-kubedb-ops-manager-85bdb8f5d8-5qxf4
+  namespace: kubedb
+  resourceVersion: "8199"
+  uid: 68bd001b-49f6-4622-80be-fb8feee2bb27
+kind: Event
+lastTimestamp: null
+message: Successfully assigned kubedb/kubedb-kubedb-ops-manager-85bdb8f5d8-5qxf4 to
+  lke124212-183842-64d5ea639250
+metadata:
+  creationTimestamp: "2023-08-11T09:10:56Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-08-11T09:10:56Z"
+  name: kubedb-kubedb-ops-manager-85bdb8f5d8-5qxf4.177a492a6c060f4e
+  namespace: kubedb
+  resourceVersion: "8205"
+  uid: 17787176-ad77-4734-b865-dfcb171a5ed5
+reason: Scheduled
+reportingComponent: default-scheduler
+reportingInstance: default-scheduler-kube-scheduler-866fc84f78-mbvvc
+source: {}
+type: Normal

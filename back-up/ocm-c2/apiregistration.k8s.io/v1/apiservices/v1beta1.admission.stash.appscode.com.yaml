@@ -1,0 +1,84 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:42:25Z"
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-enterprise
+    app.kubernetes.io/version: v0.30.1
+    helm.sh/chart: stash-enterprise-v0.30.0
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        f:caBundle: {}
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:service:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+          f:port: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:25Z"
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:42:38Z"
+  name: v1beta1.admission.stash.appscode.com
+  resourceVersion: "5578"
+  uid: 187f00f7-dc5c-4361-92eb-93361029d390
+spec:
+  caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lSQVBNZmxETDFZQXJnRmpBSlYvR0g2Vnd3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTWpNd09ERXhNRGcwTVRRNVdoY05Nek13T0RBNE1EZzBNVFE1V2pBTgpNUXN3Q1FZRFZRUURFd0pqWVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS3l1Cm41cVdIeC9Hb1Z0cnp3cUpYcTlDc1hXT09HdkpVd3ZPaUd5SkVtdjJwMHVLKzR5OFhCOURZenBONkZCVzRRYS8KUWFwL0RkQng5UGl2Y21uNUV6clZZTml0UHVyNWpuOWdkdm9pTHR5MDd1OS9zUjFNNlpWRzJlYnl5SUx4VXRVawpuZVA3alJEd09mQXl1QWlPRklTUXVVVnRHVkV0Y2RpbVhLTy9Id1h1YSt0elViakZCYnVxa2piWmJRRTRIRUV4CmhiZW00d3dmNGxaYkFBRm5rck1WUW1EejdicjYrTXFKR0t5ZVF0d1JoWUl1dVNtaEtLY2ZjZTNTeWdrYThNbDMKZG80NkxvYTBaVmw1Sk9CNGFTUmloL2ZqdE82R3RXTzJlZTBVZUNkbmVCYUhVMXA2U3BZVmNFdDB4cUZiTWxWagpJbnBSa2pZNnRhMEVrc0pXNkpVQ0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUJCZ2dyQmdFRkJRY0RBakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJUb05YUjZtajFNMWpQdzRJMnBBdUxEckNOT016QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFhb0NmR1ZJcgpGOHVZQkdjS1FITk5WdEhsVWYraS9EL1dmNk9KKzN5SytqK2kybk5sdkk0a3VHZjRFZHIrcW02MHNsSGdReTNECktWdTdPRldaOWlQcU85YnVUU1FNWk5wNFlvc3BUM0pJZDkrTXk2RU9CL0xCU3JvWEt0c09GaUlDS2U0SzlNQ0gKT0lOZTB5ZG85c0JkRHd3OG9KK0FsZmJaK09nSW9NQ0FaOUF5OU5pZEIraUFZWnVxOUlDd09QNEVIL0ZRWHFLeQp4OFRFMXNVd2JUeng4WmJZZTU1NFdiejRVaUYwMlR5TGd6MjFQdFEvZWpaN3AyakcrMGxTU1JxdUxPUGV0bzlNCno1ZERobjZ3QWdPYzBtOUdQQThMdnJrYnVkK1RsdDlXNkpvaTlUSVczWlFhemlUQ2Fib1E5MmJZYkNQVE1BSXAKRWxoQjl0amN1eXhFd1E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  group: admission.stash.appscode.com
+  groupPriorityMinimum: 10000
+  service:
+    name: stash-stash-enterprise
+    namespace: stash
+    port: 443
+  version: v1beta1
+  versionPriority: 15
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:42:38Z"
+    message: all checks passed
+    reason: Passed
+    status: "True"
+    type: Available

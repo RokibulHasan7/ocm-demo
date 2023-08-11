@@ -1,0 +1,97 @@
+apiVersion: supervisor.appscode.com/v1alpha1
+kind: Recommendation
+metadata:
+  annotations:
+    kubedb.com/recommendation-for-version: "13.2"
+  creationTimestamp: "2023-08-11T09:51:14Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: quick-postgres
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/type: version-upgrade
+  managedFields:
+  - apiVersion: supervisor.appscode.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubedb.com/recommendation-for-version: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/type: {}
+      f:spec:
+        .: {}
+        f:description: {}
+        f:operation:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:metadata:
+            .: {}
+            f:name: {}
+            f:namespace: {}
+          f:spec:
+            .: {}
+            f:databaseRef:
+              .: {}
+              f:name: {}
+            f:type: {}
+            f:updateVersion:
+              .: {}
+              f:targetVersion: {}
+          f:status: {}
+        f:recommender:
+          .: {}
+          f:name: {}
+        f:requireExplicitApproval: {}
+        f:rules:
+          .: {}
+          f:failed: {}
+          f:inProgress: {}
+          f:success: {}
+        f:target: {}
+        f:vulnerabilityReport:
+          .: {}
+          f:message: {}
+          f:status: {}
+    manager: kubedb-ops-manager
+    operation: Update
+    time: "2023-08-11T09:51:14Z"
+  name: quick-postgres-x-postgres-x-update-version-oa3sn8
+  namespace: app1
+  resourceVersion: "11804"
+  uid: 5a9af8c6-36f2-4140-9a2d-12339587df86
+spec:
+  description: Latest Major/Minor version is available. Recommending version upgrade
+    from 13.2 to 13.5.
+  operation:
+    apiVersion: ops.kubedb.com/v1alpha1
+    kind: PostgresOpsRequest
+    metadata:
+      name: update-version
+      namespace: app1
+    spec:
+      databaseRef:
+        name: quick-postgres
+      type: UpdateVersion
+      updateVersion:
+        targetVersion: "13.5"
+    status: {}
+  recommender:
+    name: kubedb-ops-manager
+  requireExplicitApproval: true
+  rules:
+    failed: has(self.status) && has(self.status.phase) && self.status.phase == 'Failed'
+    inProgress: has(self.status) && has(self.status.phase) && self.status.phase ==
+      'Progressing'
+    success: has(self.status) && has(self.status.phase) && self.status.phase == 'Successful'
+  target:
+    apiGroup: kubedb.com
+    kind: Postgres
+    name: quick-postgres
+  vulnerabilityReport:
+    message: no matches for kind "ImageScanReport" in version "scanner.appscode.com/v1alpha1"
+    status: Failure

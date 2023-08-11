@@ -1,0 +1,53 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"labels":{"k8s-addon":"cluster-autoscaler.addons.k8s.io","k8s-app":"cluster-autoscaler"},"name":"cluster-autoscaler-user-role","namespace":"kube-system"},"rules":[{"apiGroups":[""],"resources":["configmaps"],"verbs":["create","list","watch"]},{"apiGroups":[""],"resourceNames":["cluster-autoscaler-status","cluster-autoscaler-priority-expander"],"resources":["configmaps"],"verbs":["delete","get","update","watch"]}]}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:00:39Z"
+  labels:
+    k8s-addon: cluster-autoscaler.addons.k8s.io
+    k8s-app: cluster-autoscaler
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+        f:labels:
+          .: {}
+          f:k8s-addon: {}
+          f:k8s-app: {}
+      f:rules: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:39Z"
+  name: cluster-autoscaler-user-role
+  namespace: kube-system
+  resourceVersion: "311"
+  uid: d74db28d-97db-4242-8128-52506e65d5c6
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - create
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resourceNames:
+  - cluster-autoscaler-status
+  - cluster-autoscaler-priority-expander
+  resources:
+  - configmaps
+  verbs:
+  - delete
+  - get
+  - update
+  - watch

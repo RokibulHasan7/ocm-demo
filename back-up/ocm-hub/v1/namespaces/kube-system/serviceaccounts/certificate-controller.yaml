@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:00:24Z"
+  name: certificate-controller
+  namespace: kube-system
+  resourceVersion: "384"
+  uid: dcef632c-e493-43c2-92d4-797764e8bdb5
+secrets:
+- name: certificate-controller-token-hmdbd

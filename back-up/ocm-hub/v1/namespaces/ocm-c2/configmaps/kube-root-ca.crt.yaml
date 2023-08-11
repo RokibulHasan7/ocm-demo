@@ -1,0 +1,48 @@
+apiVersion: v1
+data:
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIC/jCCAeagAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl
+    cm5ldGVzMB4XDTIzMDgxMTA3NTkxMloXDTMzMDgwODA3NTkxMlowFTETMBEGA1UE
+    AxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOgk
+    GWI8bUPUMGJFQjBkaNipG6Qr5qRG3uhcjgeVpzwqQoijlwsPZ44sGWHMQ9AN1KEE
+    cPIayu0elzyGPt11daJ7iE05WMFfPdKBPLXsnfLb+oiusKrjTV/OodgyXodH1++/
+    bjRwIJJJijdm5niQqYGW/B8k0iIfoBPxi700k3Wzkpq/MrjMxgf2VMc8PkqNFrhF
+    Zg4aBPSK9U15K+q1ZeGpUXr4IaUVnB4/HB5KGs/UNPUh/iygigCYalGSrUf13A5i
+    Ctn3CJj/BRJTnPS8Vj1gsAcOndX7WRmdt6J4Cpo4CEyBNXAqy1AoOr34cmrFqouy
+    eUMWqFgND2DAUMgAbC0CAwEAAaNZMFcwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB
+    /wQFMAMBAf8wHQYDVR0OBBYEFHgHH4L8Ab/37w1DeC0594olLd7gMBUGA1UdEQQO
+    MAyCCmt1YmVybmV0ZXMwDQYJKoZIhvcNAQELBQADggEBABRgfpxJAZ0XXRzJMsEa
+    Fxeb3+etLElch8Jv7p91vzhjiGSr/2NGX3rtC0YOm+KLnWr8WcfwFOiSCZ54KwCu
+    T5Wu609rwA0cg2M1zIKOcq30QE+0wdct0e3V9tvgB//3KLqYJgoZtoyFhyl3yU+a
+    Cgfimrdc8GBvPWmZVFbGrnA7dKNGKjYU5OmTwWTChiNXOsh7OeRyxTTUjrJ9bC4L
+    uA3IWgDsCc63BJjSiw4OPp0lrRGhepE+rqnnnQpccKoRjRY/a3WIWO4zyscAEhGu
+    G7lyhCwkAwFThPjlkAdnhbj5NkyQf/PjiZcHjlXLPLsCN3sdhlijJO29/Rr0nL1N
+    /PY=
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  annotations:
+    kubernetes.io/description: Contains a CA bundle that can be used to verify the
+      kube-apiserver when using internal endpoints such as the internal service IP
+      or kubernetes.default.svc. No other usage is guaranteed across distributions
+      of Kubernetes clusters.
+  creationTimestamp: "2023-08-11T08:21:21Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca.crt: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/description: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:21:21Z"
+  name: kube-root-ca.crt
+  namespace: ocm-c2
+  resourceVersion: "2575"
+  uid: 76364d73-375a-4675-9c86-c50995aea443

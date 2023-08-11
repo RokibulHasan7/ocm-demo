@@ -1,0 +1,51 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"labels":{"app":"kubernetes-dashboard-lke"},"name":"kubernetes-dashboard-lke","namespace":"kube-system"},"rules":[{"apiGroups":[""],"resourceNames":["kubernetes-dashboard-key-holder","kubernetes-dashboard-csrf"],"resources":["secrets"],"verbs":["get","update","delete"]},{"apiGroups":[""],"resourceNames":["kubernetes-dashboard-settings"],"resources":["configmaps"],"verbs":["get","update"]}]}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:00:39Z"
+  labels:
+    app: kubernetes-dashboard-lke
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+        f:labels:
+          .: {}
+          f:app: {}
+      f:rules: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:39Z"
+  name: kubernetes-dashboard-lke
+  namespace: kube-system
+  resourceVersion: "318"
+  uid: 7aad1327-444f-4072-b536-d407bca1d56d
+rules:
+- apiGroups:
+  - ""
+  resourceNames:
+  - kubernetes-dashboard-key-holder
+  - kubernetes-dashboard-csrf
+  resources:
+  - secrets
+  verbs:
+  - get
+  - update
+  - delete
+- apiGroups:
+  - ""
+  resourceNames:
+  - kubernetes-dashboard-settings
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - update

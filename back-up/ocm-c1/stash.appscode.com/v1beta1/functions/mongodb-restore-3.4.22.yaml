@@ -1,0 +1,71 @@
+apiVersion: stash.appscode.com/v1beta1
+kind: Function
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:43:14Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-catalog
+    app.kubernetes.io/version: v2023.05.31
+    helm.sh/chart: stash-catalog-v2023.05.31
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: stash.appscode.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:args: {}
+        f:image: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:14Z"
+  name: mongodb-restore-3.4.22
+  resourceVersion: "5040"
+  uid: 5f976768-7204-45be-85d0-64f8d30ad548
+spec:
+  args:
+  - restore-mongo
+  - --provider=${REPOSITORY_PROVIDER:=}
+  - --bucket=${REPOSITORY_BUCKET:=}
+  - --endpoint=${REPOSITORY_ENDPOINT:=}
+  - --region=${REPOSITORY_REGION:=}
+  - --path=${REPOSITORY_PREFIX:=}
+  - --storage-secret-name=${REPOSITORY_SECRET_NAME:=}
+  - --storage-secret-namespace=${REPOSITORY_SECRET_NAMESPACE:=}
+  - --scratch-dir=/stash-tmp
+  - --enable-cache=false
+  - --max-connections=${MAX_CONNECTIONS:=0}
+  - --hostname=${HOSTNAME:=}
+  - --source-hostname=${SOURCE_HOSTNAME:=}
+  - --mongo-args=${args:=}
+  - --max-concurrency=${MAX_CONCURRENCY:=3}
+  - --wait-timeout=${waitTimeout:=300}
+  - --namespace=${NAMESPACE:=default}
+  - --appbinding=${TARGET_NAME:=}
+  - --appbinding-namespace=${TARGET_NAMESPACE:=}
+  - --restoresession=${RESTORE_SESSION:=}
+  - --snapshot=${RESTORE_SNAPSHOTS:=}
+  - --output-dir=${outputDir:=}
+  - --license-apiservice=${LICENSE_APISERVICE:=}
+  - --authentication-database=${authenticationDatabase:=admin}
+  image: ghcr.io/stashed/stash-mongodb:3.4.22-v26

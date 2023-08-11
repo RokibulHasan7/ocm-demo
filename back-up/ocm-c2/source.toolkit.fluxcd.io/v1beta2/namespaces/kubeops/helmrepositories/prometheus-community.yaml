@@ -1,0 +1,90 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  managedFields:
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"finalizers.fluxcd.io": {}
+    manager: source-controller
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"70f150bb-f647-4fcf-88b6-cadb771180e9"}: {}
+      f:spec:
+        .: {}
+        f:interval: {}
+        f:provider: {}
+        f:timeout: {}
+        f:url: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:artifact:
+          .: {}
+          f:digest: {}
+          f:lastUpdateTime: {}
+          f:path: {}
+          f:revision: {}
+          f:size: {}
+          f:url: {}
+        f:conditions: {}
+        f:observedGeneration: {}
+        f:url: {}
+    manager: source-controller
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:41:45Z"
+  name: prometheus-community
+  namespace: kubeops
+  ownerReferences:
+  - apiVersion: work.open-cluster-management.io/v1
+    kind: AppliedManifestWork
+    name: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833-operators
+    uid: 70f150bb-f647-4fcf-88b6-cadb771180e9
+  resourceVersion: "4150"
+  uid: a7c11e6a-30fe-4d1c-8ee9-621f757f5391
+spec:
+  interval: 30m
+  provider: generic
+  timeout: 60s
+  url: https://prometheus-community.github.io/helm-charts
+status:
+  artifact:
+    digest: sha256:687a979559bcd6167ff47fdee8cd52a67bb9ca7365edec9895220072c5faf675
+    lastUpdateTime: "2023-08-11T08:41:44Z"
+    path: helmrepository/kubeops/prometheus-community/index-687a979559bcd6167ff47fdee8cd52a67bb9ca7365edec9895220072c5faf675.yaml
+    revision: sha256:687a979559bcd6167ff47fdee8cd52a67bb9ca7365edec9895220072c5faf675
+    size: 2818640
+    url: http://source-controller.flux-system.svc.cluster.local./helmrepository/kubeops/prometheus-community/index-687a979559bcd6167ff47fdee8cd52a67bb9ca7365edec9895220072c5faf675.yaml
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:41:44Z"
+    message: 'stored artifact: revision ''sha256:687a979559bcd6167ff47fdee8cd52a67bb9ca7365edec9895220072c5faf675'''
+    observedGeneration: 1
+    reason: Succeeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2023-08-11T08:41:44Z"
+    message: 'stored artifact: revision ''sha256:687a979559bcd6167ff47fdee8cd52a67bb9ca7365edec9895220072c5faf675'''
+    observedGeneration: 1
+    reason: Succeeded
+    status: "True"
+    type: ArtifactInStorage
+  observedGeneration: 1
+  url: http://source-controller.flux-system.svc.cluster.local./helmrepository/kubeops/prometheus-community/index.yaml

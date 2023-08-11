@@ -1,0 +1,35 @@
+apiVersion: stash.appscode.com/v1beta1
+kind: Task
+metadata:
+  creationTimestamp: "2023-08-11T08:43:43Z"
+  generation: 1
+  managedFields:
+  - apiVersion: stash.appscode.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:steps: {}
+        f:volumes: {}
+    manager: stash-enterprise
+    operation: Update
+    time: "2023-08-11T08:43:43Z"
+  name: pvc-restore
+  resourceVersion: "5453"
+  uid: 90aa7ce9-d771-435b-953d-7e1d96c3325f
+spec:
+  steps:
+  - name: pvc-restore
+    params:
+    - name: outputDir
+      value: /stash-tmp/output
+    - name: targetVolume
+      value: stash-volume
+  - name: update-status
+    params:
+    - name: outputDir
+      value: /stash-tmp/output
+  volumes:
+  - name: stash-volume
+    persistentVolumeClaim:
+      claimName: ${TARGET_NAME}

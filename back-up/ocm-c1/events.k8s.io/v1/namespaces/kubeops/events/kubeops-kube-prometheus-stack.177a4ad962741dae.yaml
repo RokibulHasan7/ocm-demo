@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:41:47Z"
+deprecatedLastTimestamp: "2023-08-11T09:41:47Z"
+deprecatedSource:
+  component: source-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:41:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T09:41:47Z"
+  name: kubeops-kube-prometheus-stack.177a4ad962741dae
+  namespace: kubeops
+  resourceVersion: "10986"
+  uid: 021f9914-d8ef-406d-b827-0c7449bd9249
+note: 'artifact up-to-date with remote revision: ''48.3.1'''
+reason: ArtifactUpToDate
+regarding:
+  apiVersion: source.toolkit.fluxcd.io/v1beta2
+  kind: HelmChart
+  name: kubeops-kube-prometheus-stack
+  namespace: kubeops
+  resourceVersion: "4186"
+  uid: 9d550cd7-9d51-48d2-bcca-ac719499f4e4
+type: Normal

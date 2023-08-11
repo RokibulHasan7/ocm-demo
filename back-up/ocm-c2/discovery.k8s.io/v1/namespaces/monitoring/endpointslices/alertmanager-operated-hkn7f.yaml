@@ -1,0 +1,73 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.2.10
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  hostname: alertmanager-kube-prometheus-stack-alertmanager-0
+  nodeName: lke124213-183843-64d5ea8eb6a0
+  targetRef:
+    kind: Pod
+    name: alertmanager-kube-prometheus-stack-alertmanager-0
+    namespace: monitoring
+    uid: 3bb340d7-0c92-4a9e-8413-223f402bdad8
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:41Z"
+  creationTimestamp: "2023-08-11T08:42:28Z"
+  generateName: alertmanager-operated-
+  generation: 3
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: alertmanager-operated
+    operated-alertmanager: "true"
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+          f:operated-alertmanager: {}
+          f:service.kubernetes.io/headless: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"87756199-040b-461e-9f26-c4b0bdeb0e23"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:41Z"
+  name: alertmanager-operated-hkn7f
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: alertmanager-operated
+    uid: 87756199-040b-461e-9f26-c4b0bdeb0e23
+  resourceVersion: "5605"
+  uid: 6efdd7a5-39b5-4aec-b4a4-93441e793b3c
+ports:
+- name: http-web
+  port: 9093
+  protocol: TCP
+- name: udp-mesh
+  port: 9094
+  protocol: UDP
+- name: tcp-mesh
+  port: 9094
+  protocol: TCP

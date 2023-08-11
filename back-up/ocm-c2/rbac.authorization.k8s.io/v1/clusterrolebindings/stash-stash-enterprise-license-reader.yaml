@@ -1,0 +1,41 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:42:25Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:25Z"
+  name: stash-stash-enterprise-license-reader
+  resourceVersion: "5146"
+  uid: e0bbfc4a-1c9c-4f1d-9938-08cf68191fba
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: appscode:license-reader
+subjects:
+- kind: ServiceAccount
+  name: stash-stash-enterprise
+  namespace: stash

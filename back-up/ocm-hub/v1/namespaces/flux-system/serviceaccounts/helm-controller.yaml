@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    meta.helm.sh/release-name: flux
+    meta.helm.sh/release-namespace: flux-system
+  creationTimestamp: "2023-08-11T08:19:06Z"
+  labels:
+    app.kubernetes.io/instance: flux-system
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: flux
+    app.kubernetes.io/version: 2.0.1
+    helm.sh/chart: flux2-2.9.2
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+    manager: helm
+    operation: Update
+    time: "2023-08-11T08:19:06Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:secrets:
+        .: {}
+        k:{"name":"helm-controller-token-snrcz"}: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:19:06Z"
+  name: helm-controller
+  namespace: flux-system
+  resourceVersion: "1949"
+  uid: 63f5f7f6-4419-43b8-8892-6f9e777d683d
+secrets:
+- name: helm-controller-token-snrcz

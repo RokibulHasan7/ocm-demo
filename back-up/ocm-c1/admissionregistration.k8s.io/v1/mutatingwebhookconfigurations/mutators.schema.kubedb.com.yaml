@@ -1,0 +1,154 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:43:07Z"
+  generation: 2
+  labels:
+    app.kubernetes.io/component: kubedb-schema-manager
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-webhook-server
+    app.kubernetes.io/version: v0.10.0-rc.0
+    helm.sh/chart: kubedb-webhook-server-v0.10.0-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"mongodbdatabasewebhook.mutators.schema.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"mysqldatabasewebhook.mutators.schema.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:07Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"mongodbdatabasewebhook.mutators.schema.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"mysqldatabasewebhook.mutators.schema.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: kubedb-webhook-server
+    operation: Update
+    time: "2023-08-11T08:43:25Z"
+  name: mutators.schema.kubedb.com
+  resourceVersion: "5207"
+  uid: 0c768781-4e08-47f9-940b-34a65260d7ad
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.schema.kubedb.com/v1alpha1/mysqldatabasewebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: mysqldatabasewebhook.mutators.schema.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - schema.kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - mysqldatabases
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.schema.kubedb.com/v1alpha1/mongodbdatabasewebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: mongodbdatabasewebhook.mutators.schema.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - schema.kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - mongodbdatabases
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

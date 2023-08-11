@@ -1,0 +1,107 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: "2023-08-11T09:14:58Z"
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: quick-postgres
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: postgreses.kubedb.com
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1e8afd0b-667d-4e7c-af0d-611f3d8e10cc"}: {}
+      f:rules: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:14:58Z"
+  name: quick-postgres
+  namespace: app1
+  ownerReferences:
+  - apiVersion: kubedb.com/v1alpha2
+    blockOwnerDeletion: true
+    controller: true
+    kind: Postgres
+    name: quick-postgres
+    uid: 1e8afd0b-667d-4e7c-af0d-611f3d8e10cc
+  resourceVersion: "8595"
+  uid: 9c29e826-91a7-43c0-aa64-49692a65ed3d
+rules:
+- apiGroups:
+  - apps
+  resourceNames:
+  - quick-postgres
+  resources:
+  - statefulsets
+  verbs:
+  - get
+- apiGroups:
+  - kubedb.com
+  resourceNames:
+  - quick-postgres
+  resources:
+  - postgreses
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - list
+  - patch
+  - delete
+- apiGroups:
+  - ""
+  resources:
+  - pods/exec
+  verbs:
+  - create
+- apiGroups:
+  - ""
+  resources:
+  - pods/eviction
+  verbs:
+  - create
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - create
+  - get
+  - update
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - policy
+  resourceNames:
+  - postgres-db
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use

@@ -1,0 +1,42 @@
+apiVersion: v1
+count: 17
+eventTime: null
+firstTimestamp: "2023-08-11T08:41:46Z"
+involvedObject:
+  apiVersion: source.toolkit.fluxcd.io/v1beta2
+  kind: HelmChart
+  name: kubeops-kubedb
+  namespace: kubeops
+  resourceVersion: "4146"
+  uid: fcf85006-dd6e-47b3-b991-6bddebeebb2d
+kind: Event
+lastTimestamp: "2023-08-11T10:01:48Z"
+message: 'artifact up-to-date with remote revision: ''v2023.06.13-rc.0'''
+metadata:
+  creationTimestamp: "2023-08-11T08:41:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T10:01:48Z"
+  name: kubeops-kubedb.177a4792d6ca1fa8
+  namespace: kubeops
+  resourceVersion: "12555"
+  uid: 76a1ab3f-927f-4f96-90aa-6ef1b8f9d632
+reason: ArtifactUpToDate
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: source-controller
+type: Normal

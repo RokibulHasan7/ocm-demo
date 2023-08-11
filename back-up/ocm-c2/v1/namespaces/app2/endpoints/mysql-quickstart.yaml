@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T09:15:32Z"
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+      f:subsets: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:32Z"
+  name: mysql-quickstart
+  namespace: app2
+  resourceVersion: "8584"
+  uid: 88713af8-1529-40ec-86ed-db3b2548e105
+subsets:
+- addresses:
+  - ip: 10.2.1.12
+    nodeName: lke124213-183843-64d5ea8ec8eb
+    targetRef:
+      kind: Pod
+      name: mysql-quickstart-0
+      namespace: app2
+      uid: 0f67d004-79c3-417d-b856-c19e3e9c292f
+  ports:
+  - name: primary
+    port: 3306
+    protocol: TCP

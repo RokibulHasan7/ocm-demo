@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"ServiceAccount","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"name":"calico-node","namespace":"kube-system"}}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:00:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:secrets:
+        .: {}
+        k:{"name":"calico-node-token-svdl6"}: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:00:23Z"
+  name: calico-node
+  namespace: kube-system
+  resourceVersion: "327"
+  uid: ec86d9a8-e809-4f48-9b38-49c214cc6afd
+secrets:
+- name: calico-node-token-svdl6

@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:15:02Z"
+deprecatedLastTimestamp: "2023-08-11T09:15:02Z"
+deprecatedSource:
+  component: KubeDB Operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:02Z"
+  name: mysql-quickstart.177a4963a4f5a689
+  namespace: app2
+  resourceVersion: "8492"
+  uid: 543c1e57-4c52-4aea-b46e-4751b0697885
+note: Successfully created database auth secret
+reason: Successful
+regarding:
+  apiVersion: kubedb.com/v1alpha2
+  kind: MySQL
+  name: mysql-quickstart
+  namespace: app2
+  resourceVersion: "8470"
+  uid: 563d7630-0615-4e8e-8c26-9a9a3c7c566a
+type: Normal

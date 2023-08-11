@@ -1,0 +1,98 @@
+apiVersion: crd.projectcalico.org/v1
+kind: KubeControllersConfiguration
+metadata:
+  annotations:
+    projectcalico.org/metadata: '{"uid":"3abfa2d7-977e-4326-a038-45f7ab6534df","creationTimestamp":"2023-08-11T08:02:35Z"}'
+  creationTimestamp: "2023-08-11T08:02:35Z"
+  generation: 2
+  managedFields:
+  - apiVersion: crd.projectcalico.org/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:projectcalico.org/metadata: {}
+      f:spec:
+        .: {}
+        f:controllers:
+          .: {}
+          f:namespace:
+            .: {}
+            f:reconcilerPeriod: {}
+          f:node:
+            .: {}
+            f:leakGracePeriod: {}
+            f:reconcilerPeriod: {}
+            f:syncLabels: {}
+          f:policy:
+            .: {}
+            f:reconcilerPeriod: {}
+          f:serviceAccount:
+            .: {}
+            f:reconcilerPeriod: {}
+          f:workloadEndpoint:
+            .: {}
+            f:reconcilerPeriod: {}
+        f:etcdV3CompactionPeriod: {}
+        f:healthChecks: {}
+        f:logSeverityScreen: {}
+        f:prometheusMetricsPort: {}
+      f:status:
+        .: {}
+        f:environmentVars:
+          .: {}
+          f:DATASTORE_TYPE: {}
+          f:ENABLED_CONTROLLERS: {}
+        f:runningConfig:
+          .: {}
+          f:controllers:
+            .: {}
+            f:node:
+              .: {}
+              f:hostEndpoint:
+                .: {}
+                f:autoCreate: {}
+              f:leakGracePeriod: {}
+              f:syncLabels: {}
+          f:etcdV3CompactionPeriod: {}
+          f:healthChecks: {}
+          f:logSeverityScreen: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T08:02:35Z"
+  name: default
+  resourceVersion: "935"
+  uid: 3abfa2d7-977e-4326-a038-45f7ab6534df
+spec:
+  controllers:
+    namespace:
+      reconcilerPeriod: 5m0s
+    node:
+      leakGracePeriod: 15m0s
+      reconcilerPeriod: 5m0s
+      syncLabels: Enabled
+    policy:
+      reconcilerPeriod: 5m0s
+    serviceAccount:
+      reconcilerPeriod: 5m0s
+    workloadEndpoint:
+      reconcilerPeriod: 5m0s
+  etcdV3CompactionPeriod: 10m0s
+  healthChecks: Enabled
+  logSeverityScreen: Info
+  prometheusMetricsPort: 9094
+status:
+  environmentVars:
+    DATASTORE_TYPE: kubernetes
+    ENABLED_CONTROLLERS: node
+  runningConfig:
+    controllers:
+      node:
+        hostEndpoint:
+          autoCreate: Disabled
+        leakGracePeriod: 15m0s
+        syncLabels: Disabled
+    etcdV3CompactionPeriod: 10m0s
+    healthChecks: Enabled
+    logSeverityScreen: Info

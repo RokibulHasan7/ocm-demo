@@ -1,0 +1,32 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-08-11T08:01:39Z"
+  managedFields:
+  - apiVersion: coordination.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d99a3ae5-a76c-4b31-bd3d-bb7daf1ee02b"}: {}
+      f:spec:
+        f:holderIdentity: {}
+        f:leaseDurationSeconds: {}
+        f:renewTime: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T10:00:40Z"
+  name: lke124212-183842-64d5ea63a57f
+  namespace: kube-node-lease
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: lke124212-183842-64d5ea63a57f
+    uid: d99a3ae5-a76c-4b31-bd3d-bb7daf1ee02b
+  resourceVersion: "12608"
+  uid: fe73ffbe-8417-4439-8b2f-aa57601aa628
+spec:
+  holderIdentity: lke124212-183842-64d5ea63a57f
+  leaseDurationSeconds: 40
+  renewTime: "2023-08-11T10:00:40.813897Z"

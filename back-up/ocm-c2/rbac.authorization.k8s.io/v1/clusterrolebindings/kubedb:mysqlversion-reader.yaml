@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:02Z"
+  name: kubedb:mysqlversion-reader
+  resourceVersion: "8479"
+  uid: 74bcccd9-f195-49e9-b2ad-f18fca1723a1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: kubedb:mysqlversion-reader
+subjects:
+- kind: ServiceAccount
+  name: mysql-quickstart
+  namespace: app2

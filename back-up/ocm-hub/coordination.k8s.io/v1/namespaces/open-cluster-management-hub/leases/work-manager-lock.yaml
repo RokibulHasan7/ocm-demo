@@ -1,0 +1,27 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-08-11T08:41:42Z"
+  managedFields:
+  - apiVersion: coordination.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime: {}
+        f:holderIdentity: {}
+        f:leaseDurationSeconds: {}
+        f:leaseTransitions: {}
+        f:renewTime: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T09:57:09Z"
+  name: work-manager-lock
+  namespace: open-cluster-management-hub
+  resourceVersion: "11204"
+  uid: afe76307-3633-4de7-95aa-6eb855032545
+spec:
+  acquireTime: "2023-08-11T08:41:42.839394Z"
+  holderIdentity: cluster-manager-work-controller-58d8896f9d-6vstq_a2af0b0d-9959-468a-b22f-1c0ee2a5c8fe
+  leaseDurationSeconds: 137
+  leaseTransitions: 0
+  renewTime: "2023-08-11T09:57:09.031543Z"

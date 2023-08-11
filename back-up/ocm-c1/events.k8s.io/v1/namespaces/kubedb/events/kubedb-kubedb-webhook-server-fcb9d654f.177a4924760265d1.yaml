@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:10:30Z"
+deprecatedLastTimestamp: "2023-08-11T09:10:30Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:10:30Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:10:30Z"
+  name: kubedb-kubedb-webhook-server-fcb9d654f.177a4924760265d1
+  namespace: kubedb
+  resourceVersion: "8111"
+  uid: 16962295-7b85-40d0-b977-6263efbd8a6e
+note: 'Created pod: kubedb-kubedb-webhook-server-fcb9d654f-r72g4'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: kubedb-kubedb-webhook-server-fcb9d654f
+  namespace: kubedb
+  resourceVersion: "5174"
+  uid: fb047e2b-267e-4522-9e0d-d32220d7e629
+type: Normal

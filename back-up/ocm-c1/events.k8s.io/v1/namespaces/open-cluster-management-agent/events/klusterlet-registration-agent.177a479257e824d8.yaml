@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 33
+deprecatedFirstTimestamp: "2023-08-11T08:41:43Z"
+deprecatedLastTimestamp: "2023-08-11T09:59:16Z"
+deprecatedSource:
+  component: work-agent-manifestworkagent
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T09:59:16Z"
+  name: klusterlet-registration-agent.177a479257e824d8
+  namespace: open-cluster-management-agent
+  resourceVersion: "12486"
+  uid: d8a8d116-1cd2-4a14-bd3c-c20a0bec3d50
+note: Updated kubeops/stash
+reason: HelmRelease Updated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: klusterlet-registration-agent
+  namespace: open-cluster-management-agent
+  uid: e81dbb65-61f2-4c5b-b49e-c2cafb1e5642
+type: Normal

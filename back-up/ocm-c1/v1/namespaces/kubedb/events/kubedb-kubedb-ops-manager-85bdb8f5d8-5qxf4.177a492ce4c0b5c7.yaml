@@ -1,0 +1,46 @@
+apiVersion: v1
+count: 5
+eventTime: null
+firstTimestamp: "2023-08-11T09:11:07Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{operator}
+  kind: Pod
+  name: kubedb-kubedb-ops-manager-85bdb8f5d8-5qxf4
+  namespace: kubedb
+  resourceVersion: "8200"
+  uid: 68bd001b-49f6-4622-80be-fb8feee2bb27
+kind: Event
+lastTimestamp: "2023-08-11T09:11:47Z"
+message: 'Readiness probe failed: Get "http://10.2.1.13:8081/readyz": dial tcp 10.2.1.13:8081:
+  connect: connection refused'
+metadata:
+  creationTimestamp: "2023-08-11T09:11:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T09:11:47Z"
+  name: kubedb-kubedb-ops-manager-85bdb8f5d8-5qxf4.177a492ce4c0b5c7
+  namespace: kubedb
+  resourceVersion: "8307"
+  uid: 34ddf92c-98d3-4d87-b51c-6bda9935776c
+reason: Unhealthy
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: lke124212-183842-64d5ea639250
+type: Warning

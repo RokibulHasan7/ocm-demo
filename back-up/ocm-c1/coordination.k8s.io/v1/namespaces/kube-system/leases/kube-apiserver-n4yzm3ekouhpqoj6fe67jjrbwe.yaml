@@ -1,0 +1,31 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-08-11T08:28:54Z"
+  labels:
+    k8s.io/component: kube-apiserver
+    kubernetes.io/hostname: kube-apiserver-6d56c876d9-d654l
+  managedFields:
+  - apiVersion: coordination.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:k8s.io/component: {}
+          f:kubernetes.io/hostname: {}
+      f:spec:
+        f:holderIdentity: {}
+        f:leaseDurationSeconds: {}
+        f:renewTime: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-08-11T10:00:36Z"
+  name: kube-apiserver-n4yzm3ekouhpqoj6fe67jjrbwe
+  namespace: kube-system
+  resourceVersion: "12602"
+  uid: 0679d042-d094-46d4-a62c-95a0ba026b14
+spec:
+  holderIdentity: kube-apiserver-n4yzm3ekouhpqoj6fe67jjrbwe_733e94b5-ad9a-40e7-9740-4faf4d7e231e
+  leaseDurationSeconds: 3600
+  renewTime: "2023-08-11T10:00:36.808111Z"

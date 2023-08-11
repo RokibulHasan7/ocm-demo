@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:20:50Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:20:50Z"
+  name: open-cluster-management:klusterlet-work:execution
+  resourceVersion: "2278"
+  uid: b632bb7a-ce39-45a8-87fe-e2510d6b1edf
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-cluster-management:klusterlet-work:execution
+subjects:
+- kind: ServiceAccount
+  name: klusterlet-work-sa
+  namespace: open-cluster-management-agent

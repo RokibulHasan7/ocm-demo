@@ -1,0 +1,22 @@
+apiVersion: scheduling.k8s.io/v1
+description: Used for system critical pods that must not be moved from their current
+  node.
+kind: PriorityClass
+metadata:
+  creationTimestamp: "2023-08-11T08:00:12Z"
+  generation: 1
+  managedFields:
+  - apiVersion: scheduling.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:description: {}
+      f:preemptionPolicy: {}
+      f:value: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-08-11T08:00:12Z"
+  name: system-node-critical
+  resourceVersion: "67"
+  uid: cbf93ce0-613c-492f-9594-b1c40a89bd14
+preemptionPolicy: PreemptLowerPriority
+value: 2000001000

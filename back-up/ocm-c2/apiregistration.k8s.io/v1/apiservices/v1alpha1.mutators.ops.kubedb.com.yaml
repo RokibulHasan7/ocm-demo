@@ -1,0 +1,86 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:42:08Z"
+  labels:
+    app.kubernetes.io/component: kubedb-ops-manager
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-webhook-server
+    app.kubernetes.io/version: v0.10.0-rc.0
+    helm.sh/chart: kubedb-webhook-server-v0.10.0-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        f:caBundle: {}
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:service:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+          f:port: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:08Z"
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:42:19Z"
+  name: v1alpha1.mutators.ops.kubedb.com
+  resourceVersion: "4898"
+  uid: d77b4ea6-5499-4354-8cbc-37328ff56553
+spec:
+  caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lSQU5QN0lNekNZZ09NeEZIdVA5ZitWcHd3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTWpNd09ERXhNRGcwTVRRM1doY05Nek13T0RBNE1EZzBNVFEzV2pBTgpNUXN3Q1FZRFZRUURFd0pqWVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTEtRCmxqdm5PZys4NEUrTDhoZG5ZZFg5eERzcEFQbXIwSUN4L2d4Q0NzNGY3WjlBbkJNUWhMb0R5SzZuQlpIdmFRSGQKQmZSS1ZhOVhXbkQya1d5dUhGb3l4QVV2M1lEWnFqd21rbVVYWU5sN2wvZTBQNi9jemdGc3BrMXV4WHBtUmJVZApKY0hET1lYU3U0ZXhaQ0ovQUsraE5ZOTFDZURBdFhaR2ZJZ2VRNTZFYWJTUFJ4SkJTRjVkTUR6eWNUN0doR1VvCndidTdWMXBDZTJKdzV4ZE1wZHJDRDBqMGZ1RGdBY3F2ZnNaOGwrS3dySFFmNHFzeTc3RmNvTGlFdXg1cnBPNXQKWXI2OTYyZG9nazZlWDhPOEtnaXNNOCtMa24ydTdlc09VcW5reXpDNUxiQU5xSGZDVyt5SXJnWDhNaTh5VkpzagpPYmRzWUFJZnhhQmlaRTlNQW9NQ0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUJCZ2dyQmdFRkJRY0RBakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJTYW16bHIyUHRranQ0L2pqaUM4VmNBQ2JXUUNqQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFkS1JSWWJaSAp6eW41V240NE56YzFwZnNlYnhIV2JmM1pkTGQwRzdaZWdHODN3b1phYWxDVlRmeE9GWkh0aldWZS92aStKaDZQCjExVGJkWDN0N1ZoZlljT1kra2hqWkRGTTlsTmNuYVF5NUxjSUlCY0dSTWtPU3RQSGRIZWtaMGlJTDNZbC91RGwKOCtMcXQ2ZGo3UnpQbmRBODVlYW9vR0RuYjF1S0hsV3BXbUM1Uzg5YS9NUCtWUlJySCsraUt0M1V6ajFIR0RXagprYldyeTZER00wNktabE5OR2MrSkNhSU5zUkkvbE10UVRtN1A5d0dqR21WOXRYY0FOKzJxUG5PYUxFYVpOMU1ZCmt4RmpvMEJGdXNqUGoycUMrRzlXdFpuNUhScjc1Um8ySHEwTVpEWENwaVFWK1BqMWprNXFQdkg5N0l3UVl1d0QKOGswcVpGUnFJVTJrQXc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  group: mutators.ops.kubedb.com
+  groupPriorityMinimum: 10000
+  service:
+    name: kubedb-kubedb-webhook-server
+    namespace: kubedb
+    port: 443
+  version: v1alpha1
+  versionPriority: 15
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:42:17Z"
+    message: all checks passed
+    reason: Passed
+    status: "True"
+    type: Available

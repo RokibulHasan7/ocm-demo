@@ -1,0 +1,62 @@
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: PgBouncerVersion
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:42:10Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-catalog
+    app.kubernetes.io/version: v2023.06.13-rc.0
+    helm.sh/chart: kubedb-catalog-v2023.06.13-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: catalog.kubedb.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:exporter:
+          .: {}
+          f:image: {}
+        f:pgBouncer:
+          .: {}
+          f:image: {}
+        f:securityContext:
+          .: {}
+          f:runAsAnyNonRoot: {}
+          f:runAsUser: {}
+        f:version: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:10Z"
+  name: 1.17.0
+  resourceVersion: "4713"
+  uid: b27d3bf9-afbe-47c6-8cfa-6e4d12197e17
+spec:
+  exporter:
+    image: ghcr.io/kubedb/pgbouncer_exporter:v0.1.1
+  pgBouncer:
+    image: ghcr.io/kubedb/pgbouncer:1.17.0
+  securityContext:
+    runAsAnyNonRoot: false
+    runAsUser: 70
+  version: 1.17.0

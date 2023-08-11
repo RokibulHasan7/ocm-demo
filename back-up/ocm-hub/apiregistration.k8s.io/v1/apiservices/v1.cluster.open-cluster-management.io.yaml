@@ -1,0 +1,37 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2023-08-11T08:19:37Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: "true"
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kube-aggregator.kubernetes.io/automanaged: {}
+      f:spec:
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-08-11T08:19:37Z"
+  name: v1.cluster.open-cluster-management.io
+  resourceVersion: "2140"
+  uid: 8af013d5-a0f5-4668-8518-8643a1bdb003
+spec:
+  group: cluster.open-cluster-management.io
+  groupPriorityMinimum: 1000
+  version: v1
+  versionPriority: 100
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:19:37Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

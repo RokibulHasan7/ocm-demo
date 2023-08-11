@@ -1,0 +1,47 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"563d7630-0615-4e8e-8c26-9a9a3c7c566a"}: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:02Z"
+  name: mysql-quickstart
+  namespace: app2
+  ownerReferences:
+  - apiVersion: kubedb.com/v1alpha2
+    blockOwnerDeletion: true
+    controller: true
+    kind: MySQL
+    name: mysql-quickstart
+    uid: 563d7630-0615-4e8e-8c26-9a9a3c7c566a
+  resourceVersion: "8477"
+  uid: 0e01c4c2-ea19-4de9-a7ad-c0a5a1a7d0b8
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: mysql-quickstart
+subjects:
+- kind: ServiceAccount
+  name: mysql-quickstart
+  namespace: app2

@@ -1,0 +1,53 @@
+apiVersion: stash.appscode.com/v1beta1
+kind: Task
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:42:28Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-catalog
+    app.kubernetes.io/version: v2023.05.31
+    helm.sh/chart: stash-catalog-v2023.05.31
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: stash.appscode.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:steps: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:28Z"
+  name: mongodb-restore-5.0.3
+  resourceVersion: "5318"
+  uid: a37ceec6-42b8-4bf1-b419-2d4836c76459
+spec:
+  steps:
+  - name: mongodb-restore-5.0.3
+    params:
+    - name: outputDir
+      value: /stash-tmp/output
+  - name: update-status
+    params:
+    - name: outputDir
+      value: /stash-tmp/output

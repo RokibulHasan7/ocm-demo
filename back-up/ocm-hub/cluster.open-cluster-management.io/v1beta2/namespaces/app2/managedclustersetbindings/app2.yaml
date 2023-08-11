@@ -1,0 +1,38 @@
+apiVersion: cluster.open-cluster-management.io/v1beta2
+kind: ManagedClusterSetBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:22:15Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterSet: {}
+    manager: clusteradm
+    operation: Update
+    time: "2023-08-11T08:22:15Z"
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: registration
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:22:15Z"
+  name: app2
+  namespace: app2
+  resourceVersion: "2696"
+  uid: c62d35d8-9338-4722-b6ad-c530792609f8
+spec:
+  clusterSet: app2
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:22:15Z"
+    message: ""
+    reason: ClusterSetBound
+    status: "True"
+    type: Bound

@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    operator.openshift.io/spec-hash: 659aba3bb314a0808d23107ffd9177598456185ba5df81c20640f3820702c749
+  creationTimestamp: "2023-08-11T08:19:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/spec-hash: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":9443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:19:42Z"
+  name: cluster-manager-work-webhook
+  namespace: open-cluster-management-hub
+  resourceVersion: "2209"
+  uid: 04ff5e8d-fdfe-47f1-9d7e-68c52e316015
+spec:
+  clusterIP: 10.128.91.215
+  clusterIPs:
+  - 10.128.91.215
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: webhook
+    port: 9443
+    protocol: TCP
+    targetPort: 9443
+  selector:
+    app: cluster-manager-work-webhook
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

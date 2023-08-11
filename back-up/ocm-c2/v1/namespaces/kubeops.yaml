@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  labels:
+    kubernetes.io/metadata.name: kubeops
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"70f150bb-f647-4fcf-88b6-cadb771180e9"}: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  name: kubeops
+  ownerReferences:
+  - apiVersion: work.open-cluster-management.io/v1
+    kind: AppliedManifestWork
+    name: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833-operators
+    uid: 70f150bb-f647-4fcf-88b6-cadb771180e9
+  resourceVersion: "4047"
+  uid: 243a8e93-f958-42b6-9f05-09aea2acb3d3
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

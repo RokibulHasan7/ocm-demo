@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:19:42Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:19:42Z"
+  name: open-cluster-management:cluster-manager-placement:controller
+  resourceVersion: "2201"
+  uid: a8384335-2944-4d7e-aa8f-738ea3988b17
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-cluster-management:cluster-manager-placement:controller
+subjects:
+- kind: ServiceAccount
+  name: placement-controller-sa
+  namespace: open-cluster-management-hub

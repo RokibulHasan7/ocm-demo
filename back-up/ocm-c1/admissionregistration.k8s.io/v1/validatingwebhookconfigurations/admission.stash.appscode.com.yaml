@@ -1,0 +1,438 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    helm.sh/hook: pre-install,pre-upgrade
+    helm.sh/hook-delete-policy: before-hook-creation
+  creationTimestamp: "2023-08-11T08:42:39Z"
+  generation: 2
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-enterprise
+    app.kubernetes.io/version: v0.30.1
+    helm.sh/chart: stash-enterprise-v0.30.0
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:helm.sh/hook: {}
+          f:helm.sh/hook-delete-policy: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"backupbatch.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"backupblueprint.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"backupconfiguration.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"recovery.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"repository.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"restic.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"restorebatch.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"restoresession.admission.stash.appscode.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:39Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"backupbatch.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"backupblueprint.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"backupconfiguration.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"recovery.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"repository.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"restic.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"restorebatch.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"restoresession.admission.stash.appscode.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: stash-enterprise
+    operation: Update
+    time: "2023-08-11T08:43:45Z"
+  name: admission.stash.appscode.com
+  resourceVersion: "5479"
+  uid: 44d13128-75a5-4b83-8aba-ea8fe2f75311
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1alpha1/resticvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: restic.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - restics
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1alpha1/recoveryvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: recovery.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - recoveries
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1alpha1/repositoryvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: repository.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - repositories
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1beta1/restoresessionvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: restoresession.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - restoresessions
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1beta1/restorebatchvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: restorebatch.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - restorebatches
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1beta1/backupconfigurationvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: backupconfiguration.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - backupconfigurations
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1beta1/backupbatchvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: backupbatch.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - backupbatches
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEEzTlRrek5Gb1hEVE16TURnd09EQTNOVGt6TkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTVJaCkxsN1dNdUpROVQwYy9tU3FaU29Ud24vRXluQ0pjUEQ4RkZaQVprcTl6NURjTEZzMCtHb1J6d1hYYmdGTW1ud2YKNVk1bDBXZ0g2UjFXL20wY3ppNzBrSGU0ZnJPZWJ4alZtR1FRTFdMQjlSQ3JrTEFTdkduMHBmSkNDUGp3YWhacwpHcFJmNUhOTkN5aFFCSUt2R05HUytaSlNwVUxaWTA5cjNLa3VBcXNmNFRUYWZ0RVJNUDlnQ1owMTRZSE1jRVZ1ClhUcjQ4T0dmc2l5UEh4UDAzY2MxSi9wTUJ3Z2gwczhnL0hTL1pqUVUyeHZkajFPbkJBaXJOOStEbEM0UjlLR1UKZ0xZZ0dBNXBnNDk4WlZOYzhsekIySi96OTZEb21MMlRBbzNqNk95dEM4bmZsK0gvbjV6NDhTL1pUNVVxZzIwUApOSWNsSVdXUW50VGhUVmRyWGM4Q0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQytwQTVGSWxONHV3WmtQZEswQlRCanpRQllNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSlZveFlFU0tzbWIraDhjQWVWNQpneStLMnhPeHBEYm5FSDRqS2VkZVRKN0ZmNi8wV0c5TGFVd3BTaytWTVlyNlVFNkdiUGV2bnRPZ3VCZGpTWVNnCko2NmpQSFJHUFpVbHRjSlBRMlZoREs0djV1WmlSUXRKanQ3aFJZNXlHVjN5b0VGVkNGcWI1ZzBlUktsZWtMWC8KSU5NRytMaGdCSW1ESjRpRzdOZUoxS2NyckZ0NTFBN2N5SUJ1OFR4NTdVNXZaV0ZZcFZlZVpTZ3hmeDhrM3QzWQpZcFhvL21JcXZPQUtNUlkxeW9NdkQ0RnFacGlEcU8wRU43WkZBSmhpRXdQNUlaYjNUakVvb3F0Nk1SNzRVTVp5CjFUNC91aGdZTWIzU2hOUE9TbU5OMWtiRFR6VlJZdWJNYXFvVWxPMThaV01meWpySlFzZVlQWCtsb0d2UVVxWVYKRTY0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/admission.stash.appscode.com/v1beta1/backupblueprintvalidators
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: backupblueprint.admission.stash.appscode.com
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - stash.appscode.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - backupblueprints
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

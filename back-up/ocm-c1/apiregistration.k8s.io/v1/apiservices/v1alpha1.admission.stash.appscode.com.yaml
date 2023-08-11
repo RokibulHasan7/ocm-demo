@@ -1,0 +1,96 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  annotations:
+    admission-webhook.appscode.com/active: "true"
+    admission-webhook.appscode.com/status: ""
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:43:11Z"
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-enterprise
+    app.kubernetes.io/version: v0.30.1
+    helm.sh/chart: stash-enterprise-v0.30.0
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        f:caBundle: {}
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:service:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+          f:port: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:11Z"
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:43:50Z"
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:admission-webhook.appscode.com/active: {}
+          f:admission-webhook.appscode.com/status: {}
+    manager: stash-enterprise
+    operation: Update
+    time: "2023-08-11T08:43:53Z"
+  name: v1alpha1.admission.stash.appscode.com
+  resourceVersion: "5585"
+  uid: 9d2cb2bb-0261-4f12-a96f-370c9a51214d
+spec:
+  caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lSQUxDejl0MzJEcnd0b3QwUkJqcGp0SDB3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTWpNd09ERXhNRGcwTVRVeVdoY05Nek13T0RBNE1EZzBNVFV5V2pBTgpNUXN3Q1FZRFZRUURFd0pqWVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBSmNrCnllbHJqS3d2czM5bytVdkVIZERxQ29VcHhWQlJQTWVraFhDdnNlRWxKTjlmOHlkaFkwbnZIVlZuSWVsYTF3ejUKMEptYzVrRlBGdHN1WngwVmNEclFsNU8rMXBFMnZFbUE3QllWbmsrL2JHb0NLRkRmNjJJQ09rRU13blBiL0VwTApIbFFXS0xqMzh2dERmU3VQK0k4YVV1ZTFvM092Y1FYRkU3dkJoc1RMc1lLbm9sQnFoTXRMa0NGMDlFWkVrZk00ClBVYzlNVng2VG0vaFpJWWhGNWs3NlBCaG10TllYNGM3WC9tNWtBZklXeXhsaWVwZ041UnUyRGJCZjNQYTI1TkwKY2Q2SGVYSDB0cVhRU1VnbXIvZlVuRjJ2bjdUSkxRaEx4U0t5b3BzbEkvM3l6aW9UNjBXSXNITFZMSEZSTWVDZwphUjQrSmt0NHYrQk9kV0ZxVVAwQ0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUJCZ2dyQmdFRkJRY0RBakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJRTjJYYVhDNVdDZ2VlbXNMZkpYWXVIaEhmYzhEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFJQkRIT3gyOQpiQXg4L0pTaWdvT1FUbm5OZnNyNis5bjRpc2ZnY3lFc01zclZ6VXdENmt5akIwYmhJN2hHWTZaTUxqMmZCSGRsCjNiWG0zV2VOMWdtYjJ3L2lST2Vndk51YUZHd2p3RkVSVjlFTDZVbEhwdzFDWEpNVmZtd2JsemhCL3d1WlVMMloKVGpHaENSbEdobEtZWGNkcEgrdFJ4ak4vWWlTS0o2U1BEeHRqS1puclFnV3o3Wk8vQy9xMzlOZEpQMFdKNk9OUwpvZ2VCNWl1R3dVUDE4Tms3bnFxQStQc1M0SFVmUk5IdjZPMUJHN01DbDBCRGtDYlRaQnRQZ2V4OUhsbUJpMUs5CnV3VzBlbjlrMjB5bVpvUHVuT3N0VVJVd3p2NHZWd2hrZWVxZGRIRFFJYmpEL1RGUzFUb01FaEVGWW02Mk1wYlcKbi91SzZCaU03REYzbGc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  group: admission.stash.appscode.com
+  groupPriorityMinimum: 10000
+  service:
+    name: stash-stash-enterprise
+    namespace: stash
+    port: 443
+  version: v1alpha1
+  versionPriority: 15
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:43:50Z"
+    message: all checks passed
+    reason: Passed
+    status: "True"
+    type: Available

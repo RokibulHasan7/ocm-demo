@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 17
+deprecatedFirstTimestamp: "2023-08-11T08:41:46Z"
+deprecatedLastTimestamp: "2023-08-11T10:01:48Z"
+deprecatedSource:
+  component: source-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T08:41:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T10:01:48Z"
+  name: kubeops-stash.177a4792df926d73
+  namespace: kubeops
+  resourceVersion: "12554"
+  uid: d368d5a3-9a63-4b55-b86b-f8a1366d25c1
+note: 'artifact up-to-date with remote revision: ''v2023.05.31'''
+reason: ArtifactUpToDate
+regarding:
+  apiVersion: source.toolkit.fluxcd.io/v1beta2
+  kind: HelmChart
+  name: kubeops-stash
+  namespace: kubeops
+  resourceVersion: "4191"
+  uid: 45e7ecf7-0849-4ce6-94bb-0c68fdbdcafc
+type: Normal

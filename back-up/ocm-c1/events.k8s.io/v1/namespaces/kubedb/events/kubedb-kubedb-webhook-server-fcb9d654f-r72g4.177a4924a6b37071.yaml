@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:10:31Z"
+deprecatedLastTimestamp: "2023-08-11T09:10:31Z"
+deprecatedSource:
+  component: kubelet
+  host: lke124212-183842-64d5ea637f43
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:10:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T09:10:31Z"
+  name: kubedb-kubedb-webhook-server-fcb9d654f-r72g4.177a4924a6b37071
+  namespace: kubedb
+  resourceVersion: "8122"
+  uid: e6bea6b9-adb7-48c7-bc0f-18a0f380c888
+note: Started container operator
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{operator}
+  kind: Pod
+  name: kubedb-kubedb-webhook-server-fcb9d654f-r72g4
+  namespace: kubedb
+  resourceVersion: "8112"
+  uid: 55bc497c-128b-4303-9587-c98321710746
+type: Normal

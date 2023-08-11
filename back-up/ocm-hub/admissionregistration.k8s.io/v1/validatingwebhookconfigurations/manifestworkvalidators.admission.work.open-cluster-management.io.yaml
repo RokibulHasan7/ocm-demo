@@ -1,0 +1,66 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  creationTimestamp: "2023-08-11T08:20:25Z"
+  generation: 1
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        .: {}
+        k:{"name":"manifestworkvalidators.admission.work.open-cluster-management.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:caBundle: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:20:25Z"
+  name: manifestworkvalidators.admission.work.open-cluster-management.io
+  resourceVersion: "2446"
+  uid: 8c2953d2-ae6f-41eb-b5a7-32a519f9d905
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURQekNDQWllZ0F3SUJBZ0lJQUp5VlRXNmNwbEl3RFFZSktvWklodmNOQVFFTEJRQXdMVEVyTUNrR0ExVUUKQXd3aVkyeDFjM1JsY2kxdFlXNWhaMlZ5TFhkbFltaHZiMnRBTVRZNU1UYzBNVGs0TWpBZUZ3MHlNekE0TVRFdwpPREU1TkRGYUZ3MHlOREE0TVRBd09ERTVOREphTUMweEt6QXBCZ05WQkFNTUltTnNkWE4wWlhJdGJXRnVZV2RsCmNpMTNaV0pvYjI5clFERTJPVEUzTkRFNU9ESXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUsKQW9JQkFRQzJZdkZzcGw3N2tqNnUzV2FBV3V2RWJ0azUvNFVKQ3h6SUU3Nm1CZXRLQUZTbXBqbkRRdGR0N3Z4Zgo1TWhhK1BCd0NnSStMTXQzTlY1OGs1S3pOcVAydFFYZGc5MU9QZkVyWXk5THhLRU5OWUJ3TGRiam1zeDNxSGg5Ckc5bTR1RDJKcEhQU0ZBa1lUQVcyR1BxRlNzcFJ6RGN4SUFnTERJVlh4WWRGQnMwbG1HV013NGcwOHJubWRNRzMKVnRtWjQxQ2Fkbnk1bzlWV3lIbXZyY2JjV3cxOXZ4azlFNDVFbzFnRTdYcUY1N29DM0tySEVySC9JRHBpSVhMQwo0aGduRjdsdmpMczhaRkc3WkZZWVoxUlNNMmQ2aVZodW9JNEFWV0ZIdTRYTWM4VHp6STdDSHhVK1pFOTZtVlNKCk9ldll3Q3JqNFhSSHNiK3pjMUtnVTJMMVJBcmpBZ01CQUFHall6QmhNQTRHQTFVZER3RUIvd1FFQXdJQ3BEQVAKQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlRTdlQ2dDFaK0RwRlpwZUlJcTFZYUhDeExtV3pBZgpCZ05WSFNNRUdEQVdnQlRTdlQ2dDFaK0RwRlpwZUlJcTFZYUhDeExtV3pBTkJna3Foa2lHOXcwQkFRc0ZBQU9DCkFRRUFFRi9oVUYzeVJHc2cvS25GR3RaRzV3MlVNQmt3c082WlFmcUt4dE1XamZwamI5MGQwTDRvWXJvdnpmWmgKYXNTYllNdDZyQkhOMG9MRjN4YmxFbm5sNitWM2VzdUhOcGU3b3E1azh5c0V6Wld5MEsvZUhSanI4N1F0Q1I3dwptRXA1U2dzRVJnQzRBbmhzVWVod2dnaE04WXM1NXAxSzE2MTJseitITlNFTjI0RzVPOGt4TUt3UzVka3IrK0taCjM4UWVRbUk0akF2YmR1VnNSQWg2MThiRzhKVDJMTFErSVJEbXp5OUEzZ3hGelBTMmxkK29NeEhSUGdacVRabHkKOUlSUWYyRFRSUnZrbzhNSTVTNWFBUFpBZGE3VzR5RjFjcUk4YUliOHFleEhldmY2YUtOOUgvdXFIN01sVG5BNQpNSVkvUDdySEIxQnQxN2FTNWxKbnE0RG1zZz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: cluster-manager-work-webhook
+      namespace: open-cluster-management-hub
+      path: /validate-work-open-cluster-management-io-v1-manifestwork
+      port: 9443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: manifestworkvalidators.admission.work.open-cluster-management.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - work.open-cluster-management.io
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - manifestworks
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

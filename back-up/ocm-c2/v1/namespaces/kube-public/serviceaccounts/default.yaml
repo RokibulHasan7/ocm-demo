@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:01:40Z"
+  name: default
+  namespace: kube-public
+  resourceVersion: "502"
+  uid: 43c3990c-e78e-4c31-9573-0440328b5192
+secrets:
+- name: default-token-xz48l

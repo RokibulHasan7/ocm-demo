@@ -1,0 +1,57 @@
+apiVersion: stash.appscode.com/v1beta1
+kind: Function
+metadata:
+  creationTimestamp: "2023-08-11T08:42:36Z"
+  generation: 1
+  managedFields:
+  - apiVersion: stash.appscode.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:args: {}
+        f:image: {}
+        f:volumeMounts: {}
+    manager: stash-enterprise
+    operation: Update
+    time: "2023-08-11T08:42:36Z"
+  name: pvc-backup
+  resourceVersion: "5552"
+  uid: cce61071-3545-4c4b-8baf-cf86320d0ea5
+spec:
+  args:
+  - backup-pvc
+  - --provider=${REPOSITORY_PROVIDER:=}
+  - --bucket=${REPOSITORY_BUCKET:=}
+  - --endpoint=${REPOSITORY_ENDPOINT:=}
+  - --region=${REPOSITORY_REGION:=}
+  - --path=${REPOSITORY_PREFIX:=}
+  - --enable-cache=${ENABLE_CACHE:=true}
+  - --max-connections=${MAX_CONNECTIONS:=0}
+  - --hostname=${HOSTNAME:=}
+  - --backup-paths=${TARGET_PATHS}
+  - --exclude=${EXCLUDE_PATTERNS:=}
+  - --args=${DRIVER_ARGS:=}
+  - --invoker-kind=${INVOKER_KIND:=}
+  - --invoker-name=${INVOKER_NAME:=}
+  - --storage-secret-name=${REPOSITORY_SECRET_NAME}
+  - --storage-secret-namespace=${REPOSITORY_SECRET_NAMESPACE}
+  - --target-kind=${TARGET_KIND:=}
+  - --target-name=${TARGET_NAME:=}
+  - --target-namespace=${TARGET_NAMESPACE:=}
+  - --backupsession=${BACKUP_SESSION:=}
+  - --retention-keep-last=${RETENTION_KEEP_LAST:=0}
+  - --retention-keep-hourly=${RETENTION_KEEP_HOURLY:=0}
+  - --retention-keep-daily=${RETENTION_KEEP_DAILY:=0}
+  - --retention-keep-weekly=${RETENTION_KEEP_WEEKLY:=0}
+  - --retention-keep-monthly=${RETENTION_KEEP_MONTHLY:=0}
+  - --retention-keep-yearly=${RETENTION_KEEP_YEARLY:=0}
+  - --retention-keep-tags=${RETENTION_KEEP_TAGS:=}
+  - --retention-prune=${RETENTION_PRUNE:=false}
+  - --retention-dry-run=${RETENTION_DRY_RUN:=false}
+  - --output-dir=${outputDir:=}
+  - --scratch-dir=/stash-tmp
+  image: ghcr.io/stashed/stash-enterprise:v0.30.1
+  volumeMounts:
+  - mountPath: ${TARGET_MOUNT_PATH}
+    name: ${targetVolume}

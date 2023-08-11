@@ -1,0 +1,31 @@
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"allowVolumeExpansion":true,"apiVersion":"storage.k8s.io/v1","kind":"StorageClass","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"name":"linode-block-storage"},"provisioner":"linodebs.csi.linode.com"}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:01:19Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:allowVolumeExpansion: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+      f:provisioner: {}
+      f:reclaimPolicy: {}
+      f:volumeBindingMode: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:01:19Z"
+  name: linode-block-storage
+  resourceVersion: "280"
+  uid: e86f72a0-a85c-400b-8d3c-44663ee6a003
+provisioner: linodebs.csi.linode.com
+reclaimPolicy: Delete
+volumeBindingMode: Immediate

@@ -1,0 +1,60 @@
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: MemcachedVersion
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:43:06Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-catalog
+    app.kubernetes.io/version: v2023.06.13-rc.0
+    helm.sh/chart: kubedb-catalog-v2023.06.13-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: catalog.kubedb.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:db:
+          .: {}
+          f:image: {}
+        f:exporter:
+          .: {}
+          f:image: {}
+        f:podSecurityPolicies:
+          .: {}
+          f:databasePolicyName: {}
+        f:version: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:06Z"
+  name: 1.5.22
+  resourceVersion: "4752"
+  uid: d7e6a5ab-1061-4407-b13d-dbd6def55b4c
+spec:
+  db:
+    image: ghcr.io/kubedb/memcached:1.5.22
+  exporter:
+    image: ghcr.io/kubedb/memcached-exporter:v0.4.1
+  podSecurityPolicies:
+    databasePolicyName: memcached-db
+  version: 1.5.22

@@ -1,0 +1,38 @@
+apiVersion: v1
+data:
+  status: |
+    Cluster-autoscaler status at 2023-08-11 10:02:27.389838894 +0000 UTC:
+    Cluster-wide:
+      Health:      Healthy (ready=3 unready=0 notStarted=0 longNotStarted=0 registered=3 longUnregistered=0)
+                   LastProbeTime:      2023-08-11 10:02:27.389434217 +0000 UTC m=+7247.142511241
+                   LastTransitionTime: 2023-08-11 08:01:56.228237501 +0000 UTC m=+15.981314525
+      ScaleUp:     NoActivity (ready=3 registered=3)
+                   LastProbeTime:      2023-08-11 10:02:27.389434217 +0000 UTC m=+7247.142511241
+                   LastTransitionTime: 2023-08-11 08:01:56.228237501 +0000 UTC m=+15.981314525
+      ScaleDown:   NoCandidates (candidates=0)
+                   LastProbeTime:      2023-08-11 10:02:27.389434217 +0000 UTC m=+7247.142511241
+                   LastTransitionTime: 2023-08-11 08:01:56.228237501 +0000 UTC m=+15.981314525
+kind: ConfigMap
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/last-updated: 2023-08-11 10:02:27.389838894 +0000
+      UTC
+  creationTimestamp: "2023-08-11T08:01:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:status: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cluster-autoscaler.kubernetes.io/last-updated: {}
+    manager: cluster-autoscaler
+    operation: Update
+    time: "2023-08-11T10:02:27Z"
+  name: cluster-autoscaler-status
+  namespace: kube-system
+  resourceVersion: "12606"
+  uid: 8ba299c0-8aca-4363-ac06-cc95099ef5d7

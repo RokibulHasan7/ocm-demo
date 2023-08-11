@@ -1,0 +1,51 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  annotations:
+    meta.helm.sh/release-name: flux
+    meta.helm.sh/release-namespace: flux-system
+  creationTimestamp: "2023-08-11T08:19:21Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: flux-system
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: flux
+    app.kubernetes.io/version: 2.0.1
+    helm.sh/chart: flux2-2.9.2
+  managedFields:
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:ingress: {}
+        f:policyTypes: {}
+    manager: helm
+    operation: Update
+    time: "2023-08-11T08:19:21Z"
+  name: allow-scraping
+  namespace: flux-system
+  resourceVersion: "1944"
+  uid: 2245db31-c41a-45fb-8d2a-063116d1a5f8
+spec:
+  ingress:
+  - from:
+    - namespaceSelector: {}
+    ports:
+    - port: 8080
+      protocol: TCP
+  podSelector: {}
+  policyTypes:
+  - Ingress
+status: {}

@@ -1,0 +1,599 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 75142a49fb513fda916e3c05a25577f0675aae800240bac8316bea072383ab0d
+    cni.projectcalico.org/podIP: 10.2.0.3/32
+    cni.projectcalico.org/podIPs: 10.2.0.3/32
+  creationTimestamp: "2023-08-11T08:01:41Z"
+  generateName: csi-linode-controller-
+  labels:
+    app: csi-linode-controller
+    controller-revision-hash: csi-linode-controller-6fb74cb59
+    role: csi-linode
+    statefulset.kubernetes.io/pod-name: csi-linode-controller-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:controller-revision-hash: {}
+          f:role: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"7f3a762d-5e1b-49b4-a26c-8c4045e1d1aa"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"csi-attacher"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-provisioner"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-resizer"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"linode-csi-plugin"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"CSI_ENDPOINT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_SERVICE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"LINODE_API_URL"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"LINODE_BS_PREFIX"}:
+                .: {}
+                f:name: {}
+              k:{"name":"LINODE_TOKEN"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"LINODE_URL"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/linode-info"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"init"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/linode-info"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:subdomain: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"get-linode-id"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"linode-info"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"socket-dir"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:01:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:01:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cni.projectcalico.org/containerID: {}
+          f:cni.projectcalico.org/podIP: {}
+          f:cni.projectcalico.org/podIPs: {}
+    manager: calico
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:02:57Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.2.0.3"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:03:03Z"
+  name: csi-linode-controller-0
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: csi-linode-controller
+    uid: 7f3a762d-5e1b-49b4-a26c-8c4045e1d1aa
+  resourceVersion: "812"
+  uid: 017f6530-4c40-4c55-ade7-c22074a34ddc
+spec:
+  containers:
+  - args:
+    - --volume-name-prefix=pvc
+    - --volume-name-uuid-length=16
+    - --csi-address=$(ADDRESS)
+    - --default-fstype=ext4
+    - --v=2
+    env:
+    - name: ADDRESS
+      value: /var/lib/csi/sockets/pluginproxy/csi.sock
+    - name: KUBERNETES_SERVICE_HOST
+      value: dce519b6-f20f-4691-96af-31bf64dab68b.us-southeast-2.linodelke.net
+    - name: KUBERNETES_SERVICE_PORT
+      value: "443"
+    image: linode/csi-provisioner:v3.0.0
+    imagePullPolicy: IfNotPresent
+    name: csi-provisioner
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-22jjk
+      readOnly: true
+  - args:
+    - --v=2
+    - --csi-address=$(ADDRESS)
+    env:
+    - name: ADDRESS
+      value: /var/lib/csi/sockets/pluginproxy/csi.sock
+    - name: KUBERNETES_SERVICE_HOST
+      value: dce519b6-f20f-4691-96af-31bf64dab68b.us-southeast-2.linodelke.net
+    - name: KUBERNETES_SERVICE_PORT
+      value: "443"
+    image: linode/csi-attacher:v3.3.0
+    imagePullPolicy: IfNotPresent
+    name: csi-attacher
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-22jjk
+      readOnly: true
+  - args:
+    - --v=2
+    - --csi-address=$(ADDRESS)
+    env:
+    - name: ADDRESS
+      value: /var/lib/csi/sockets/pluginproxy/csi.sock
+    - name: KUBERNETES_SERVICE_HOST
+      value: dce519b6-f20f-4691-96af-31bf64dab68b.us-southeast-2.linodelke.net
+    - name: KUBERNETES_SERVICE_PORT
+      value: "443"
+    image: linode/csi-resizer:v1.3.0
+    imagePullPolicy: IfNotPresent
+    name: csi-resizer
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-22jjk
+      readOnly: true
+  - args:
+    - --endpoint=$(CSI_ENDPOINT)
+    - --token=$(LINODE_TOKEN)
+    - --url=$(LINODE_API_URL)
+    - --node=$(NODE_NAME)
+    - --bs-prefix=$(LINODE_BS_PREFIX)
+    - --v=2
+    env:
+    - name: CSI_ENDPOINT
+      value: unix:///var/lib/csi/sockets/pluginproxy/csi.sock
+    - name: LINODE_API_URL
+      valueFrom:
+        secretKeyRef:
+          key: apiurl
+          name: linode
+    - name: LINODE_BS_PREFIX
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    - name: LINODE_TOKEN
+      valueFrom:
+        secretKeyRef:
+          key: token
+          name: linode
+    - name: KUBERNETES_SERVICE_HOST
+      value: dce519b6-f20f-4691-96af-31bf64dab68b.us-southeast-2.linodelke.net
+    - name: KUBERNETES_SERVICE_PORT
+      value: "443"
+    - name: LINODE_URL
+      valueFrom:
+        secretKeyRef:
+          key: apiurl
+          name: linode
+    image: linode/linode-blockstorage-csi-driver:v0.5.2
+    imagePullPolicy: IfNotPresent
+    name: linode-csi-plugin
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /linode-info
+      name: linode-info
+    - mountPath: /scripts
+      name: get-linode-id
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-22jjk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: csi-linode-controller-0
+  initContainers:
+  - command:
+    - /scripts/get-linode-id.sh
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    image: bitnami/kubectl:1.16.3-debian-10-r36
+    imagePullPolicy: IfNotPresent
+    name: init
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /linode-info
+      name: linode-info
+    - mountPath: /scripts
+      name: get-linode-id
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-22jjk
+      readOnly: true
+  nodeName: lke124213-183843-64d5ea8ea3fc
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: csi-controller-sa
+  serviceAccountName: csi-controller-sa
+  subdomain: csi-linode
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    operator: Exists
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoExecute
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: socket-dir
+  - emptyDir: {}
+    name: linode-info
+  - configMap:
+      defaultMode: 493
+      name: get-linode-id
+    name: get-linode-id
+  - name: kube-api-access-22jjk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:02:58Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:03:03Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:03:03Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:02:06Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://1cba2624816c1a5a63cee9a31648c738a44d603a722355489dbf6574e6c22803
+    image: docker.io/linode/csi-attacher:v3.3.0
+    imageID: docker.io/linode/csi-attacher@sha256:221c1c6930fb1cb93b57762a74ccb59194c4c74a63c0fd49309d1158d4f8c72c
+    lastState: {}
+    name: csi-attacher
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T08:03:01Z"
+  - containerID: containerd://e4567590152800b376713d8838de56a260fee2cb53e9b3329e71a623366cd98e
+    image: docker.io/linode/csi-provisioner:v3.0.0
+    imageID: docker.io/linode/csi-provisioner@sha256:bbae7cde811054f6a51060ba7a42d8bf2469b8c574abb50fec8b46c13e32541e
+    lastState: {}
+    name: csi-provisioner
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T08:02:59Z"
+  - containerID: containerd://202543c502228b695125db7902a634d6e6f4fc05bd55948ced4e1b3f77ac80a6
+    image: docker.io/linode/csi-resizer:v1.3.0
+    imageID: docker.io/linode/csi-resizer@sha256:d2d2e429a0a87190ee73462698a02a08e555055246ad87ad979b464b999fedae
+    lastState: {}
+    name: csi-resizer
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T08:03:02Z"
+  - containerID: containerd://a15e0911b4e4ed9bde2e69795a31876931aa984c28c8ef8370c0663344912ca1
+    image: docker.io/linode/linode-blockstorage-csi-driver:v0.5.2
+    imageID: docker.io/linode/linode-blockstorage-csi-driver@sha256:6d4d32ebe2a6d0ba59fdcb6d891ca930d0a1208ce015125888af3037fa23eada
+    lastState: {}
+    name: linode-csi-plugin
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T08:03:02Z"
+  hostIP: 192.168.237.30
+  initContainerStatuses:
+  - containerID: containerd://37d9a86fed44ab4351e1eafd69dedea8b945df7bfa627a259ac589a5d86689fa
+    image: docker.io/bitnami/kubectl:1.16.3-debian-10-r36
+    imageID: docker.io/bitnami/kubectl@sha256:c4a8d9c0cd9c5f903830ea64816c83adf307ff1d775bc3e5b77f1d49d3960205
+    lastState: {}
+    name: init
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: containerd://37d9a86fed44ab4351e1eafd69dedea8b945df7bfa627a259ac589a5d86689fa
+        exitCode: 0
+        finishedAt: "2023-08-11T08:02:57Z"
+        reason: Completed
+        startedAt: "2023-08-11T08:02:57Z"
+  phase: Running
+  podIP: 10.2.0.3
+  podIPs:
+  - ip: 10.2.0.3
+  qosClass: BestEffort
+  startTime: "2023-08-11T08:02:09Z"

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:20:40Z"
+  name: default
+  namespace: open-cluster-management
+  resourceVersion: "2158"
+  uid: c0029ec0-a60e-4248-a3d3-475e1c176be6
+secrets:
+- name: default-token-r55b6

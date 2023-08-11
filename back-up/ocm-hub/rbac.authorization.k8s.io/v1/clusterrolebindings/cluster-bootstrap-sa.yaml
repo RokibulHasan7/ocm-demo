@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:19:25Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: clusteradm
+    operation: Update
+    time: "2023-08-11T08:19:25Z"
+  name: cluster-bootstrap-sa
+  resourceVersion: "2073"
+  uid: 3b935046-e137-4008-ba55-bbb7b15a8acd
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:open-cluster-management:bootstrap
+subjects:
+- kind: ServiceAccount
+  name: cluster-bootstrap
+  namespace: open-cluster-management

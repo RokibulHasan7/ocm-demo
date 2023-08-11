@@ -1,0 +1,73 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.2.12
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  hostname: quick-postgres-0
+  nodeName: lke124212-183842-64d5ea637f43
+  targetRef:
+    kind: Pod
+    name: quick-postgres-0
+    namespace: app1
+    uid: 9ad3d940-1f39-4264-a7ba-7bafe787187b
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T09:15:22Z"
+  creationTimestamp: "2023-08-11T09:14:58Z"
+  generateName: quick-postgres-pods-
+  generation: 3
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: quick-postgres
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: postgreses.kubedb.com
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: quick-postgres-pods
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+          f:service.kubernetes.io/headless: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"4f4af956-f8f4-4a07-8058-97c62ac9e075"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:22Z"
+  name: quick-postgres-pods-nrrnj
+  namespace: app1
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: quick-postgres-pods
+    uid: 4f4af956-f8f4-4a07-8058-97c62ac9e075
+  resourceVersion: "8681"
+  uid: c5a06830-23b7-450e-890f-ee63e01aa761
+ports:
+- name: db
+  port: 5432
+  protocol: TCP

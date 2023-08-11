@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-08-11T08:22:13Z"
+  labels:
+    kubernetes.io/metadata.name: app2
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2023-08-11T08:22:13Z"
+  name: app2
+  resourceVersion: "2690"
+  uid: a7811284-c228-4d46-bde1-f86009eca6ea
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

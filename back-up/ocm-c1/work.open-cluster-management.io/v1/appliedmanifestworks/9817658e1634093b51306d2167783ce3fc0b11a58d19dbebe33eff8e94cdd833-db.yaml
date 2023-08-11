@@ -1,0 +1,54 @@
+apiVersion: work.open-cluster-management.io/v1
+kind: AppliedManifestWork
+metadata:
+  creationTimestamp: "2023-08-11T08:46:41Z"
+  finalizers:
+  - cluster.open-cluster-management.io/applied-manifest-work-cleanup
+  generation: 1
+  managedFields:
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster.open-cluster-management.io/applied-manifest-work-cleanup": {}
+      f:spec:
+        .: {}
+        f:agentID: {}
+        f:hubHash: {}
+        f:manifestWorkName: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:46:41Z"
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:appliedResources: {}
+    manager: work
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:14:57Z"
+  name: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833-db
+  resourceVersion: "8576"
+  uid: 01e229f1-1ede-4e29-903e-895f04d3dfab
+spec:
+  agentID: 46754a2f-063f-42a7-999f-1cb2e10b26e2
+  hubHash: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833
+  manifestWorkName: db
+status:
+  appliedResources:
+  - group: ""
+    name: app1
+    namespace: ""
+    resource: namespaces
+    uid: 93198e05-c482-4461-8515-613173340f64
+    version: v1
+  - group: kubedb.com
+    name: quick-postgres
+    namespace: app1
+    resource: postgreses
+    uid: 1e8afd0b-667d-4e7c-af0d-611f3d8e10cc
+    version: v1alpha2

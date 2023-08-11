@@ -1,0 +1,68 @@
+apiVersion: metrics.appscode.com/v1alpha1
+kind: MetricsConfiguration
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:43:14Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: metrics.appscode.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:commonLabels: {}
+        f:metrics: {}
+        f:targetRef:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:14Z"
+  name: stash-appscode-com-backupsession
+  resourceVersion: "5045"
+  uid: 9a6cf7fa-ab92-4559-8095-7b26b68feb4f
+spec:
+  commonLabels:
+  - key: invoker_api_group
+    valuePath: .spec.invoker.apiGroup
+  - key: invoker_kind
+    valuePath: .spec.invoker.kind
+  - key: invoker_name
+    valuePath: .spec.invoker.name
+  metrics:
+  - field:
+      path: .metadata.creationTimestamp
+      type: DateTime
+    help: Unix creation timestamp of this BackupSession
+    metricValue:
+      valueFromPath: .metadata.creationTimestamp
+    name: created
+    type: gauge
+  - help: General information about BackupSession
+    labels:
+    - key: phase
+      valuePath: .status.phase
+    metricValue:
+      value: 1
+    name: info
+    type: gauge
+  targetRef:
+    apiVersion: stash.appscode.com/v1beta1
+    kind: BackupSession

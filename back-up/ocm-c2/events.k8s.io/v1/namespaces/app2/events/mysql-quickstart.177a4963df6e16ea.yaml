@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:15:03Z"
+deprecatedLastTimestamp: "2023-08-11T09:15:03Z"
+deprecatedSource:
+  component: KubeDB Operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:15:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:03Z"
+  name: mysql-quickstart.177a4963df6e16ea
+  namespace: app2
+  resourceVersion: "8513"
+  uid: 18841e0f-6381-4428-a4a3-6bb432580163
+note: Successfully created appbinding
+reason: Successful
+regarding:
+  apiVersion: kubedb.com/v1alpha2
+  kind: MySQL
+  name: mysql-quickstart
+  namespace: app2
+  resourceVersion: "8470"
+  uid: 563d7630-0615-4e8e-8c26-9a9a3c7c566a
+type: Normal

@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 2
+deprecatedFirstTimestamp: "2023-08-11T09:11:44Z"
+deprecatedLastTimestamp: "2023-08-11T09:41:44Z"
+deprecatedSource:
+  component: source-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:11:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T09:41:44Z"
+  name: appscode.177a49358e1af476
+  namespace: kubeops
+  resourceVersion: "10837"
+  uid: cc4765dd-293a-48a8-b85d-e49f767c602d
+note: 'artifact up-to-date with remote revision: ''sha256:c9a5f9e8ab928aadbd8d07ed49862fdcd04a074a21ae05f3aa81abc859fc7cae'''
+reason: ArtifactUpToDate
+regarding:
+  apiVersion: source.toolkit.fluxcd.io/v1beta2
+  kind: HelmRepository
+  name: appscode
+  namespace: kubeops
+  resourceVersion: "4127"
+  uid: 21fee5d8-d48c-47dd-b9fe-437cf242d6ff
+type: Normal

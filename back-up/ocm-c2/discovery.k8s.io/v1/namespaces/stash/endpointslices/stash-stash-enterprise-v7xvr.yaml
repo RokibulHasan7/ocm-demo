@@ -1,0 +1,79 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.1.10
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124213-183843-64d5ea8ec8eb
+  targetRef:
+    kind: Pod
+    name: stash-stash-enterprise-668f8f9645-v5xdq
+    namespace: stash
+    uid: 813b8bc6-5143-47af-98cf-11b1cb21c60b
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:33Z"
+  creationTimestamp: "2023-08-11T08:42:25Z"
+  generateName: stash-stash-enterprise-
+  generation: 2
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-enterprise
+    app.kubernetes.io/version: v0.30.1
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: stash-enterprise-v0.30.0
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    kubernetes.io/service-name: stash-stash-enterprise
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"a2249dd0-0f2a-489e-b741-79cdc4161e86"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:33Z"
+  name: stash-stash-enterprise-v7xvr
+  namespace: stash
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: stash-stash-enterprise
+    uid: a2249dd0-0f2a-489e-b741-79cdc4161e86
+  resourceVersion: "5515"
+  uid: f4e8730c-439a-4202-8fb3-e0d2fd7394c0
+ports:
+- name: api
+  port: 8443
+  protocol: TCP
+- name: pushgateway
+  port: 56789
+  protocol: TCP

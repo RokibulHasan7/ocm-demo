@@ -1,0 +1,85 @@
+apiVersion: v1
+data:
+  birdmod-run: |
+    #!/bin/bash
+    set -euo pipefail
+    # Calico uses an init system called runit (runsv, sv) inside the
+    # Calico Node containers. Adding this script at the correct location
+    # ($SVDIR) creates a new service which will restart indefinitely. This
+    # service reconfigures the BIRD bgp daemon to listen only on a Linode
+    # private IP address for increased security.
+    DEBUG=""
+    BGP_PORT="179"
+    BIRD_TEMPLATE="/etc/calico/confd/templates/bird.cfg.template"
+    BIRD_CONFIG="/etc/calico/confd/config/bird.cfg"
+    SV_SLEEP_SEC="300"
+    privip() {
+        # Get our Linode private IP address
+        ip -4 addr show eth0 | grep -E '192.168.*/17' \
+            | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+    }
+    export SVDIR="/etc/service/enabled"
+    # Determine whether the bird config already contains the private IP
+    # address, and update the config if it does not
+    if [ ! "$(grep "listen bgp address $(privip)" "$BIRD_TEMPLATE")" ]; then
+        # Create a bird "listen bgp" directive for a private ip
+        listencfg="listen bgp address $(privip) port $BGP_PORT;"
+        if [ ! -z "$DEBUG" ]; then
+            echo "listencfg: $listencfg"
+        fi
+        # Remove all listen directives in the template
+        sed -i'' -e "s/^listen bgp.*//g" "$BIRD_TEMPLATE"
+        # Append the new listen directive to the end of the config
+        echo "$listencfg" >> "$BIRD_TEMPLATE"
+        # Bird will exit with the following error until we wait for confd to
+        # regenerate the config
+        #
+        # > bird: Unable to open configuration file
+        #
+        # This can be confirmed by giving the bird service a log/run file
+        # similar to the one that this service uses, and checking the bird
+        # logs.
+        sleep 20
+        while [ ! -s "$BIRD_CONFIG" ]; do
+            sleep 1
+        done
+        # Restart the bird service to pick up the new configuration
+        sv restart bird /etc/service/enabled/bird
+        if [ ! -z "$DEBUG" ]; then
+            echo "bird restart: $?"
+        fi
+    fi
+    # Sleep so that runit doesn't see this as a failed service
+    sleep "$SV_SLEEP_SEC"
+    # This script will re-run every $SLEEP_SEC
+  log-run: |
+    #!/bin/sh
+    # Output from the birdmod script will appear here
+    LOGDIR=/var/log/calico/birdmod
+    mkdir -p "$LOGDIR"
+    exec svlogd "$LOGDIR"
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"birdmod-run":"#!/bin/bash\nset -euo pipefail\n# Calico uses an init system called runit (runsv, sv) inside the\n# Calico Node containers. Adding this script at the correct location\n# ($SVDIR) creates a new service which will restart indefinitely. This\n# service reconfigures the BIRD bgp daemon to listen only on a Linode\n# private IP address for increased security.\nDEBUG=\"\"\nBGP_PORT=\"179\"\nBIRD_TEMPLATE=\"/etc/calico/confd/templates/bird.cfg.template\"\nBIRD_CONFIG=\"/etc/calico/confd/config/bird.cfg\"\nSV_SLEEP_SEC=\"300\"\nprivip() {\n    # Get our Linode private IP address\n    ip -4 addr show eth0 | grep -E '192.168.*/17' \\\n        | grep -oP '(?\u003c=inet\\s)\\d+(\\.\\d+){3}'\n}\nexport SVDIR=\"/etc/service/enabled\"\n# Determine whether the bird config already contains the private IP\n# address, and update the config if it does not\nif [ ! \"$(grep \"listen bgp address $(privip)\" \"$BIRD_TEMPLATE\")\" ]; then\n    # Create a bird \"listen bgp\" directive for a private ip\n    listencfg=\"listen bgp address $(privip) port $BGP_PORT;\"\n    if [ ! -z \"$DEBUG\" ]; then\n        echo \"listencfg: $listencfg\"\n    fi\n    # Remove all listen directives in the template\n    sed -i'' -e \"s/^listen bgp.*//g\" \"$BIRD_TEMPLATE\"\n    # Append the new listen directive to the end of the config\n    echo \"$listencfg\" \u003e\u003e \"$BIRD_TEMPLATE\"\n    # Bird will exit with the following error until we wait for confd to\n    # regenerate the config\n    #\n    # \u003e bird: Unable to open configuration file\n    #\n    # This can be confirmed by giving the bird service a log/run file\n    # similar to the one that this service uses, and checking the bird\n    # logs.\n    sleep 20\n    while [ ! -s \"$BIRD_CONFIG\" ]; do\n        sleep 1\n    done\n    # Restart the bird service to pick up the new configuration\n    sv restart bird /etc/service/enabled/bird\n    if [ ! -z \"$DEBUG\" ]; then\n        echo \"bird restart: $?\"\n    fi\nfi\n# Sleep so that runit doesn't see this as a failed service\nsleep \"$SV_SLEEP_SEC\"\n# This script will re-run every $SLEEP_SEC\n","log-run":"#!/bin/sh\n# Output from the birdmod script will appear here\nLOGDIR=/var/log/calico/birdmod\nmkdir -p \"$LOGDIR\"\nexec svlogd \"$LOGDIR\"\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"calico-birdmod","namespace":"kube-system"}}
+  creationTimestamp: "2023-08-11T08:00:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:birdmod-run: {}
+        f:log-run: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:12Z"
+  name: calico-birdmod
+  namespace: kube-system
+  resourceVersion: "260"
+  uid: 45c98a44-4207-49eb-89d1-fbb5bc1c6efa

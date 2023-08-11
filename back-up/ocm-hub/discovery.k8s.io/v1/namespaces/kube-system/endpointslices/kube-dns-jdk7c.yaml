@@ -1,0 +1,86 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.0.3
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124210-183840-64d5ea4da98d
+  targetRef:
+    kind: Pod
+    name: coredns-75fd9f59f7-x9g5k
+    namespace: kube-system
+    uid: 4dd731d8-6e6f-4b28-a6df-061b96c155dc
+- addresses:
+  - 10.2.0.2
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124210-183840-64d5ea4da98d
+  targetRef:
+    kind: Pod
+    name: coredns-75fd9f59f7-vch46
+    namespace: kube-system
+    uid: 97470b94-0642-418f-b51a-6f0d8b4c8052
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:01:32Z"
+  creationTimestamp: "2023-08-11T08:00:37Z"
+  generateName: kube-dns-
+  generation: 5
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    k8s-app: kube-dns
+    kubernetes.io/cluster-service: "true"
+    kubernetes.io/name: KubeDNS
+    kubernetes.io/service-name: kube-dns
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:k8s-app: {}
+          f:kubernetes.io/cluster-service: {}
+          f:kubernetes.io/name: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d2399229-c88b-4895-8e31-a16ea66cca20"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:01:32Z"
+  name: kube-dns-jdk7c
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-dns
+    uid: d2399229-c88b-4895-8e31-a16ea66cca20
+  resourceVersion: "713"
+  uid: 0796257a-dfe8-4368-a954-9d1c8ea98a9a
+ports:
+- name: metrics
+  port: 9153
+  protocol: TCP
+- name: dns
+  port: 53
+  protocol: UDP
+- name: dns-tcp
+  port: 53
+  protocol: TCP

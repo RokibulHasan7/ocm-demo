@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-08-11T08:20:50Z"
+  labels:
+    kubernetes.io/metadata.name: open-cluster-management
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: clusteradm
+    operation: Update
+    time: "2023-08-11T08:20:50Z"
+  name: open-cluster-management
+  resourceVersion: "2160"
+  uid: c005e496-b3e6-4c1e-9a7d-9f7107a697ed
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

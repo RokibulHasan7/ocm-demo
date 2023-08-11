@@ -1,0 +1,84 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  annotations:
+    meta.helm.sh/release-name: license-proxyserver
+    meta.helm.sh/release-namespace: kubeops
+  creationTimestamp: "2023-08-11T08:41:57Z"
+  labels:
+    app.kubernetes.io/instance: license-proxyserver
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: license-proxyserver
+    app.kubernetes.io/version: v0.0.4
+    helm.sh/chart: license-proxyserver-v2023.03.23
+    helm.toolkit.fluxcd.io/name: license-proxyserver
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        f:caBundle: {}
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:service:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+          f:port: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:41:57Z"
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:42:02Z"
+  name: v1alpha1.proxyserver.licenses.appscode.com
+  resourceVersion: "4332"
+  uid: 1cb3a699-77da-4c0d-a3b7-64f08361ccbd
+spec:
+  caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lSQUxOZmRCTEx2eXlLUEN5Ni9VWUdSZ2N3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTWpNd09ERXhNRGcwTVRRNFdoY05Nek13T0RBNE1EZzBNVFE0V2pBTgpNUXN3Q1FZRFZRUURFd0pqWVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTG5xCis0QW1uZmsxN2RyZXZkc2Y3U0VEODF3ZnUrZjYvWmUvNnJ0emRTSE9La1RsaUJQRlJKTmlERnBMZlZCbE9oeDkKNVNHbG94Q0dSR04zRWZoN3U1a3E1QTBOS0kzOW9wSDZkMEFya0FCRjJ4aDZic091UE1rZzhzM2oyemlRb0M4Nwp5M1cxS0s4QU5uOWRQYjdyU0xxc0VFbTVLMlA5MWxhbUJJMGc0ZmVBN1dOS01wb3lQWG02WU9VV1FWN2dLQUpmCk9lTVJ2MXRNM2kyVWRreDYvVjBxVzUzK29hY0ZINHUrSUNOc3dwVTI1SjZ4b1A4R3ZBMEVNdEdLWkhXSU9nWGkKRzBzRU8wbGQzZHBWekFIMFp4RXl3a1pRK2x0VktnOHZVL3lmK0RFUUJGenVVc2dYYXU0U1VablhlVm1xTVo1aQpsd0pYZzNicCt0Q3c0YlEvOTZzQ0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUJCZ2dyQmdFRkJRY0RBakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJTS2pwWmd1dWZTNTlmT0FNVVVReDJNKzVqOTh6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFNOGFYZDVTRwpmOTd3dlFQVE1EZWp3eElnWjFhMENRL2NvRHBUMTE1R1RhSHFmWDNHQUNDTkdjbnpEcG44ZFVsSXI5VWtQS3VqCnFBS0FoUTRaRlJZanlEVnpQbGRVU1FRZTI5T1VXd2lnaTExcTN4c3pxUW9BWmdXTjFUZVZscGw3NzlRUnB6WjQKR2swOUpneE9ScS9ZdEo4Nm9BcWVPbUZYb1M0ZVErY2pUblZYMEhON0RRSkxXbGNpcVByWnFqVUQ4VitCcG5XTQpRbm0wVTZQVkVadG5KUUhSMlJPUnl5Ym9laUZBeUJYWll1eFhHeGg4Y0lVaHI0RE5GSENXc0o1QVRoUENQVDVQCkxoaVBiR0JhZlFNd3RDTWl3ZVp2NXBIZ3JoQXE0RlJGcXJteEZUbUN3Z2JJWWhWOGJuQnAyQ2VQMjFtQUt2ZTMKUGNYQkZNS3VBSGU2N1E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  group: proxyserver.licenses.appscode.com
+  groupPriorityMinimum: 10000
+  service:
+    name: license-proxyserver
+    namespace: kubeops
+    port: 443
+  version: v1alpha1
+  versionPriority: 15
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:42:01Z"
+    message: all checks passed
+    reason: Passed
+    status: "True"
+    type: Available

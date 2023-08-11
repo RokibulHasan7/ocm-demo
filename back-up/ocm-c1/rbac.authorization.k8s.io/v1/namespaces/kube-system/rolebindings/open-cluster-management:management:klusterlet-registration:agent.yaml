@@ -1,0 +1,25 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:20:52Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:20:52Z"
+  name: open-cluster-management:management:klusterlet-registration:agent
+  namespace: kube-system
+  resourceVersion: "2293"
+  uid: f4e83ff9-7c95-4551-84fd-a95d04b88f19
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: open-cluster-management:management:klusterlet:extension-apiserver
+subjects:
+- kind: ServiceAccount
+  name: klusterlet-registration-sa
+  namespace: open-cluster-management-agent

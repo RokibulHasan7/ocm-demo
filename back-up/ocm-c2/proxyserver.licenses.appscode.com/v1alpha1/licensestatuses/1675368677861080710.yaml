@@ -1,0 +1,49 @@
+apiVersion: proxyserver.licenses.appscode.com/v1alpha1
+kind: LicenseStatus
+metadata:
+  creationTimestamp: "2023-08-11T08:42:14Z"
+  name: "1675368677861080710"
+  uid: "1675368677861080710"
+spec:
+  features:
+  - kubedb-enterprise
+  user:
+    extra:
+      authentication.kubernetes.io/pod-name:
+      - kubedb-kubedb-ops-manager-bd65c54d-47mgs
+      authentication.kubernetes.io/pod-uid:
+      - 17a51181-a40b-4d9e-90e0-505e3ed98a19
+    groups:
+    - system:serviceaccounts
+    - system:serviceaccounts:kubedb
+    - system:authenticated
+    username: system:serviceaccount:kubedb:kubedb-kubedb-ops-manager
+status:
+  contract:
+    expiryTimestamp: "1970-01-01T00:00:00Z"
+    id: "0"
+    startTimestamp: "1970-01-01T00:00:00Z"
+  license:
+    apiVersion: licenses.appscode.com/v1alpha1
+    clusters:
+    - 2477d4e0-db29-47ac-beeb-aed9cec8bae8
+    features:
+    - kubedb-community
+    - kubedb-ext-stash
+    - kubedb-autoscaler
+    - kubedb-enterprise
+    - panopticon-enterprise
+    - kubedb-monitoring-agent
+    id: "1675368677861080710"
+    issuer: byte.builders
+    kind: License
+    notAfter: "2023-08-14T08:42:14Z"
+    notBefore: "2023-08-11T08:42:14Z"
+    planName: kubedb-enterprise
+    productLine: kubedb
+    reason: ""
+    status: active
+    tierName: enterprise
+    user:
+      email: 328285@id.byte.builders
+      name: rakib-org

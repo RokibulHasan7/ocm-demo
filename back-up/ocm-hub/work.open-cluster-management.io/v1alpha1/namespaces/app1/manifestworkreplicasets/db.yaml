@@ -1,0 +1,100 @@
+apiVersion: work.open-cluster-management.io/v1alpha1
+kind: ManifestWorkReplicaSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"work.open-cluster-management.io/v1alpha1","kind":"ManifestWorkReplicaSet","metadata":{"annotations":{},"name":"db","namespace":"app1"},"spec":{"manifestWorkTemplate":{"workload":{"manifests":[{"apiVersion":"v1","kind":"Namespace","metadata":{"name":"app1"}},{"apiVersion":"kubedb.com/v1alpha2","kind":"Postgres","metadata":{"name":"quick-postgres","namespace":"app1"},"spec":{"storage":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"1Gi"}},"storageClassName":"linode-block-storage-retain"},"storageType":"Durable","terminationPolicy":"Delete","version":"13.2"}}]}},"placementRefs":[{"name":"app1"}]}}
+  creationTimestamp: "2023-08-11T08:46:40Z"
+  finalizers:
+  - work.open-cluster-management.io/manifest-work-cleanup
+  generation: 2
+  managedFields:
+  - apiVersion: work.open-cluster-management.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"work.open-cluster-management.io/manifest-work-cleanup": {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:46:40Z"
+  - apiVersion: work.open-cluster-management.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:manifestWorkTemplate:
+          .: {}
+          f:workload:
+            .: {}
+            f:manifests: {}
+        f:placementRefs: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T09:14:57Z"
+  - apiVersion: work.open-cluster-management.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:summary:
+          .: {}
+          f:Applied: {}
+          f:available: {}
+          f:total: {}
+    manager: work
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:14:57Z"
+  name: db
+  namespace: app1
+  resourceVersion: "7459"
+  uid: 617c868f-fd16-4d43-93ca-1c95b70b20ff
+spec:
+  manifestWorkTemplate:
+    workload:
+      manifests:
+      - apiVersion: v1
+        kind: Namespace
+        metadata:
+          name: app1
+      - apiVersion: kubedb.com/v1alpha2
+        kind: Postgres
+        metadata:
+          name: quick-postgres
+          namespace: app1
+        spec:
+          storage:
+            accessModes:
+            - ReadWriteOnce
+            resources:
+              requests:
+                storage: 1Gi
+            storageClassName: linode-block-storage-retain
+          storageType: Durable
+          terminationPolicy: Delete
+          version: "13.2"
+  placementRefs:
+  - name: app1
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:46:41Z"
+    message: ""
+    reason: AsExpected
+    status: "True"
+    type: PlacementVerified
+  - lastTransitionTime: "2023-08-11T09:14:57Z"
+    message: ""
+    reason: AsExpected
+    status: "True"
+    type: ManifestworkApplied
+  summary:
+    Applied: 1
+    available: 1
+    total: 1

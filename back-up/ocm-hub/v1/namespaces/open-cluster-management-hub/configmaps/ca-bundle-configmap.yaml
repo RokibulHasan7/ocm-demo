@@ -1,0 +1,40 @@
+apiVersion: v1
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDPzCCAiegAwIBAgIIAJyVTW6cplIwDQYJKoZIhvcNAQELBQAwLTErMCkGA1UE
+    AwwiY2x1c3Rlci1tYW5hZ2VyLXdlYmhvb2tAMTY5MTc0MTk4MjAeFw0yMzA4MTEw
+    ODE5NDFaFw0yNDA4MTAwODE5NDJaMC0xKzApBgNVBAMMImNsdXN0ZXItbWFuYWdl
+    ci13ZWJob29rQDE2OTE3NDE5ODIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+    AoIBAQC2YvFspl77kj6u3WaAWuvEbtk5/4UJCxzIE76mBetKAFSmpjnDQtdt7vxf
+    5Mha+PBwCgI+LMt3NV58k5KzNqP2tQXdg91OPfErYy9LxKENNYBwLdbjmsx3qHh9
+    G9m4uD2JpHPSFAkYTAW2GPqFSspRzDcxIAgLDIVXxYdFBs0lmGWMw4g08rnmdMG3
+    VtmZ41Cadny5o9VWyHmvrcbcWw19vxk9E45Eo1gE7XqF57oC3KrHErH/IDpiIXLC
+    4hgnF7lvjLs8ZFG7ZFYYZ1RSM2d6iVhuoI4AVWFHu4XMc8TzzI7CHxU+ZE96mVSJ
+    OevYwCrj4XRHsb+zc1KgU2L1RArjAgMBAAGjYzBhMA4GA1UdDwEB/wQEAwICpDAP
+    BgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTSvT6t1Z+DpFZpeIIq1YaHCxLmWzAf
+    BgNVHSMEGDAWgBTSvT6t1Z+DpFZpeIIq1YaHCxLmWzANBgkqhkiG9w0BAQsFAAOC
+    AQEAEF/hUF3yRGsg/KnFGtZG5w2UMBkwsO6ZQfqKxtMWjfpjb90d0L4oYrovzfZh
+    asSbYMt6rBHN0oLF3xblEnnl6+V3esuHNpe7oq5k8ysEzZWy0K/eHRjr87QtCR7w
+    mEp5SgsERgC4AnhsUehwgghM8Ys55p1K1612lz+HNSEN24G5O8kxMKwS5dkr++KZ
+    38QeQmI4jAvbduVsRAh618bG8JT2LLQ+IRDmzy9A3gxFzPS2ld+oMxHRPgZqTZly
+    9IRQf2DTRRvko8MI5S5aAPZAda7W4yF1cqI8aIb8qexHevf6aKN9H/uqH7MlTnA5
+    MIY/P7rHB1Bt17aS5lJnq4Dmsg==
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-08-11T08:19:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:19:42Z"
+  name: ca-bundle-configmap
+  namespace: open-cluster-management-hub
+  resourceVersion: "2224"
+  uid: 11f4569a-972f-4fa2-b884-130fba567b87

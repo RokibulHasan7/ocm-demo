@@ -1,0 +1,71 @@
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  creationTimestamp: "2023-08-11T08:21:08Z"
+  generateName: ocm-c2-
+  labels:
+    open-cluster-management.io/cluster-name: ocm-c2
+  managedFields:
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:open-cluster-management.io/cluster-name: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T08:21:08Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Approved"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: clusteradm
+    operation: Update
+    subresource: approval
+    time: "2023-08-11T08:21:20Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:certificate: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:21:20Z"
+  name: ocm-c2-mw9z6
+  resourceVersion: "2571"
+  uid: c4afb3cf-433d-4c32-808f-00b84b51cd95
+spec:
+  groups:
+  - system:serviceaccounts
+  - system:serviceaccounts:open-cluster-management
+  - system:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlJQld6Q0NBUUVDQVFBd2daNHhaakFzQmdOVkJBb1RKWE41YzNSbGJUcHZjR1Z1TFdOc2RYTjBaWEl0YldGdQpZV2RsYldWdWREcHZZMjB0WXpJd05nWURWUVFLRXk5emVYTjBaVzA2YjNCbGJpMWpiSFZ6ZEdWeUxXMWhibUZuClpXMWxiblE2YldGdVlXZGxaQzFqYkhWemRHVnljekUwTURJR0ExVUVBeE1yYzNsemRHVnRPbTl3Wlc0dFkyeDEKYzNSbGNpMXRZVzVoWjJWdFpXNTBPbTlqYlMxak1qb3lOMjF4WXpCWk1CTUdCeXFHU000OUFnRUdDQ3FHU000OQpBd0VIQTBJQUJJVmkzRytaakRtVDdYOCtuMHdoaHFwZmN0enQwRFpQc3lpRGtoMmRKMzFwcmhkODA5eG54OFFKCkVBYmduTmF1d2paVE5YcDAzbjNRMHJGSVhpa0txdmlnQURBS0JnZ3Foa2pPUFFRREFnTklBREJGQWlFQWpFU1QKd2c2V255WGV5UFo5SnVBTlV4ZWFORytBUTZXWnQreVJBdnExTWRNQ0lDdjdOdHRsK0srN1IyUFh6bWlRQ0k5dwpNSFJwVmEvTTV4YWlrRUg0bWh3NwotLS0tLUVORCBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0K
+  signerName: kubernetes.io/kube-apiserver-client
+  uid: 73b3e51d-fd1a-436d-a560-5d7454f93e14
+  usages:
+  - digital signature
+  - key encipherment
+  - client auth
+  username: system:serviceaccount:open-cluster-management:cluster-bootstrap
+status:
+  certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5akNDQWJLZ0F3SUJBZ0lSQU5ZUGpieFc1MW1LdExMWUJjN2Ivc1l3RFFZSktvWklodmNOQVFFTEJRQXcKRlRFVE1CRUdBMVVFQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNE1URXdPREUyTWpCYUZ3MHlOREE0TVRBdwpPREUyTWpCYU1JR2VNV1l3TEFZRFZRUUtFeVZ6ZVhOMFpXMDZiM0JsYmkxamJIVnpkR1Z5TFcxaGJtRm5aVzFsCmJuUTZiMk50TFdNeU1EWUdBMVVFQ2hNdmMzbHpkR1Z0T205d1pXNHRZMngxYzNSbGNpMXRZVzVoWjJWdFpXNTAKT20xaGJtRm5aV1F0WTJ4MWMzUmxjbk14TkRBeUJnTlZCQU1USzNONWMzUmxiVHB2Y0dWdUxXTnNkWE4wWlhJdApiV0Z1WVdkbGJXVnVkRHB2WTIwdFl6STZNamR0Y1dNd1dUQVRCZ2NxaGtqT1BRSUJCZ2dxaGtqT1BRTUJCd05DCkFBU0ZZdHh2bVl3NWsrMS9QcDlNSVlhcVgzTGM3ZEEyVDdNb2c1SWRuU2Q5YWE0WGZOUGNaOGZFQ1JBRzRKelcKcnNJMlV6VjZkTjU5ME5LeFNGNHBDcXI0bzFZd1ZEQU9CZ05WSFE4QkFmOEVCQU1DQmFBd0V3WURWUjBsQkF3dwpDZ1lJS3dZQkJRVUhBd0l3REFZRFZSMFRBUUgvQkFJd0FEQWZCZ05WSFNNRUdEQVdnQlI0QngrQy9BRy85KzhOClEzZ3RPZmVLSlMzZTREQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUF0djg2d01UUlpESXVxRk01Q1A3Ni9TVjQKb3pMb2tiRWVQbENuamtLT1RubDZLVXFvOUtyQXgxSGcyRVZyODNSY2xBTGZKeU9NYWJVOXdBZVlZWHBhTkwzQgplR0xVNk91Z2xOVnY4S0tHUjZuYi81dUU2ZzZHR3A4QldwUVg1eVFNSVRJeEk4R0c5UzRmQUNKRnBrRld3bURXCjNkVlUraVB5QnJ0dGtkOURPdW43RUdGZE1WaDExQ0YvM2g3QzkrbjZ1NVljS0xaSGZBM3ZsN0J3VUhtekN2cWgKTDhRRWJhaEY1WnY1TG9HZlpVSmYxemFSWkNNRU1UTkltcnZLckRXNzRRRE1HVmVLbkNzdXpIOE4xdE1tcUtXbwo0dDF3bTV6WVlWOU5nd1BBNXNtYys0QkdaOXNSRmZzdFA5QVFoRkVEdXZaVXMzQmk4M2ZJa3grTzBPY25WQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:21:20Z"
+    lastUpdateTime: "2023-08-11T08:21:20Z"
+    message: This CSR was approved by clusteradm certificate approve.
+    reason: clusteradm Approve
+    status: "True"
+    type: Approved

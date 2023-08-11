@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:01:25Z"
+  name: pod-garbage-collector
+  namespace: kube-system
+  resourceVersion: "358"
+  uid: 4dc0c0ab-3671-4819-b2a8-5e188b568b41
+secrets:
+- name: pod-garbage-collector-token-bzkxw

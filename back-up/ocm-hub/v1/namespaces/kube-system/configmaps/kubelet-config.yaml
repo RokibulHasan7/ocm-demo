@@ -1,0 +1,107 @@
+apiVersion: v1
+data:
+  kubelet: |
+    address: 0.0.0.0
+    apiVersion: kubelet.config.k8s.io/v1beta1
+    authentication:
+      anonymous:
+        enabled: false
+      webhook:
+        cacheTTL: 2m0s
+        enabled: true
+      x509:
+        clientCAFile: /etc/kubernetes/pki/ca.crt
+    authorization:
+      mode: Webhook
+      webhook:
+        cacheAuthorizedTTL: 5m0s
+        cacheUnauthorizedTTL: 30s
+    cgroupDriver: cgroupfs
+    cgroupsPerQOS: true
+    clusterDNS:
+    - 10.128.0.10
+    clusterDomain: cluster.local
+    containerLogMaxFiles: 5
+    containerLogMaxSize: 10Mi
+    contentType: application/vnd.kubernetes.protobuf
+    cpuCFSQuota: true
+    cpuManagerPolicy: none
+    cpuManagerReconcilePeriod: 10s
+    enableControllerAttachDetach: true
+    enableDebuggingHandlers: true
+    enforceNodeAllocatable:
+    - pods
+    eventBurst: 10
+    eventRecordQPS: 5
+    evictionHard:
+      imagefs.available: 15%
+      memory.available: 100Mi
+      nodefs.available: 10%
+      nodefs.inodesFree: 5%
+    evictionPressureTransitionPeriod: 5m0s
+    failSwapOn: true
+    featureGates:
+      # only k8s 1.24+ for "LegacyServiceAccountTokenNoAutoGeneration": false
+      "LegacyServiceAccountTokenNoAutoGeneration": false
+      "EphemeralContainers": true
+      "GracefulNodeShutdown": true
+    fileCheckFrequency: 20s
+    hairpinMode: promiscuous-bridge
+    healthzBindAddress: 127.0.0.1
+    # note, we don't have port pressure on cluster Nodes, so this should be fine as is
+    healthzPort: 10248
+    httpCheckFrequency: 20s
+    imageGCHighThresholdPercent: 85
+    imageGCLowThresholdPercent: 80
+    imageMinimumGCAge: 2m0s
+    iptablesDropBit: 15
+    iptablesMasqueradeBit: 14
+    kind: KubeletConfiguration
+    kubeAPIBurst: 10
+    kubeAPIQPS: 5
+    makeIPTablesUtilChains: true
+    maxOpenFiles: 1000000
+    maxPods: 110
+    nodeStatusUpdateFrequency: 10s
+    oomScoreAdj: -999
+    podPidsLimit: -1
+    # note, we don't have port pressure on cluster Nodes, so this should be fine as is
+    port: 10250
+    registryBurst: 10
+    registryPullQPS: 5
+    resolvConf: /etc/resolv.conf
+    rotateCertificates: true
+    runtimeRequestTimeout: 2m0s
+    serializeImagePulls: true
+    staticPodPath: /etc/kubernetes/manifests
+    streamingConnectionIdleTimeout: 4h0m0s
+    syncFrequency: 1m0s
+    volumeStatsAggPeriod: 1m0s
+    shutdownGracePeriod: 30s
+    shutdownGracePeriodCriticalPods: 10s
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"kubelet":"address: 0.0.0.0\napiVersion: kubelet.config.k8s.io/v1beta1\nauthentication:\n  anonymous:\n    enabled: false\n  webhook:\n    cacheTTL: 2m0s\n    enabled: true\n  x509:\n    clientCAFile: /etc/kubernetes/pki/ca.crt\nauthorization:\n  mode: Webhook\n  webhook:\n    cacheAuthorizedTTL: 5m0s\n    cacheUnauthorizedTTL: 30s\ncgroupDriver: cgroupfs\ncgroupsPerQOS: true\nclusterDNS:\n- 10.128.0.10\nclusterDomain: cluster.local\ncontainerLogMaxFiles: 5\ncontainerLogMaxSize: 10Mi\ncontentType: application/vnd.kubernetes.protobuf\ncpuCFSQuota: true\ncpuManagerPolicy: none\ncpuManagerReconcilePeriod: 10s\nenableControllerAttachDetach: true\nenableDebuggingHandlers: true\nenforceNodeAllocatable:\n- pods\neventBurst: 10\neventRecordQPS: 5\nevictionHard:\n  imagefs.available: 15%\n  memory.available: 100Mi\n  nodefs.available: 10%\n  nodefs.inodesFree: 5%\nevictionPressureTransitionPeriod: 5m0s\nfailSwapOn: true\nfeatureGates:\n  # only k8s 1.24+ for \"LegacyServiceAccountTokenNoAutoGeneration\": false\n  \"LegacyServiceAccountTokenNoAutoGeneration\": false\n  \"EphemeralContainers\": true\n  \"GracefulNodeShutdown\": true\nfileCheckFrequency: 20s\nhairpinMode: promiscuous-bridge\nhealthzBindAddress: 127.0.0.1\n# note, we don't have port pressure on cluster Nodes, so this should be fine as is\nhealthzPort: 10248\nhttpCheckFrequency: 20s\nimageGCHighThresholdPercent: 85\nimageGCLowThresholdPercent: 80\nimageMinimumGCAge: 2m0s\niptablesDropBit: 15\niptablesMasqueradeBit: 14\nkind: KubeletConfiguration\nkubeAPIBurst: 10\nkubeAPIQPS: 5\nmakeIPTablesUtilChains: true\nmaxOpenFiles: 1000000\nmaxPods: 110\nnodeStatusUpdateFrequency: 10s\noomScoreAdj: -999\npodPidsLimit: -1\n# note, we don't have port pressure on cluster Nodes, so this should be fine as is\nport: 10250\nregistryBurst: 10\nregistryPullQPS: 5\nresolvConf: /etc/resolv.conf\nrotateCertificates: true\nruntimeRequestTimeout: 2m0s\nserializeImagePulls: true\nstaticPodPath: /etc/kubernetes/manifests\nstreamingConnectionIdleTimeout: 4h0m0s\nsyncFrequency: 1m0s\nvolumeStatsAggPeriod: 1m0s\nshutdownGracePeriod: 30s\nshutdownGracePeriodCriticalPods: 10s\n"},"kind":"ConfigMap","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"name":"kubelet-config","namespace":"kube-system"}}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:00:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:kubelet: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:12Z"
+  name: kubelet-config
+  namespace: kube-system
+  resourceVersion: "200"
+  uid: 7b26c98f-f4b5-4d04-988d-eda7f0163c8d

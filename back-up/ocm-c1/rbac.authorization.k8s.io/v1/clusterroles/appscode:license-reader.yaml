@@ -1,0 +1,34 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    helm.sh/hook: pre-install,pre-upgrade
+    helm.sh/hook-delete-policy: before-hook-creation
+  creationTimestamp: "2023-08-11T08:42:50Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:helm.sh/hook: {}
+          f:helm.sh/hook-delete-policy: {}
+      f:rules: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:50Z"
+  name: appscode:license-reader
+  resourceVersion: "4492"
+  uid: 2a4002b8-26c2-4d97-9a9a-a33684aa76d3
+rules:
+- apiGroups:
+  - apiregistration.k8s.io
+  resources:
+  - apiservices
+  verbs:
+  - get
+- nonResourceURLs:
+  - /appscode/license
+  verbs:
+  - get

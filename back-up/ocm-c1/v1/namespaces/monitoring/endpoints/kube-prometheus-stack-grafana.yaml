@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:44:04Z"
+  creationTimestamp: "2023-08-11T08:43:38Z"
+  labels:
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: grafana
+    app.kubernetes.io/version: 10.0.3
+    helm.sh/chart: grafana-6.58.7
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:subsets: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:44:06Z"
+  name: kube-prometheus-stack-grafana
+  namespace: monitoring
+  resourceVersion: "5707"
+  uid: 274e060c-4075-4d07-b2ee-66e55fc43c21
+subsets:
+- addresses:
+  - ip: 10.2.1.11
+    nodeName: lke124212-183842-64d5ea639250
+    targetRef:
+      kind: Pod
+      name: kube-prometheus-stack-grafana-77f4cdd9cb-nf5gj
+      namespace: monitoring
+      uid: 797cd73f-9c48-401e-80e4-4da32df462d5
+  ports:
+  - name: http-web
+    port: 3000
+    protocol: TCP

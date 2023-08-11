@@ -1,0 +1,53 @@
+apiVersion: stash.appscode.com/v1beta1
+kind: Task
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:43:15Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-catalog
+    app.kubernetes.io/version: v2023.05.31
+    helm.sh/chart: stash-catalog-v2023.05.31
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: stash.appscode.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:steps: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:15Z"
+  name: elasticsearch-restore-6.2.4
+  resourceVersion: "5052"
+  uid: ff35a787-e8fc-4f0d-8309-f38c723439ae
+spec:
+  steps:
+  - name: elasticsearch-restore-6.2.4
+    params:
+    - name: outputDir
+      value: /stash-tmp/output
+  - name: update-status
+    params:
+    - name: outputDir
+      value: /stash-tmp/output

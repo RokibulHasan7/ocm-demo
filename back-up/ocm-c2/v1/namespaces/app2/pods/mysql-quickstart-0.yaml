@@ -1,0 +1,406 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: fa3c0ce01505679eefe22623d2648fcfe751e0e320a1f0ea22ee65fc4f3686ab
+    cni.projectcalico.org/podIP: 10.2.1.12/32
+    cni.projectcalico.org/podIPs: 10.2.1.12/32
+  creationTimestamp: "2023-08-11T09:15:03Z"
+  generateName: mysql-quickstart-
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+    controller-revision-hash: mysql-quickstart-6db94dd6dc
+    statefulset.kubernetes.io/pod-name: mysql-quickstart-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:controller-revision-hash: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"00fe8290-57ef-4689-aaa1-3ae6619486fd"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"mysql"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"MYSQL_ROOT_PASSWORD"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"MYSQL_ROOT_USERNAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":3306,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/mysql"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"mysql-init"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/scripts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/mysql"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:subdomain: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"data"}:
+            .: {}
+            f:name: {}
+            f:persistentVolumeClaim:
+              .: {}
+              f:claimName: {}
+          k:{"name":"init-scripts"}:
+            .: {}
+            f:emptyDir:
+              .: {}
+              f:medium: {}
+            f:name: {}
+          k:{"name":"tmp"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:15:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cni.projectcalico.org/containerID: {}
+          f:cni.projectcalico.org/podIP: {}
+          f:cni.projectcalico.org/podIPs: {}
+    manager: calico
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:15:23Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.2.1.12"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:15:32Z"
+  name: mysql-quickstart-0
+  namespace: app2
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: mysql-quickstart
+    uid: 00fe8290-57ef-4689-aaa1-3ae6619486fd
+  resourceVersion: "8583"
+  uid: 0f67d004-79c3-417d-b856-c19e3e9c292f
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/instance: mysql-quickstart
+              app.kubernetes.io/managed-by: kubedb.com
+              app.kubernetes.io/name: mysqls.kubedb.com
+          namespaces:
+          - app2
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/instance: mysql-quickstart
+              app.kubernetes.io/managed-by: kubedb.com
+              app.kubernetes.io/name: mysqls.kubedb.com
+          namespaces:
+          - app2
+          topologyKey: failure-domain.beta.kubernetes.io/zone
+        weight: 50
+  containers:
+  - args:
+    - --gtid-mode=ON
+    - --enforce_gtid_consistency=ON
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: mysql-quickstart-auth
+    - name: MYSQL_ROOT_USERNAME
+      valueFrom:
+        secretKeyRef:
+          key: username
+          name: mysql-quickstart-auth
+    image: mysql:8.0.29@sha256:152cf187a3efc56afb0b3877b4d21e231d1d6eb828ca9221056590b0ac834c75
+    imagePullPolicy: IfNotPresent
+    name: mysql
+    ports:
+    - containerPort: 3306
+      name: db
+      protocol: TCP
+    resources:
+      limits:
+        memory: 1Gi
+      requests:
+        cpu: 500m
+        memory: 1Gi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp
+      name: tmp
+    - mountPath: /scripts
+      name: init-scripts
+    - mountPath: /var/lib/mysql
+      name: data
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-wb6ph
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: mysql-quickstart-0
+  initContainers:
+  - command:
+    - /init-script/run.sh
+    image: ghcr.io/kubedb/mysql-init:8.0.31@sha256:815d6b4424e009a2e293c52f006a8eec433f8664776848e1c7a9467ff2ba9beb
+    imagePullPolicy: IfNotPresent
+    name: mysql-init
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/mysql
+      name: data
+    - mountPath: /scripts
+      name: init-scripts
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-wb6ph
+      readOnly: true
+  nodeName: lke124213-183843-64d5ea8ec8eb
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: mysql-quickstart
+  serviceAccountName: mysql-quickstart
+  subdomain: mysql-quickstart-pods
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: data
+    persistentVolumeClaim:
+      claimName: data-mysql-quickstart-0
+  - emptyDir: {}
+    name: tmp
+  - emptyDir:
+      medium: Memory
+    name: init-scripts
+  - name: kube-api-access-wb6ph
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:24Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:32Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:32Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T09:15:13Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://d5331957850146f1ed6be03ea26fe712de29ad04409b06f05c19bf4a428afd50
+    image: sha256:33037edcac9b155a185e9555a5da711d754c88cb244e3d13e214db029c3b28ed
+    imageID: docker.io/library/mysql@sha256:152cf187a3efc56afb0b3877b4d21e231d1d6eb828ca9221056590b0ac834c75
+    lastState: {}
+    name: mysql
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T09:15:32Z"
+  hostIP: 192.168.237.156
+  initContainerStatuses:
+  - containerID: containerd://b1e40732b86b742216a68dd7d4ad800801aa748cb0cbee2df7dc38281f09b6fb
+    image: sha256:bd4092c25b9a8ea6906aeffd1ac5184ba0d47fc221e9f8780f82be4607f297ef
+    imageID: ghcr.io/kubedb/mysql-init@sha256:815d6b4424e009a2e293c52f006a8eec433f8664776848e1c7a9467ff2ba9beb
+    lastState: {}
+    name: mysql-init
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: containerd://b1e40732b86b742216a68dd7d4ad800801aa748cb0cbee2df7dc38281f09b6fb
+        exitCode: 0
+        finishedAt: "2023-08-11T09:15:24Z"
+        reason: Completed
+        startedAt: "2023-08-11T09:15:24Z"
+  phase: Running
+  podIP: 10.2.1.12
+  podIPs:
+  - ip: 10.2.1.12
+  qosClass: Burstable
+  startTime: "2023-08-11T09:15:13Z"

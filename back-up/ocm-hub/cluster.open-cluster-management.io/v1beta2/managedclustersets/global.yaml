@@ -1,0 +1,42 @@
+apiVersion: cluster.open-cluster-management.io/v1beta2
+kind: ManagedClusterSet
+metadata:
+  creationTimestamp: "2023-08-11T08:20:19Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterSelector:
+          .: {}
+          f:labelSelector: {}
+          f:selectorType: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T08:20:19Z"
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: registration
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:21:08Z"
+  name: global
+  resourceVersion: "2523"
+  uid: c324f4c5-72e3-490f-9f38-90975f3a2ea9
+spec:
+  clusterSelector:
+    labelSelector: {}
+    selectorType: LabelSelector
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:21:02Z"
+    message: 2 ManagedClusters selected
+    reason: ClustersSelected
+    status: "False"
+    type: ClusterSetEmpty

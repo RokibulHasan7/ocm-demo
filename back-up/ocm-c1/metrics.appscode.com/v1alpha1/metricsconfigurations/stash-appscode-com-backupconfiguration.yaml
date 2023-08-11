@@ -1,0 +1,89 @@
+apiVersion: metrics.appscode.com/v1alpha1
+kind: MetricsConfiguration
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:43:14Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: metrics.appscode.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:commonLabels: {}
+        f:metrics: {}
+        f:targetRef:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:14Z"
+  name: stash-appscode-com-backupconfiguration
+  resourceVersion: "5046"
+  uid: 0c940387-07ab-4a8c-9b07-0f0184613d81
+spec:
+  commonLabels:
+  - key: invoker_kind
+    value: BackupConfiguration
+  - key: invoker_name
+    valuePath: .metadata.name
+  metrics:
+  - field:
+      path: .metadata.creationTimestamp
+      type: DateTime
+    help: Unix creation timestamp of this BackupConfiguration object
+    metricValue:
+      valueFromPath: .metadata.creationTimestamp
+    name: created
+    type: gauge
+  - help: General information about this BackupConfiguration
+    labels:
+    - key: driver
+      valuePath: .spec.driver
+    - key: repository
+      valuePath: .spec.repository.name
+    - key: schedule
+      valuePath: .spec.schedule
+    - key: target_api_version
+      valuePath: .spec.target.ref.apiVersion
+    - key: target_kind
+      valuePath: .spec.target.ref.kind
+    - key: target_name
+      valuePath: .spec.target.ref.name
+    metricValue:
+      value: 1
+    name: info
+    type: gauge
+  - field:
+      path: .status.conditions
+      type: Array
+    help: Current conditions of this BackupConfiguration
+    labels:
+    - key: condition
+      valuePath: .status.conditions[*].type
+    - key: status
+      valuePath: .status.conditions[*].status
+    metricValue:
+      value: 1
+    name: conditions
+    type: gauge
+  targetRef:
+    apiVersion: stash.appscode.com/v1beta1
+    kind: BackupConfiguration

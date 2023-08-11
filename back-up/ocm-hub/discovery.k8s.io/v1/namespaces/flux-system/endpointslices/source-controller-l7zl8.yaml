@@ -1,0 +1,74 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.2.3
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124210-183840-64d5ea4d7de8
+  targetRef:
+    kind: Pod
+    name: source-controller-6bc6fb78bd-4ljhs
+    namespace: flux-system
+    uid: 0ff7a1bb-66be-4fe7-a1b2-0c39566db529
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:19:12Z"
+  creationTimestamp: "2023-08-11T08:19:08Z"
+  generateName: source-controller-
+  generation: 3
+  labels:
+    app.kubernetes.io/instance: flux-system
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: flux
+    app.kubernetes.io/version: 2.0.1
+    control-plane: controller
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: flux2-2.9.2
+    kubernetes.io/service-name: source-controller
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:control-plane: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.sh/chart: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"31a04409-db61-47ff-a784-7f6601bb38a1"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:19:12Z"
+  name: source-controller-l7zl8
+  namespace: flux-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: source-controller
+    uid: 31a04409-db61-47ff-a784-7f6601bb38a1
+  resourceVersion: "2040"
+  uid: 9aa4c0cd-e554-46f7-81b7-3fdf5ebb9286
+ports:
+- name: http
+  port: 9090
+  protocol: TCP

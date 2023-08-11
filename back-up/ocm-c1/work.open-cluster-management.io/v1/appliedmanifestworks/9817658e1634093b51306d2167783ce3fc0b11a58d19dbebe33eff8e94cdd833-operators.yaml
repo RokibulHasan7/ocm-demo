@@ -1,0 +1,84 @@
+apiVersion: work.open-cluster-management.io/v1
+kind: AppliedManifestWork
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  finalizers:
+  - cluster.open-cluster-management.io/applied-manifest-work-cleanup
+  generation: 1
+  managedFields:
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster.open-cluster-management.io/applied-manifest-work-cleanup": {}
+      f:spec:
+        .: {}
+        f:agentID: {}
+        f:hubHash: {}
+        f:manifestWorkName: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:appliedResources: {}
+    manager: work
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:41:43Z"
+  name: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833-operators
+  resourceVersion: "4097"
+  uid: 0b924118-729a-4aa9-93c1-859f38a470f6
+spec:
+  agentID: 46754a2f-063f-42a7-999f-1cb2e10b26e2
+  hubHash: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833
+  manifestWorkName: operators
+status:
+  appliedResources:
+  - group: ""
+    name: kubeops
+    namespace: ""
+    resource: namespaces
+    uid: b93529bd-3d38-4220-b9d5-8437ae3b7321
+    version: v1
+  - group: helm.toolkit.fluxcd.io
+    name: kube-prometheus-stack
+    namespace: kubeops
+    resource: helmreleases
+    uid: 2007d0a5-ca7e-4ece-b7a2-c2e84c24e9d7
+    version: v2beta1
+  - group: helm.toolkit.fluxcd.io
+    name: kubedb
+    namespace: kubeops
+    resource: helmreleases
+    uid: 96c38a99-cb14-41ef-ab84-83f85d83dcae
+    version: v2beta1
+  - group: helm.toolkit.fluxcd.io
+    name: license-proxyserver
+    namespace: kubeops
+    resource: helmreleases
+    uid: 5bd1619b-8333-4153-b656-19969462563a
+    version: v2beta1
+  - group: helm.toolkit.fluxcd.io
+    name: stash
+    namespace: kubeops
+    resource: helmreleases
+    uid: 29d53088-3cbf-441f-b0c5-ea085e693360
+    version: v2beta1
+  - group: source.toolkit.fluxcd.io
+    name: appscode
+    namespace: kubeops
+    resource: helmrepositories
+    uid: 05542dc0-a2c1-4dbd-b1e4-55507c3cea4e
+    version: v1beta2
+  - group: source.toolkit.fluxcd.io
+    name: prometheus-community
+    namespace: kubeops
+    resource: helmrepositories
+    uid: c8654aee-22ad-46f1-a87f-1a7e803ba3a3
+    version: v1beta2

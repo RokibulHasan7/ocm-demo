@@ -1,0 +1,53 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2023-08-11T08:20:49Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:20:49Z"
+  name: open-cluster-management:klusterlet-work:agent
+  resourceVersion: "2263"
+  uid: c51ab31b-743f-4bbe-954b-c3d7e509d73b
+rules:
+- apiGroups:
+  - work.open-cluster-management.io
+  resources:
+  - appliedmanifestworks
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - work.open-cluster-management.io
+  resources:
+  - appliedmanifestworks/status
+  verbs:
+  - patch
+  - update
+- apiGroups:
+  - work.open-cluster-management.io
+  resources:
+  - appliedmanifestworks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - authorization.k8s.io
+  resources:
+  - subjectaccessreviews
+  verbs:
+  - create
+- apiGroups:
+  - ""
+  resources:
+  - serviceaccounts
+  verbs:
+  - impersonate

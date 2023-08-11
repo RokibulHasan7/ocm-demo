@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:22:32Z"
+  name: default
+  namespace: kubeops
+  resourceVersion: "2733"
+  uid: 4cbd7362-8dec-4835-b8bd-1fa6a721d135
+secrets:
+- name: default-token-7ph2x

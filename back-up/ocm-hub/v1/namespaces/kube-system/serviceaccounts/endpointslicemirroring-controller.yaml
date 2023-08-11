@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:00:24Z"
+  name: endpointslicemirroring-controller
+  namespace: kube-system
+  resourceVersion: "379"
+  uid: 0e842e7d-c753-4001-8a03-7d060933eb4f
+secrets:
+- name: endpointslicemirroring-controller-token-28qsq

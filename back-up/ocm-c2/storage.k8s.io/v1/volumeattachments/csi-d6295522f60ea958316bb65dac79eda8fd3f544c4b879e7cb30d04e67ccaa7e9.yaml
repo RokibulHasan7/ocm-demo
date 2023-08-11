@@ -1,0 +1,52 @@
+apiVersion: storage.k8s.io/v1
+kind: VolumeAttachment
+metadata:
+  annotations:
+    csi.alpha.kubernetes.io/node-id: "48580147"
+  creationTimestamp: "2023-08-11T09:15:13Z"
+  finalizers:
+  - external-attacher/linodebs-csi-linode-com
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:csi.alpha.kubernetes.io/node-id: {}
+        f:finalizers:
+          .: {}
+          v:"external-attacher/linodebs-csi-linode-com": {}
+    manager: csi-attacher
+    operation: Update
+    time: "2023-08-11T09:15:13Z"
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:attacher: {}
+        f:nodeName: {}
+        f:source:
+          f:persistentVolumeName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:13Z"
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:attached: {}
+    manager: csi-attacher
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:15:16Z"
+  name: csi-d6295522f60ea958316bb65dac79eda8fd3f544c4b879e7cb30d04e67ccaa7e9
+  resourceVersion: "8543"
+  uid: c125212f-dade-48de-9c9c-ed2a274f9e8b
+spec:
+  attacher: linodebs.csi.linode.com
+  nodeName: lke124213-183843-64d5ea8ec8eb
+  source:
+    persistentVolumeName: pvc-caa4af0b08374a4b
+status:
+  attached: true

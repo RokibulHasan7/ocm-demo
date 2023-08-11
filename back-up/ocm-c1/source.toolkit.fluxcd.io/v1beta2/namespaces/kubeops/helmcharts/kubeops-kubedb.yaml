@@ -1,0 +1,92 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmChart
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  managedFields:
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:chart: {}
+        f:interval: {}
+        f:reconcileStrategy: {}
+        f:sourceRef:
+          .: {}
+          f:kind: {}
+          f:name: {}
+        f:version: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"finalizers.fluxcd.io": {}
+    manager: source-controller
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:artifact:
+          .: {}
+          f:digest: {}
+          f:lastUpdateTime: {}
+          f:path: {}
+          f:revision: {}
+          f:size: {}
+          f:url: {}
+        f:conditions: {}
+        f:observedChartName: {}
+        f:observedGeneration: {}
+        f:observedSourceArtifactRevision: {}
+        f:url: {}
+    manager: source-controller
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:41:46Z"
+  name: kubeops-kubedb
+  namespace: kubeops
+  resourceVersion: "4167"
+  uid: 115c449e-fb0a-47c3-97ef-d027fbbeec7e
+spec:
+  chart: kubedb
+  interval: 5m0s
+  reconcileStrategy: ChartVersion
+  sourceRef:
+    kind: HelmRepository
+    name: appscode
+  version: v2023.06.13-rc.0
+status:
+  artifact:
+    digest: sha256:0ebd43373ba8e75feb632283634a3e8b6099d7a3cb817be143727c72890b5cf7
+    lastUpdateTime: "2023-08-11T08:41:46Z"
+    path: helmchart/kubeops/kubeops-kubedb/kubedb-v2023.06.13-rc.0.tgz
+    revision: v2023.06.13-rc.0
+    size: 177565
+    url: http://source-controller.flux-system.svc.cluster.local./helmchart/kubeops/kubeops-kubedb/kubedb-v2023.06.13-rc.0.tgz
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:41:46Z"
+    message: pulled 'kubedb' chart with version 'v2023.06.13-rc.0'
+    observedGeneration: 1
+    reason: ChartPullSucceeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2023-08-11T08:41:46Z"
+    message: pulled 'kubedb' chart with version 'v2023.06.13-rc.0'
+    observedGeneration: 1
+    reason: ChartPullSucceeded
+    status: "True"
+    type: ArtifactInStorage
+  observedChartName: kubedb
+  observedGeneration: 1
+  observedSourceArtifactRevision: sha256:c9a5f9e8ab928aadbd8d07ed49862fdcd04a074a21ae05f3aa81abc859fc7cae
+  url: http://source-controller.flux-system.svc.cluster.local./helmchart/kubeops/kubeops-kubedb/latest.tar.gz

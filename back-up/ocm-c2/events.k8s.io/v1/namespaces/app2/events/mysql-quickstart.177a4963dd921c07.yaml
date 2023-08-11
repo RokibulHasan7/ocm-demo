@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:15:03Z"
+deprecatedLastTimestamp: "2023-08-11T09:15:03Z"
+deprecatedSource:
+  component: statefulset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:15:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:03Z"
+  name: mysql-quickstart.177a4963dd921c07
+  namespace: app2
+  resourceVersion: "8502"
+  uid: e55ace99-1de4-4edc-8168-28b8746d7411
+note: create Pod mysql-quickstart-0 in StatefulSet mysql-quickstart successful
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: StatefulSet
+  name: mysql-quickstart
+  namespace: app2
+  resourceVersion: "8495"
+  uid: 00fe8290-57ef-4689-aaa1-3ae6619486fd
+type: Normal

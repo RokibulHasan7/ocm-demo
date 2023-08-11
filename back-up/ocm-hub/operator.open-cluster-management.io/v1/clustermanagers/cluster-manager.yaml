@@ -1,0 +1,342 @@
+apiVersion: operator.open-cluster-management.io/v1
+kind: ClusterManager
+metadata:
+  creationTimestamp: "2023-08-11T08:19:37Z"
+  finalizers:
+  - operator.open-cluster-management.io/cluster-manager-cleanup
+  generation: 3
+  managedFields:
+  - apiVersion: operator.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:addOnManagerImagePullSpec: {}
+        f:deployOption:
+          .: {}
+          f:mode: {}
+        f:placementImagePullSpec: {}
+        f:registrationConfiguration:
+          .: {}
+          f:featureGates: {}
+        f:registrationImagePullSpec: {}
+        f:workImagePullSpec: {}
+    manager: clusteradm
+    operation: Update
+    time: "2023-08-11T08:19:37Z"
+  - apiVersion: operator.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"operator.open-cluster-management.io/cluster-manager-cleanup": {}
+      f:spec:
+        f:nodePlacement: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:19:37Z"
+  - apiVersion: operator.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:workConfiguration:
+          .: {}
+          f:featureGates: {}
+    manager: kubectl-edit
+    operation: Update
+    time: "2023-08-11T08:41:39Z"
+  - apiVersion: operator.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:observedGeneration: {}
+        f:relatedResources: {}
+    manager: registration-operator
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:41:46Z"
+  name: cluster-manager
+  resourceVersion: "4459"
+  uid: f461ab70-b950-41cf-be8c-b94255c055c7
+spec:
+  addOnManagerImagePullSpec: quay.io/open-cluster-management/addon-manager:v0.7.0
+  deployOption:
+    mode: Default
+  nodePlacement: {}
+  placementImagePullSpec: quay.io/open-cluster-management/placement:v0.11.0
+  registrationConfiguration:
+    featureGates:
+    - feature: DefaultClusterSet
+      mode: Enable
+  registrationImagePullSpec: quay.io/open-cluster-management/registration:v0.11.0
+  workConfiguration:
+    featureGates:
+    - feature: ManifestWorkReplicaSet
+      mode: Enable
+  workImagePullSpec: quay.io/open-cluster-management/work:v0.11.0
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:19:37Z"
+    message: Do not support StorageVersionMigration
+    reason: StorageVersionMigrationFailed
+    status: "False"
+    type: MigrationSucceeded
+  - lastTransitionTime: "2023-08-11T08:20:19Z"
+    message: Registration is managing credentials
+    observedGeneration: 3
+    reason: RegistrationFunctional
+    status: "False"
+    type: HubRegistrationDegraded
+  - lastTransitionTime: "2023-08-11T08:20:24Z"
+    message: Placement is scheduling placement decisions
+    observedGeneration: 3
+    reason: PlacementFunctional
+    status: "False"
+    type: HubPlacementDegraded
+  - lastTransitionTime: "2023-08-11T08:19:43Z"
+    message: Feature gates are all valid
+    reason: FeatureGatesAllValid
+    status: "True"
+    type: ValidFeatureGates
+  - lastTransitionTime: "2023-08-11T08:41:46Z"
+    message: Components of cluster manager are up to date
+    reason: ClusterManagerUpToDate
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-08-11T08:19:43Z"
+    message: Components of cluster manager are applied
+    reason: ClusterManagerApplied
+    status: "True"
+    type: Applied
+  generations:
+  - group: apps
+    lastGeneration: 1
+    name: cluster-manager-registration-controller
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: apps
+    lastGeneration: 1
+    name: cluster-manager-registration-webhook
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: apps
+    lastGeneration: 2
+    name: cluster-manager-work-webhook
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: apps
+    lastGeneration: 1
+    name: cluster-manager-placement-controller
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: apps
+    lastGeneration: 1
+    name: cluster-manager-work-controller
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  observedGeneration: 3
+  relatedResources:
+  - group: apiextensions.k8s.io
+    name: clustermanagementaddons.addon.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: managedclusters.cluster.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: managedclustersets.cluster.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: manifestworks.work.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: manifestworkreplicasets.work.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: managedclusteraddons.addon.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: managedclustersetbindings.cluster.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: placements.cluster.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: addondeploymentconfigs.addon.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: placementdecisions.cluster.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: addonplacementscores.cluster.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: ""
+    name: open-cluster-management-hub
+    namespace: ""
+    resource: namespaces
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-registration:controller
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-registration:controller
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: ""
+    name: registration-controller-sa
+    namespace: open-cluster-management-hub
+    resource: serviceaccounts
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-registration:webhook
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-registration:webhook
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: ""
+    name: registration-webhook-sa
+    namespace: open-cluster-management-hub
+    resource: serviceaccounts
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-work:webhook
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-work:webhook
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: ""
+    name: work-webhook-sa
+    namespace: open-cluster-management-hub
+    resource: serviceaccounts
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-placement:controller
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-placement:controller
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: ""
+    name: placement-controller-sa
+    namespace: open-cluster-management-hub
+    resource: serviceaccounts
+    version: v1
+  - group: ""
+    name: cluster-manager-registration-webhook
+    namespace: open-cluster-management-hub
+    resource: services
+    version: v1
+  - group: ""
+    name: cluster-manager-work-webhook
+    namespace: open-cluster-management-hub
+    resource: services
+    version: v1
+  - group: apps
+    name: cluster-manager-registration-controller
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: apps
+    name: cluster-manager-registration-webhook
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: apps
+    name: cluster-manager-work-webhook
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: apps
+    name: cluster-manager-placement-controller
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1
+  - group: admissionregistration.k8s.io
+    name: managedclustervalidators.admission.cluster.open-cluster-management.io
+    namespace: ""
+    resource: validatingwebhookconfigurations
+    version: v1
+  - group: admissionregistration.k8s.io
+    name: managedclustermutators.admission.cluster.open-cluster-management.io
+    namespace: ""
+    resource: mutatingwebhookconfigurations
+    version: v1
+  - group: admissionregistration.k8s.io
+    name: managedclustersetbindingvalidators.admission.cluster.open-cluster-management.io
+    namespace: ""
+    resource: validatingwebhookconfigurations
+    version: v1
+  - group: admissionregistration.k8s.io
+    name: managedclustersetbindingv1beta1validators.admission.cluster.open-cluster-management.io
+    namespace: ""
+    resource: validatingwebhookconfigurations
+    version: v1
+  - group: admissionregistration.k8s.io
+    name: manifestworkvalidators.admission.work.open-cluster-management.io
+    namespace: ""
+    resource: validatingwebhookconfigurations
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-work:controller
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:cluster-manager-work:controller
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: ""
+    name: work-controller-sa
+    namespace: open-cluster-management-hub
+    resource: serviceaccounts
+    version: v1
+  - group: apps
+    name: cluster-manager-work-controller
+    namespace: open-cluster-management-hub
+    resource: deployments
+    version: v1

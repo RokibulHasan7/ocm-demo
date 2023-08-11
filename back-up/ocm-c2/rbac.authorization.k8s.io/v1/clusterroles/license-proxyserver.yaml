@@ -1,0 +1,47 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    meta.helm.sh/release-name: license-proxyserver
+    meta.helm.sh/release-namespace: kubeops
+  creationTimestamp: "2023-08-11T08:41:57Z"
+  labels:
+    app.kubernetes.io/instance: license-proxyserver
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: license-proxyserver
+    app.kubernetes.io/version: v0.0.4
+    helm.sh/chart: license-proxyserver-v2023.03.23
+    helm.toolkit.fluxcd.io/name: license-proxyserver
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:rules: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:41:57Z"
+  name: license-proxyserver
+  resourceVersion: "4289"
+  uid: 90e86d23-d762-4f9f-a47a-449a5092ed3b
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - get

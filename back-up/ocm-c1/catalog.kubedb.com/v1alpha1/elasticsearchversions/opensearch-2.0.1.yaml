@@ -1,0 +1,105 @@
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: ElasticsearchVersion
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:43:03Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-catalog
+    app.kubernetes.io/version: v2023.06.13-rc.0
+    helm.sh/chart: kubedb-catalog-v2023.06.13-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: catalog.kubedb.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:authPlugin: {}
+        f:dashboard:
+          .: {}
+          f:image: {}
+        f:dashboardInitContainer:
+          .: {}
+          f:yqImage: {}
+        f:db:
+          .: {}
+          f:image: {}
+        f:distribution: {}
+        f:exporter:
+          .: {}
+          f:image: {}
+        f:initContainer:
+          .: {}
+          f:image: {}
+          f:yqImage: {}
+        f:podSecurityPolicies:
+          .: {}
+          f:databasePolicyName: {}
+        f:stash:
+          .: {}
+          f:addon:
+            .: {}
+            f:backupTask:
+              .: {}
+              f:name: {}
+              f:params: {}
+            f:restoreTask:
+              .: {}
+              f:name: {}
+              f:params: {}
+        f:version: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:03Z"
+  name: opensearch-2.0.1
+  resourceVersion: "4650"
+  uid: da3f4e09-4ece-4231-a4d0-7e98d64a4b6a
+spec:
+  authPlugin: OpenSearch
+  dashboard:
+    image: opensearchproject/opensearch-dashboards:2.0.1
+  dashboardInitContainer:
+    yqImage: ghcr.io/kubedb/elasticsearch-dashboard-init:2.0.1-opensearch-v2023.02.27
+  db:
+    image: opensearchproject/opensearch:2.0.1
+  distribution: OpenSearch
+  exporter:
+    image: prometheuscommunity/elasticsearch-exporter:v1.3.0
+  initContainer:
+    image: tianon/toybox:0.8.4
+    yqImage: ghcr.io/kubedb/elasticsearch-init:2.0.1-opensearch-v2023.02.27
+  podSecurityPolicies:
+    databasePolicyName: elasticsearch-db
+  stash:
+    addon:
+      backupTask:
+        name: elasticsearch-backup-7.14.0
+        params:
+        - name: args
+          value: --match=^(?![.])(?!security-auditlog)(?!kubedb-system).+
+      restoreTask:
+        name: elasticsearch-restore-7.14.0
+        params:
+        - name: args
+          value: --match=^(?![.])(?!security-auditlog)(?!kubedb-system).+
+  version: 2.0.1

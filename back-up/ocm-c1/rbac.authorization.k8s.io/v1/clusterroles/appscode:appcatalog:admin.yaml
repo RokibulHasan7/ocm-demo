@@ -1,0 +1,37 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    helm.sh/hook: pre-install,pre-upgrade
+    helm.sh/hook-delete-policy: before-hook-creation
+  creationTimestamp: "2023-08-11T08:42:45Z"
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:helm.sh/hook: {}
+          f:helm.sh/hook-delete-policy: {}
+        f:labels:
+          .: {}
+          f:rbac.authorization.k8s.io/aggregate-to-admin: {}
+          f:rbac.authorization.k8s.io/aggregate-to-edit: {}
+      f:rules: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:45Z"
+  name: appscode:appcatalog:admin
+  resourceVersion: "4446"
+  uid: 1d8c9ad4-fae8-43a7-9966-fad2fa2aebaa
+rules:
+- apiGroups:
+  - appcatalog.appscode.com
+  resources:
+  - '*'
+  verbs:
+  - '*'

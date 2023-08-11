@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:00:37Z"
+  name: default
+  namespace: kube-node-lease
+  resourceVersion: "486"
+  uid: c5ab739e-dd45-4bc0-bf1e-92a75071512d
+secrets:
+- name: default-token-r5pxx

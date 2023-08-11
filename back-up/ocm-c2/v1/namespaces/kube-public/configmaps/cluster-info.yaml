@@ -1,0 +1,46 @@
+apiVersion: v1
+data:
+  jws-kubeconfig-q5meyq: eyJhbGciOiJIUzI1NiIsImtpZCI6InE1bWV5cSJ9..lSSImvO5qjDyRy4nv7OhZH7-elEpRcldkBhp24z3amk
+  kubeconfig: |
+    apiVersion: v1
+    clusters:
+    - cluster:
+        certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+        server: https://dce519b6-f20f-4691-96af-31bf64dab68b.us-southeast-2.linodelke.net:443
+      name: ""
+    contexts: null
+    current-context: ""
+    kind: Config
+    preferences: {}
+    users: null
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-08-11T08:01:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data: {}
+    manager: kubeadm-v1.26.3
+    operation: Update
+    time: "2023-08-11T08:01:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:kubeconfig: {}
+    manager: manager
+    operation: Update
+    time: "2023-08-11T08:01:39Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:jws-kubeconfig-q5meyq: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:01:47Z"
+  name: cluster-info
+  namespace: kube-public
+  resourceVersion: "7264"
+  uid: 774009d5-3c46-4c77-8397-db0f4415df33

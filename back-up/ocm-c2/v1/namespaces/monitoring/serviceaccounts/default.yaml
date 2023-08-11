@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:42:07Z"
+  name: default
+  namespace: monitoring
+  resourceVersion: "4451"
+  uid: 8b630cdb-3b41-45ac-9507-e8dfe0ccf755
+secrets:
+- name: default-token-jrrlj

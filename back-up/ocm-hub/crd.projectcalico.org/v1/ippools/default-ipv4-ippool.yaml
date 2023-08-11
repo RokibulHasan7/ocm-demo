@@ -1,0 +1,40 @@
+apiVersion: crd.projectcalico.org/v1
+kind: IPPool
+metadata:
+  annotations:
+    projectcalico.org/metadata: '{"uid":"7ea35a1a-79e4-420c-bfbb-e7ad84fe7713","creationTimestamp":"2023-08-11T08:01:30Z"}'
+  creationTimestamp: "2023-08-11T08:01:30Z"
+  generation: 1
+  managedFields:
+  - apiVersion: crd.projectcalico.org/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:projectcalico.org/metadata: {}
+      f:spec:
+        .: {}
+        f:allowedUses: {}
+        f:blockSize: {}
+        f:cidr: {}
+        f:ipipMode: {}
+        f:natOutgoing: {}
+        f:nodeSelector: {}
+        f:vxlanMode: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T08:01:30Z"
+  name: default-ipv4-ippool
+  resourceVersion: "677"
+  uid: a422be1d-6e0e-4702-9ad4-dc8511d86f39
+spec:
+  allowedUses:
+  - Workload
+  - Tunnel
+  blockSize: 26
+  cidr: 10.2.0.0/16
+  ipipMode: Always
+  natOutgoing: true
+  nodeSelector: all()
+  vxlanMode: Never

@@ -1,0 +1,87 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.2.10
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124213-183843-64d5ea8eb6a0
+  targetRef:
+    kind: Pod
+    name: alertmanager-kube-prometheus-stack-alertmanager-0
+    namespace: monitoring
+    uid: 3bb340d7-0c92-4a9e-8413-223f402bdad8
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:41Z"
+  creationTimestamp: "2023-08-11T08:42:21Z"
+  generateName: kube-prometheus-stack-alertmanager-
+  generation: 3
+  labels:
+    app: kube-prometheus-stack-alertmanager
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 48.3.1
+    chart: kube-prometheus-stack-48.3.1
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    heritage: Helm
+    kubernetes.io/service-name: kube-prometheus-stack-alertmanager
+    release: kube-prometheus-stack
+    self-monitor: "true"
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:heritage: {}
+          f:kubernetes.io/service-name: {}
+          f:release: {}
+          f:self-monitor: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"bab6517b-1759-443b-b6ab-df393ae22ed8"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:41Z"
+  name: kube-prometheus-stack-alertmanager-4kn69
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-prometheus-stack-alertmanager
+    uid: bab6517b-1759-443b-b6ab-df393ae22ed8
+  resourceVersion: "5606"
+  uid: 647aa29a-1845-4a00-9396-f5338c72acc1
+ports:
+- name: reloader-web
+  port: 8080
+  protocol: TCP
+- name: http-web
+  port: 9093
+  protocol: TCP

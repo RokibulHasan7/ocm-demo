@@ -1,0 +1,76 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.1.13
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea639250
+  targetRef:
+    kind: Pod
+    name: kubedb-kubedb-ops-manager-85bdb8f5d8-5qxf4
+    namespace: kubedb
+    uid: 68bd001b-49f6-4622-80be-fb8feee2bb27
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T09:11:57Z"
+  creationTimestamp: "2023-08-11T08:43:02Z"
+  generateName: kubedb-kubedb-ops-manager-
+  generation: 7
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-ops-manager
+    app.kubernetes.io/version: v0.21.0-rc.0
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: kubedb-ops-manager-v0.21.0-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    kubernetes.io/service-name: kubedb-kubedb-ops-manager
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"330e1065-1748-449b-bbea-5136f403a424"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:11:57Z"
+  name: kubedb-kubedb-ops-manager-6xrqc
+  namespace: kubedb
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kubedb-kubedb-ops-manager
+    uid: 330e1065-1748-449b-bbea-5136f403a424
+  resourceVersion: "8323"
+  uid: a3de5a87-cce3-4f04-b82d-c4a262d04d89
+ports:
+- name: metrics
+  port: 8080
+  protocol: TCP

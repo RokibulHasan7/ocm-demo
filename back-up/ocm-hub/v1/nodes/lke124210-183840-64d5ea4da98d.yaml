@@ -1,0 +1,290 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    csi.volume.kubernetes.io/nodeid: '{"linodebs.csi.linode.com":"48580090"}'
+    kubeadm.alpha.kubernetes.io/cri-socket: unix:///run/containerd/containerd.sock
+    lke.linode.com/wgip: 172.31.0.1
+    lke.linode.com/wgpub: IGOiAG4F9FFU+c3TM3sfKtiaRO4mR4HilIyZ903GbCo=
+    node.alpha.kubernetes.io/ttl: "0"
+    projectcalico.org/IPv4Address: 192.168.193.23/17
+    projectcalico.org/IPv4IPIPTunnelAddr: 10.2.0.1
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2023-08-11T08:01:10Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/instance-type: g6-dedicated-2
+    beta.kubernetes.io/os: linux
+    failure-domain.beta.kubernetes.io/region: us-southeast
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: lke124210-183840-64d5ea4da98d
+    kubernetes.io/os: linux
+    lke.linode.com/pool-id: "183840"
+    node.kubernetes.io/instance-type: g6-dedicated-2
+    topology.kubernetes.io/region: us-southeast
+    topology.linode.com/region: us-southeast
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:node.alpha.kubernetes.io/ttl: {}
+      f:spec:
+        f:podCIDR: {}
+        f:podCIDRs:
+          .: {}
+          v:"10.2.0.0/24": {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:01:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubeadm.alpha.kubernetes.io/cri-socket: {}
+    manager: kubeadm
+    operation: Update
+    time: "2023-08-11T08:01:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:volumes.kubernetes.io/controller-managed-attach-detach: {}
+        f:labels:
+          .: {}
+          f:beta.kubernetes.io/arch: {}
+          f:beta.kubernetes.io/os: {}
+          f:kubernetes.io/arch: {}
+          f:kubernetes.io/hostname: {}
+          f:kubernetes.io/os: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T08:01:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:beta.kubernetes.io/instance-type: {}
+          f:failure-domain.beta.kubernetes.io/region: {}
+          f:node.kubernetes.io/instance-type: {}
+          f:topology.kubernetes.io/region: {}
+      f:spec:
+        f:providerID: {}
+    manager: linode-cloud-controller-manager-linux-amd64
+    operation: Update
+    time: "2023-08-11T08:01:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:addresses:
+          k:{"type":"ExternalIP"}:
+            .: {}
+            f:address: {}
+            f:type: {}
+          k:{"type":"InternalIP"}:
+            f:address: {}
+    manager: linode-cloud-controller-manager-linux-amd64
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:01:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:lke.linode.com/wgip: {}
+          f:lke.linode.com/wgpub: {}
+    manager: kubectl-annotate
+    operation: Update
+    time: "2023-08-11T08:01:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:lke.linode.com/pool-id: {}
+    manager: kubectl-label
+    operation: Update
+    time: "2023-08-11T08:01:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:projectcalico.org/IPv4Address: {}
+          f:projectcalico.org/IPv4IPIPTunnelAddr: {}
+      f:status:
+        f:conditions:
+          k:{"type":"NetworkUnavailable"}:
+            .: {}
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: calico-node
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:01:30Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:csi.volume.kubernetes.io/nodeid: {}
+        f:labels:
+          f:topology.linode.com/region: {}
+      f:status:
+        f:conditions:
+          k:{"type":"DiskPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"MemoryPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"PIDPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"Ready"}:
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+        f:images: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:57:01Z"
+  name: lke124210-183840-64d5ea4da98d
+  resourceVersion: "11196"
+  uid: a945754b-5c2b-483f-92b1-f6e834b990e0
+spec:
+  podCIDR: 10.2.0.0/24
+  podCIDRs:
+  - 10.2.0.0/24
+  providerID: linode://48580090
+status:
+  addresses:
+  - address: lke124210-183840-64d5ea4da98d
+    type: Hostname
+  - address: 170.187.155.45
+    type: ExternalIP
+  - address: 192.168.193.23
+    type: InternalIP
+  allocatable:
+    cpu: "2"
+    ephemeral-storage: "76019768399"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 3925908Ki
+    pods: "110"
+  capacity:
+    cpu: "2"
+    ephemeral-storage: 82486728Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 4028308Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2023-08-11T08:01:30Z"
+    lastTransitionTime: "2023-08-11T08:01:30Z"
+    message: Calico is running on this node
+    reason: CalicoIsUp
+    status: "False"
+    type: NetworkUnavailable
+  - lastHeartbeatTime: "2023-08-11T09:57:01Z"
+    lastTransitionTime: "2023-08-11T08:01:09Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2023-08-11T09:57:01Z"
+    lastTransitionTime: "2023-08-11T08:01:09Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2023-08-11T09:57:01Z"
+    lastTransitionTime: "2023-08-11T08:01:09Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2023-08-11T09:57:01Z"
+    lastTransitionTime: "2023-08-11T08:01:23Z"
+    message: kubelet is posting ready status. AppArmor enabled
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - docker.io/calico/cni@sha256:a38d53cb8688944eafede2f0eadc478b1b403cefeff7953da57fe9cd2d65e977
+    - docker.io/calico/cni:v3.25.0
+    sizeBytes: 87984941
+  - names:
+    - docker.io/calico/node@sha256:a85123d1882832af6c45b5e289c6bb99820646cb7d4f6006f98095168808b1e6
+    - docker.io/calico/node:v3.25.0
+    sizeBytes: 87185935
+  - names:
+    - docker.io/bitnami/kubectl@sha256:c4a8d9c0cd9c5f903830ea64816c83adf307ff1d775bc3e5b77f1d49d3960205
+    - docker.io/bitnami/kubectl:1.16.3-debian-10-r36
+    sizeBytes: 65850129
+  - names:
+    - docker.io/calico/kube-controllers@sha256:c45af3a9692d87a527451cf544557138fedf86f92b6e39bf2003e2fdb848dce3
+    - docker.io/calico/kube-controllers:v3.25.0
+    sizeBytes: 31271800
+  - names:
+    - docker.io/linode/csi-provisioner@sha256:bbae7cde811054f6a51060ba7a42d8bf2469b8c574abb50fec8b46c13e32541e
+    - docker.io/linode/csi-provisioner:v3.0.0
+    sizeBytes: 22727635
+  - names:
+    - docker.io/linode/kube-proxy-amd64@sha256:4dc01b17791c56df758a2bd90f8ed03139efa55256d8c0213f1db3fbc2476866
+    - docker.io/linode/kube-proxy-amd64:v1.26.7
+    sizeBytes: 21762884
+  - names:
+    - docker.io/linode/csi-resizer@sha256:d2d2e429a0a87190ee73462698a02a08e555055246ad87ad979b464b999fedae
+    - docker.io/linode/csi-resizer:v1.3.0
+    sizeBytes: 21669981
+  - names:
+    - docker.io/linode/csi-attacher@sha256:221c1c6930fb1cb93b57762a74ccb59194c4c74a63c0fd49309d1158d4f8c72c
+    - docker.io/linode/csi-attacher:v3.3.0
+    sizeBytes: 21442902
+  - names:
+    - docker.io/linode/coredns@sha256:bdb36ee882c13135669cfc2bb91c808a33926ad1a411fee07bd2dc344bb8f782
+    - docker.io/linode/coredns:1.9.3
+    sizeBytes: 14835873
+  - names:
+    - docker.io/linode/linode-blockstorage-csi-driver@sha256:6d4d32ebe2a6d0ba59fdcb6d891ca930d0a1208ce015125888af3037fa23eada
+    - docker.io/linode/linode-blockstorage-csi-driver:v0.5.2
+    sizeBytes: 11778393
+  - names:
+    - docker.io/linode/csi-node-driver-registrar@sha256:9622c6a6dac7499a055a382930f4de82905a3c5735c0753f7094115c9c871309
+    - docker.io/linode/csi-node-driver-registrar:v1.3.0
+    sizeBytes: 7717137
+  - names:
+    - docker.io/calico/pod2daemon-flexvol@sha256:01ddd57d428787b3ac689daa685660defe4bd7810069544bd43a9103a7b0a789
+    - docker.io/calico/pod2daemon-flexvol:v3.25.0
+    sizeBytes: 7076045
+  - names:
+    - k8s.gcr.io/pause@sha256:1ff6c18fbef2045af6b9c16bf034cc421a29027b800e4f9b68ae9b1cb3e9ae07
+    - k8s.gcr.io/pause:3.5
+    sizeBytes: 301416
+  nodeInfo:
+    architecture: amd64
+    bootID: e9524f1b-8d5c-40a8-8adc-2491c895d484
+    containerRuntimeVersion: containerd://1.6.19
+    kernelVersion: 5.10.0-21-cloud-amd64
+    kubeProxyVersion: v1.26.3
+    kubeletVersion: v1.26.3
+    machineID: 230116709613484993f47750868e8b4e
+    operatingSystem: linux
+    osImage: Debian GNU/Linux 11 (bullseye)
+    systemUUID: 230116709613484993f47750868e8b4e

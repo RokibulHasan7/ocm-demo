@@ -1,0 +1,51 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  annotations:
+    meta.helm.sh/release-name: flux
+    meta.helm.sh/release-namespace: flux-system
+  creationTimestamp: "2023-08-11T08:19:06Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: flux-system
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: flux
+    app.kubernetes.io/version: 2.0.1
+    helm.sh/chart: flux2-2.9.2
+  managedFields:
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:ingress: {}
+        f:podSelector: {}
+        f:policyTypes: {}
+    manager: helm
+    operation: Update
+    time: "2023-08-11T08:19:06Z"
+  name: allow-webhooks
+  namespace: flux-system
+  resourceVersion: "1942"
+  uid: 300bc1ea-36fa-41ea-aa95-11f7a389d60b
+spec:
+  ingress:
+  - from:
+    - namespaceSelector: {}
+  podSelector:
+    matchLabels:
+      app: notification-controller
+  policyTypes:
+  - Ingress
+status: {}

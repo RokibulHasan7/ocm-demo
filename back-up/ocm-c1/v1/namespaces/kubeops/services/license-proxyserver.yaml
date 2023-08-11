@@ -1,0 +1,83 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: license-proxyserver
+    meta.helm.sh/release-namespace: kubeops
+  creationTimestamp: "2023-08-11T08:42:21Z"
+  labels:
+    app.kubernetes.io/instance: license-proxyserver
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: license-proxyserver
+    app.kubernetes.io/version: v0.0.4
+    helm.sh/chart: license-proxyserver-v2023.03.23
+    helm.toolkit.fluxcd.io/name: license-proxyserver
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":8081,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:21Z"
+  name: license-proxyserver
+  namespace: kubeops
+  resourceVersion: "4318"
+  uid: 59e1197c-e4e4-4653-bb7c-c2c601396d06
+spec:
+  clusterIP: 10.128.141.199
+  clusterIPs:
+  - 10.128.141.199
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: api
+    port: 443
+    protocol: TCP
+    targetPort: 8443
+  - name: telemetry
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: license-proxyserver
+    app.kubernetes.io/name: license-proxyserver
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

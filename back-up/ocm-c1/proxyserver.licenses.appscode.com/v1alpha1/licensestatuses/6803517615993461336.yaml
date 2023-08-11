@@ -1,0 +1,50 @@
+apiVersion: proxyserver.licenses.appscode.com/v1alpha1
+kind: LicenseStatus
+metadata:
+  creationTimestamp: "2023-08-11T08:43:17Z"
+  name: "6803517615993461336"
+  uid: "6803517615993461336"
+spec:
+  features:
+  - kubedb-ext-stash
+  - stash-enterprise
+  user:
+    extra:
+      authentication.kubernetes.io/pod-name:
+      - stash-stash-enterprise-5ccdcc5c86-4vn7r
+      authentication.kubernetes.io/pod-uid:
+      - 40330e9b-110a-4481-b070-cf5b636845dc
+    groups:
+    - system:serviceaccounts
+    - system:serviceaccounts:stash
+    - system:authenticated
+    username: system:serviceaccount:stash:stash-stash-enterprise
+status:
+  contract:
+    expiryTimestamp: "1970-01-01T00:00:00Z"
+    id: "0"
+    startTimestamp: "1970-01-01T00:00:00Z"
+  license:
+    apiVersion: licenses.appscode.com/v1alpha1
+    clusters:
+    - d56ea9aa-dbe3-492a-aa92-92b14c13489c
+    features:
+    - kubedb-community
+    - kubedb-ext-stash
+    - kubedb-autoscaler
+    - kubedb-enterprise
+    - panopticon-enterprise
+    - kubedb-monitoring-agent
+    id: "6803517615993461336"
+    issuer: byte.builders
+    kind: License
+    notAfter: "2023-08-14T08:43:17Z"
+    notBefore: "2023-08-11T08:43:17Z"
+    planName: kubedb-enterprise
+    productLine: kubedb
+    reason: ""
+    status: active
+    tierName: enterprise
+    user:
+      email: 328285@id.byte.builders
+      name: rakib-org

@@ -1,0 +1,51 @@
+apiVersion: crd.projectcalico.org/v1
+kind: FelixConfiguration
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"crd.projectcalico.org/v1","kind":"FelixConfiguration","metadata":{"annotations":{},"creationTimestamp":null,"name":"default"},"spec":{"bpfLogLevel":"Info","failsafeInboundHostPorts":[{"port":6443,"protocol":"tcp"},{"port":2379,"protocol":"tcp"},{"port":2380,"protocol":"tcp"},{"port":6666,"protocol":"tcp"},{"port":6667,"protocol":"tcp"},{"port":68,"protocol":"udp"},{"port":64512,"protocol":"tcp"},{"port":9099,"protocol":"tcp"}],"ipipEnabled":true,"logSeverityScreen":"Info","reportingInterval":"0s"}}
+  creationTimestamp: "2023-08-11T08:00:15Z"
+  generation: 1
+  managedFields:
+  - apiVersion: crd.projectcalico.org/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:bpfLogLevel: {}
+        f:failsafeInboundHostPorts: {}
+        f:ipipEnabled: {}
+        f:logSeverityScreen: {}
+        f:reportingInterval: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:15Z"
+  name: default
+  resourceVersion: "268"
+  uid: c94058f3-698e-4c79-9533-cebe80fda2bf
+spec:
+  bpfLogLevel: Info
+  failsafeInboundHostPorts:
+  - port: 6443
+    protocol: tcp
+  - port: 2379
+    protocol: tcp
+  - port: 2380
+    protocol: tcp
+  - port: 6666
+    protocol: tcp
+  - port: 6667
+    protocol: tcp
+  - port: 68
+    protocol: udp
+  - port: 64512
+    protocol: tcp
+  - port: 9099
+    protocol: tcp
+  ipipEnabled: true
+  logSeverityScreen: Info
+  reportingInterval: 0s

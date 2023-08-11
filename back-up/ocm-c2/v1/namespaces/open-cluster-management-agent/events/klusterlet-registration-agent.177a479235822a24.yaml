@@ -1,0 +1,41 @@
+apiVersion: v1
+count: 34
+eventTime: null
+firstTimestamp: "2023-08-11T08:41:43Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: klusterlet-registration-agent
+  namespace: open-cluster-management-agent
+  uid: 49c78708-e80c-4e2a-b365-31c97507a8d6
+kind: Event
+lastTimestamp: "2023-08-11T10:01:12Z"
+message: Updated kubeops/appscode
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T10:01:12Z"
+  name: klusterlet-registration-agent.177a479235822a24
+  namespace: open-cluster-management-agent
+  resourceVersion: "12490"
+  uid: 83ea6e7b-6bcd-4341-b0c8-f5a5b9ea2098
+reason: HelmRepository Updated
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: work-agent-manifestworkagent
+type: Normal

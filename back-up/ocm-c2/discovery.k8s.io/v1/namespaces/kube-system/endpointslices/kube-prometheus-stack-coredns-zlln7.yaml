@@ -1,0 +1,98 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.0.4
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124213-183843-64d5ea8ea3fc
+  targetRef:
+    kind: Pod
+    name: coredns-75fd9f59f7-qs8ht
+    namespace: kube-system
+    uid: 3e087204-210d-4829-8bc3-706e724f6cdd
+- addresses:
+  - 10.2.0.5
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124213-183843-64d5ea8ea3fc
+  targetRef:
+    kind: Pod
+    name: coredns-75fd9f59f7-lvs72
+    namespace: kube-system
+    uid: 2e6f1c3e-b451-4a6e-9de7-0473530c53dc
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:20Z"
+  creationTimestamp: "2023-08-11T08:42:20Z"
+  generateName: kube-prometheus-stack-coredns-
+  generation: 1
+  labels:
+    app: kube-prometheus-stack-coredns
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 48.3.1
+    chart: kube-prometheus-stack-48.3.1
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    heritage: Helm
+    jobLabel: coredns
+    kubernetes.io/service-name: kube-prometheus-stack-coredns
+    release: kube-prometheus-stack
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:heritage: {}
+          f:jobLabel: {}
+          f:kubernetes.io/service-name: {}
+          f:release: {}
+          f:service.kubernetes.io/headless: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"2c6274f3-4cc7-4bd5-b1cc-d3e1565640d3"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:20Z"
+  name: kube-prometheus-stack-coredns-zlln7
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-prometheus-stack-coredns
+    uid: 2c6274f3-4cc7-4bd5-b1cc-d3e1565640d3
+  resourceVersion: "4989"
+  uid: 04b0fdab-a22f-4a4b-b95b-e84da9a7b2e3
+ports:
+- name: http-metrics
+  port: 9153
+  protocol: TCP

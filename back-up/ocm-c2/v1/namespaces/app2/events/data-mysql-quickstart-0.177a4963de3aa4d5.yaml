@@ -1,0 +1,42 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:15:03Z"
+involvedObject:
+  apiVersion: v1
+  kind: PersistentVolumeClaim
+  name: data-mysql-quickstart-0
+  namespace: app2
+  resourceVersion: "8507"
+  uid: caa4af0b-0837-4a4b-a9c8-b30b4f224caa
+kind: Event
+lastTimestamp: "2023-08-11T09:15:03Z"
+message: External provisioner is provisioning volume for claim "app2/data-mysql-quickstart-0"
+metadata:
+  creationTimestamp: "2023-08-11T09:15:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:03Z"
+  name: data-mysql-quickstart-0.177a4963de3aa4d5
+  namespace: app2
+  resourceVersion: "8510"
+  uid: d5c789ce-06e6-40df-b8b5-82a878aedca6
+reason: Provisioning
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: linodebs.csi.linode.com_csi-linode-controller-0_5c42e287-7688-435c-8cb0-5713cad6b1f1
+type: Normal

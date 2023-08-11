@@ -1,0 +1,73 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"563d7630-0615-4e8e-8c26-9a9a3c7c566a"}: {}
+      f:rules: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:02Z"
+  name: mysql-quickstart
+  namespace: app2
+  ownerReferences:
+  - apiVersion: kubedb.com/v1alpha2
+    blockOwnerDeletion: true
+    controller: true
+    kind: MySQL
+    name: mysql-quickstart
+    uid: 563d7630-0615-4e8e-8c26-9a9a3c7c566a
+  resourceVersion: "8476"
+  uid: 83a63c82-821f-40cd-be4a-78834f0d29b2
+rules:
+- apiGroups:
+  - policy
+  resourceNames:
+  - mysql-db
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - '*'
+- apiGroups:
+  - kubedb.com
+  resources:
+  - mysqls
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+- apiGroups:
+  - apps
+  resourceNames:
+  - mysql-quickstart
+  resources:
+  - statefulsets
+  verbs:
+  - get

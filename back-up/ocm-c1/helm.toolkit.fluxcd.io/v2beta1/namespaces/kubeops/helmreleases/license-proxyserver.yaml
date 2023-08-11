@@ -1,0 +1,117 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  managedFields:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"finalizers.fluxcd.io": {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0b924118-729a-4aa9-93c1-859f38a470f6"}: {}
+      f:spec:
+        .: {}
+        f:chart:
+          .: {}
+          f:spec:
+            .: {}
+            f:chart: {}
+            f:reconcileStrategy: {}
+            f:sourceRef:
+              .: {}
+              f:kind: {}
+              f:name: {}
+              f:namespace: {}
+            f:version: {}
+        f:install:
+          .: {}
+          f:createNamespace: {}
+        f:interval: {}
+        f:releaseName: {}
+        f:storageNamespace: {}
+        f:targetNamespace: {}
+        f:values:
+          .: {}
+          f:platform:
+            .: {}
+            f:baseURL: {}
+            f:token: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:helmChart: {}
+        f:lastAppliedRevision: {}
+        f:lastAttemptedRevision: {}
+        f:lastAttemptedValuesChecksum: {}
+        f:lastReleaseRevision: {}
+        f:observedGeneration: {}
+    manager: helm-controller
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:42:41Z"
+  name: license-proxyserver
+  namespace: kubeops
+  ownerReferences:
+  - apiVersion: work.open-cluster-management.io/v1
+    kind: AppliedManifestWork
+    name: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833-operators
+    uid: 0b924118-729a-4aa9-93c1-859f38a470f6
+  resourceVersion: "4393"
+  uid: 5bd1619b-8333-4153-b656-19969462563a
+spec:
+  chart:
+    spec:
+      chart: license-proxyserver
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: appscode
+        namespace: kubeops
+      version: v2023.03.23
+  install:
+    createNamespace: true
+  interval: 60m
+  releaseName: license-proxyserver
+  storageNamespace: kubeops
+  targetNamespace: kubeops
+  values:
+    platform:
+      baseURL: https://api.byte.builders/
+      token: ade7669a6e8bb4b57c7ca86925223c2956d7198d
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:42:41Z"
+    message: Release reconciliation succeeded
+    reason: ReconciliationSucceeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2023-08-11T08:42:41Z"
+    message: Helm install succeeded
+    reason: InstallSucceeded
+    status: "True"
+    type: Released
+  helmChart: kubeops/kubeops-license-proxyserver
+  lastAppliedRevision: v2023.03.23
+  lastAttemptedRevision: v2023.03.23
+  lastAttemptedValuesChecksum: a30fd6a69a063c1204d4b41c152bfb4f17e7106b
+  lastReleaseRevision: 1
+  observedGeneration: 1

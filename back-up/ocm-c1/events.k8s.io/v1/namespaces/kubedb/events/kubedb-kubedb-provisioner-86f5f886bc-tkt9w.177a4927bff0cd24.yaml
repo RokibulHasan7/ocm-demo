@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:10:45Z"
+deprecatedLastTimestamp: "2023-08-11T09:10:45Z"
+deprecatedSource:
+  component: kubelet
+  host: lke124212-183842-64d5ea639250
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:10:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T09:10:45Z"
+  name: kubedb-kubedb-provisioner-86f5f886bc-tkt9w.177a4927bff0cd24
+  namespace: kubedb
+  resourceVersion: "8164"
+  uid: 547fc7ca-185b-4360-a366-7fd569e62812
+note: 'Readiness probe failed: Get "http://10.2.1.7:8081/readyz": dial tcp 10.2.1.7:8081:
+  connect: invalid argument'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{operator}
+  kind: Pod
+  name: kubedb-kubedb-provisioner-86f5f886bc-tkt9w
+  namespace: kubedb
+  resourceVersion: "4653"
+  uid: 1d02d013-57db-4829-b012-5910fdc546b0
+type: Warning

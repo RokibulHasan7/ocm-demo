@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:21:21Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T08:21:21Z"
+  name: open-cluster-management:managedcluster:ocm-c2
+  resourceVersion: "2581"
+  uid: 70a3377e-4a77-465f-9a09-8e91b5838b3b
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-cluster-management:managedcluster:ocm-c2
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:open-cluster-management:ocm-c2

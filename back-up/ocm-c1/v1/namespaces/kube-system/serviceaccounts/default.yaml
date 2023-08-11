@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:00:55Z"
+  name: default
+  namespace: kube-system
+  resourceVersion: "479"
+  uid: 98641857-2dc9-4393-8efd-0a7a97182247
+secrets:
+- name: default-token-qdlcx

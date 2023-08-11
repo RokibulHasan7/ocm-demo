@@ -1,0 +1,222 @@
+apiVersion: apps/v1
+data:
+  spec:
+    template:
+      $patch: replace
+      metadata:
+        creationTimestamp: null
+        labels:
+          app.kubernetes.io/component: database
+          app.kubernetes.io/instance: quick-postgres
+          app.kubernetes.io/managed-by: kubedb.com
+          app.kubernetes.io/name: postgreses.kubedb.com
+          kubedb.com/role: primary
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/instance: quick-postgres
+                    app.kubernetes.io/managed-by: kubedb.com
+                    app.kubernetes.io/name: postgreses.kubedb.com
+                namespaces:
+                - app1
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/instance: quick-postgres
+                    app.kubernetes.io/managed-by: kubedb.com
+                    app.kubernetes.io/name: postgreses.kubedb.com
+                namespaces:
+                - app1
+                topologyKey: failure-domain.beta.kubernetes.io/zone
+              weight: 50
+        containers:
+        - args:
+          - /scripts/run.sh
+          command:
+          - /scripts/tini
+          - --
+          env:
+          - name: NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: PRIMARY_HOST
+            value: quick-postgres
+          - name: MAX_LAG_BEFORE_FAILOVER
+            value: "67108864"
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                key: username
+                name: quick-postgres-auth
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: password
+                name: quick-postgres-auth
+          - name: SHARED_BUFFERS
+            value: 262144kB
+          - name: PG_VERSION
+            value: "13.2"
+          - name: MAJOR_PG_VERSION
+            value: "13"
+          - name: CLIENT_AUTH_MODE
+            value: md5
+          - name: PV
+            value: /var/pv
+          - name: DB_UID
+            value: "70"
+          - name: DB_GID
+            value: "70"
+          - name: PGDATA
+            value: /var/pv/data
+          - name: INITDB
+            value: /var/initdb
+          - name: SSL_MODE
+            value: disable
+          - name: STANDBY
+            value: warm
+          - name: STREAMING
+            value: asynchronous
+          - name: SSL
+            value: "OFF"
+          image: postgres:13.2-alpine@sha256:c4c7a1585974706b5f72b8ab595e47399b23b2e03d93bbf75c1b0904be1803dc
+          imagePullPolicy: IfNotPresent
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                - pg_ctl
+                - -m
+                - fast
+                - -w
+                - stop
+          name: postgres
+          ports:
+          - containerPort: 5432
+            name: db
+            protocol: TCP
+          resources:
+            limits:
+              memory: 1Gi
+            requests:
+              cpu: 500m
+              memory: 1Gi
+          securityContext:
+            capabilities:
+              add:
+              - IPC_LOCK
+              - SYS_RESOURCE
+            privileged: false
+            runAsGroup: 70
+            runAsUser: 70
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /dev/shm
+            name: shared-memory
+          - mountPath: /var/pv
+            name: data
+          - mountPath: /run_scripts
+            name: run-scripts
+          - mountPath: /scripts
+            name: scripts
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - env:
+          - name: STANDALONE
+            value: "true"
+          - name: MAJOR_PG_VERSION
+            value: "13"
+          - name: SSL
+            value: "OFF"
+          image: ghcr.io/kubedb/postgres-init:0.7.0@sha256:1ec7b6148de5f301ceee25257274408135c5acb99be61016191458a2f6976ff8
+          imagePullPolicy: IfNotPresent
+          name: postgres-init-container
+          resources:
+            limits:
+              cpu: 200m
+              memory: 128Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/pv
+            name: data
+          - mountPath: /run_scripts
+            name: run-scripts
+          - mountPath: /scripts
+            name: scripts
+          - mountPath: /role_scripts
+            name: role-scripts
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          fsGroup: 70
+          runAsGroup: 70
+          runAsUser: 70
+        serviceAccount: quick-postgres
+        serviceAccountName: quick-postgres
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: role-scripts
+        - emptyDir: {}
+          name: run-scripts
+        - emptyDir: {}
+          name: scripts
+        - emptyDir:
+            medium: Memory
+          name: shared-memory
+kind: ControllerRevision
+metadata:
+  creationTimestamp: "2023-08-11T09:14:59Z"
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: quick-postgres
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: postgreses.kubedb.com
+    controller.kubernetes.io/hash: 5b8444c786
+    kubedb.com/role: primary
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data: {}
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:controller.kubernetes.io/hash: {}
+          f:kubedb.com/role: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"c83bddb9-abea-43de-973d-e45f07805132"}: {}
+      f:revision: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:14:59Z"
+  name: quick-postgres-5b8444c786
+  namespace: app1
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: quick-postgres
+    uid: c83bddb9-abea-43de-973d-e45f07805132
+  resourceVersion: "8603"
+  uid: 48687449-13cf-4455-84e0-41211791290b
+revision: 1

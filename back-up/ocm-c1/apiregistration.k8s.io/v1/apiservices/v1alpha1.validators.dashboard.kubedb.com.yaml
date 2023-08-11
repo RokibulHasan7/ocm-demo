@@ -1,0 +1,86 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:43:03Z"
+  labels:
+    app.kubernetes.io/component: kubedb-dashboard
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-webhook-server
+    app.kubernetes.io/version: v0.10.0-rc.0
+    helm.sh/chart: kubedb-webhook-server-v0.10.0-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        f:caBundle: {}
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:service:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+          f:port: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:03Z"
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:10:33Z"
+  name: v1alpha1.validators.dashboard.kubedb.com
+  resourceVersion: "8139"
+  uid: f3b3d44c-cf85-4638-aa23-0d310ef7ad8d
+spec:
+  caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lRYnYzajNCUVFhOUVLMFVLM3NaZ2J3VEFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWVGdzB5TXpBNE1URXdPRFF5TURWYUZ3MHpNekE0TURnd09EUXlNRFZhTUEweApDekFKQmdOVkJBTVRBbU5oTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUFwL0NDCjMxVmtUNytSNDRxME9XcU5FLzdoblZOTGR6NHVKZGM3NTFQTmQrVWFEeWxZM2JYR0lPcGZRcHZkSXVVNk5UcGcKbWNEMDErM0g0aVJyV0dRaDZIa25MN29MdVQ5eXgyRjYyMjdZWTF5NGFyL0lsc1U4WkgrdjkrdzJHYWw2MmFLdgprb1I3a1JkdlZES2k4SFU0aEZMNHFZVlNaZ0VSdE16UWc1bkxKZjh5bDBaTEFlRTU1WjJNdm5GZzI3dGw5OElvCjd4bWd6K2QreXQ3SjZaWFZ5bTQ2ZklJOGJYQkpFeXgzdmNLQVk0SGlxbkZaWGFkUWxWeU1jRzhwcTRhbW1qbm0KSE04N3l4QVFCejkwYlNNTkZXbzJmZHNOQk9iZHBsY0hPU0NPYmdkQVR3ZmdLYTM3T0JVajIvajQ5NjVtK0dacAp6WGtCREg4UWhTVFBtMjI3V3dJREFRQUJvMkV3WHpBT0JnTlZIUThCQWY4RUJBTUNBcVF3SFFZRFZSMGxCQll3CkZBWUlLd1lCQlFVSEF3RUdDQ3NHQVFVRkJ3TUNNQThHQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUUKRkVoMDVJK1h3SGZneXdDQkljL2FIMFlxNnRPU01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQlF2TWNvdnJZTAp0Z29GR2x2N3dLYjNjMnQyUzdLNG5GZzBMbmZnWm5aczF2WWRjTzlJMlc5RTZwSWx2TVBQdDV4OEZURUVPR25VCk5HVmZmRGUvei9haThpZE1POFRRNlF2aGdVMEZDWW1KRGlNcDdDOUZmYXRLUHpKOU1uaTQvWUdpMjE3NUZ5T24KZ3p3bzdiNDRxdUo1cWlwTXYxMVlPNWl0MEhySE9FaDVZTXhZV2o2em1BRG55OVNrZ1VYU050ZVF1clRwc1VVcgozQXFhcjJFY2RCc2YrUVlQVEl1WGYyVzFrSjNET1JlNmxuNTNERWoxYkJYU0hHK0cvbmI5NHR0eXVLYmN4VHdSCmxCbkFDTVlMVUo4SStPemNjZUZWeUJsVGQ1djk0S2puSFNwc1BvS1JsQTg5WG5WNjZBRWZPcHZKcG5JWXRoUGQKOElMR3lPLytOeXhmCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  group: validators.dashboard.kubedb.com
+  groupPriorityMinimum: 10000
+  service:
+    name: kubedb-kubedb-webhook-server
+    namespace: kubedb
+    port: 443
+  version: v1alpha1
+  versionPriority: 15
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T09:10:33Z"
+    message: all checks passed
+    reason: Passed
+    status: "True"
+    type: Available

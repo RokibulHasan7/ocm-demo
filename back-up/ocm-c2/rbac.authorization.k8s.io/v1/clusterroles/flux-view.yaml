@@ -1,0 +1,47 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    meta.helm.sh/release-name: flux
+    meta.helm.sh/release-namespace: flux-system
+  creationTimestamp: "2023-08-11T08:19:23Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:rbac.authorization.k8s.io/aggregate-to-admin: {}
+          f:rbac.authorization.k8s.io/aggregate-to-edit: {}
+          f:rbac.authorization.k8s.io/aggregate-to-view: {}
+      f:rules: {}
+    manager: helm
+    operation: Update
+    time: "2023-08-11T08:19:23Z"
+  name: flux-view
+  resourceVersion: "1977"
+  uid: dfc274f2-63f8-4d82-aa54-e9dc420e0fd5
+rules:
+- apiGroups:
+  - notification.toolkit.fluxcd.io
+  - source.toolkit.fluxcd.io
+  - helm.toolkit.fluxcd.io
+  - image.toolkit.fluxcd.io
+  - kustomize.toolkit.fluxcd.io
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch

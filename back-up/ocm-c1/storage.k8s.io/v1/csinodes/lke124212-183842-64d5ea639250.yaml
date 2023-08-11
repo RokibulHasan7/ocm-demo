@@ -1,0 +1,46 @@
+apiVersion: storage.k8s.io/v1
+kind: CSINode
+metadata:
+  annotations:
+    storage.alpha.kubernetes.io/migrated-plugins: kubernetes.io/aws-ebs,kubernetes.io/azure-disk,kubernetes.io/azure-file,kubernetes.io/cinder,kubernetes.io/gce-pd,kubernetes.io/vsphere-volume
+  creationTimestamp: "2023-08-11T08:01:37Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:storage.alpha.kubernetes.io/migrated-plugins: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"4a2f7877-be6d-4495-9187-7948acefa411"}: {}
+      f:spec:
+        f:drivers:
+          k:{"name":"linodebs.csi.linode.com"}:
+            .: {}
+            f:allocatable:
+              .: {}
+              f:count: {}
+            f:name: {}
+            f:nodeID: {}
+            f:topologyKeys: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T08:02:22Z"
+  name: lke124212-183842-64d5ea639250
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: lke124212-183842-64d5ea639250
+    uid: 4a2f7877-be6d-4495-9187-7948acefa411
+  resourceVersion: "821"
+  uid: c3a85a5d-9d57-4e77-9c31-f504897e80af
+spec:
+  drivers:
+  - allocatable:
+      count: 8
+    name: linodebs.csi.linode.com
+    nodeID: "48580117"
+    topologyKeys:
+    - topology.linode.com/region

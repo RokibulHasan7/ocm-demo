@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: "2023-08-11T08:21:01Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:rules: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:21:01Z"
+  name: open-cluster-management:management:klusterlet:extension-apiserver
+  namespace: kube-system
+  resourceVersion: "2291"
+  uid: bdea78d2-8907-4d2e-a829-a3ff6d42b0ea
+rules:
+- apiGroups:
+  - ""
+  resourceNames:
+  - extension-apiserver-authentication
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+  - watch

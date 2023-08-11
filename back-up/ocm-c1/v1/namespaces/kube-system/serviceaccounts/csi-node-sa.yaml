@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"ServiceAccount","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"name":"csi-node-sa","namespace":"kube-system"}}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:00:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:secrets:
+        .: {}
+        k:{"name":"csi-node-sa-token-54pdq"}: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:00:41Z"
+  name: csi-node-sa
+  namespace: kube-system
+  resourceVersion: "335"
+  uid: 7b6ccb3f-86ad-4618-9d32-cd68a3732ebb
+secrets:
+- name: csi-node-sa-token-54pdq

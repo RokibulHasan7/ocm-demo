@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:01:40Z"
+  name: default
+  namespace: kube-system
+  resourceVersion: "488"
+  uid: 6aa518bd-6856-4933-af36-b829a440a9ef
+secrets:
+- name: default-token-dg994

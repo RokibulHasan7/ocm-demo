@@ -1,0 +1,102 @@
+apiVersion: appcatalog.appscode.com/v1alpha1
+kind: AppBinding
+metadata:
+  creationTimestamp: "2023-08-11T09:15:03Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+  managedFields:
+  - apiVersion: appcatalog.appscode.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"563d7630-0615-4e8e-8c26-9a9a3c7c566a"}: {}
+      f:spec:
+        .: {}
+        f:appRef:
+          .: {}
+          f:apiGroup: {}
+          f:kind: {}
+          f:name: {}
+          f:namespace: {}
+        f:clientConfig:
+          .: {}
+          f:service:
+            .: {}
+            f:name: {}
+            f:path: {}
+            f:port: {}
+            f:scheme: {}
+          f:url: {}
+        f:parameters:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:stash:
+            .: {}
+            f:addon:
+              .: {}
+              f:backupTask:
+                .: {}
+                f:name: {}
+                f:params: {}
+              f:restoreTask:
+                .: {}
+                f:name: {}
+        f:secret: {}
+        f:type: {}
+        f:version: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:03Z"
+  name: mysql-quickstart
+  namespace: app2
+  ownerReferences:
+  - apiVersion: kubedb.com/v1alpha2
+    blockOwnerDeletion: true
+    controller: true
+    kind: MySQL
+    name: mysql-quickstart
+    uid: 563d7630-0615-4e8e-8c26-9a9a3c7c566a
+  resourceVersion: "8511"
+  uid: 63130b77-6775-4c74-adeb-20b0b8c117b4
+spec:
+  appRef:
+    apiGroup: kubedb.com
+    kind: MySQL
+    name: mysql-quickstart
+    namespace: app2
+  clientConfig:
+    service:
+      name: mysql-quickstart
+      path: /
+      port: 3306
+      scheme: mysql
+    url: tcp(mysql-quickstart.app2.svc:3306)/
+  parameters:
+    apiVersion: appcatalog.appscode.com/v1alpha1
+    kind: StashAddon
+    stash:
+      addon:
+        backupTask:
+          name: mysql-backup-8.0.21
+          params:
+          - name: args
+            value: --all-databases --set-gtid-purged=OFF
+        restoreTask:
+          name: mysql-restore-8.0.21
+  secret:
+    name: mysql-quickstart-auth
+  type: kubedb.com/mysql
+  version: 8.0.29

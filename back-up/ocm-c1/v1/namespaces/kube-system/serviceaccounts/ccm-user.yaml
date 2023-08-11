@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"ServiceAccount","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"name":"ccm-user","namespace":"kube-system"}}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:00:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:secrets:
+        .: {}
+        k:{"name":"ccm-user-token-kmfsz"}: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:00:41Z"
+  name: ccm-user
+  namespace: kube-system
+  resourceVersion: "342"
+  uid: df0a5dd7-77e6-4435-b99e-c0bc10676fc6
+secrets:
+- name: ccm-user-token-kmfsz

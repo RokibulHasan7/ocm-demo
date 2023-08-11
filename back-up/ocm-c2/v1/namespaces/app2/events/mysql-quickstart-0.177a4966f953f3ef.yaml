@@ -1,0 +1,42 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:15:16Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: mysql-quickstart-0
+  namespace: app2
+  resourceVersion: "8533"
+  uid: 0f67d004-79c3-417d-b856-c19e3e9c292f
+kind: Event
+lastTimestamp: "2023-08-11T09:15:16Z"
+message: 'AttachVolume.Attach succeeded for volume "pvc-caa4af0b08374a4b" '
+metadata:
+  creationTimestamp: "2023-08-11T09:15:16Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:16Z"
+  name: mysql-quickstart-0.177a4966f953f3ef
+  namespace: app2
+  resourceVersion: "8544"
+  uid: 66de1485-9fef-412b-a909-dde3959bbcff
+reason: SuccessfulAttachVolume
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: attachdetach-controller
+type: Normal

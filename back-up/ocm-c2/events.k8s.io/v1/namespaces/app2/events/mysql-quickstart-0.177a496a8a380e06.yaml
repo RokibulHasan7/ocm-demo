@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:15:31Z"
+deprecatedLastTimestamp: "2023-08-11T09:15:31Z"
+deprecatedSource:
+  component: kubelet
+  host: lke124213-183843-64d5ea8ec8eb
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:15:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T09:15:31Z"
+  name: mysql-quickstart-0.177a496a8a380e06
+  namespace: app2
+  resourceVersion: "8578"
+  uid: abe5b798-3524-41a7-9409-c70ea6a7a65a
+note: Successfully pulled image "mysql:8.0.29@sha256:152cf187a3efc56afb0b3877b4d21e231d1d6eb828ca9221056590b0ac834c75"
+  in 7.087341209s (7.087347309s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{mysql}
+  kind: Pod
+  name: mysql-quickstart-0
+  namespace: app2
+  resourceVersion: "8533"
+  uid: 0f67d004-79c3-417d-b856-c19e3e9c292f
+type: Normal

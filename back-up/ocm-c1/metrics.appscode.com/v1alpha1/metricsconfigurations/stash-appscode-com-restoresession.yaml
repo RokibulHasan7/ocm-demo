@@ -1,0 +1,76 @@
+apiVersion: metrics.appscode.com/v1alpha1
+kind: MetricsConfiguration
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stash
+    meta.helm.sh/release-namespace: stash
+  creationTimestamp: "2023-08-11T08:43:14Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: metrics.appscode.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:commonLabels: {}
+        f:metrics: {}
+        f:targetRef:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:14Z"
+  name: stash-appscode-com-restoresession
+  resourceVersion: "5047"
+  uid: fb775d85-4355-41bd-a1d6-b723d4fb6f16
+spec:
+  commonLabels:
+  - key: invoker_kind
+    value: RestoreSession
+  - key: invoker_name
+    valuePath: .metadata.name
+  metrics:
+  - field:
+      path: .metadata.creationTimestamp
+      type: DateTime
+    help: Unix creation timestamp of this RestoreSession object
+    metricValue:
+      valueFromPath: .metadata.creationTimestamp
+    name: created
+    type: gauge
+  - help: General information about this RestoreSession
+    labels:
+    - key: driver
+      valuePath: .spec.driver
+    - key: repository
+      valuePath: .spec.repository.name
+    - key: target_api_version
+      valuePath: .spec.target.ref.apiVersion
+    - key: target_kind
+      valuePath: .spec.target.ref.kind
+    - key: target_name
+      valuePath: .spec.target.ref.name
+    - key: phase
+      valuePath: .status.phase
+    metricValue:
+      value: 1
+    name: info
+    type: gauge
+  targetRef:
+    apiVersion: stash.appscode.com/v1beta1
+    kind: RestoreSession

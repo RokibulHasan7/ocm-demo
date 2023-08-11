@@ -1,0 +1,38 @@
+apiVersion: cluster.open-cluster-management.io/v1beta2
+kind: ManagedClusterSetBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:22:35Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterSet: {}
+    manager: clusteradm
+    operation: Update
+    time: "2023-08-11T08:22:35Z"
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: registration
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:22:35Z"
+  name: global
+  namespace: kubeops
+  resourceVersion: "2742"
+  uid: 636622e1-f87f-418d-b3a4-06078bac1ee5
+spec:
+  clusterSet: global
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:22:35Z"
+    message: ""
+    reason: ClusterSetBound
+    status: "True"
+    type: Bound

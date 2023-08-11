@@ -1,0 +1,69 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints: null
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:20Z"
+  creationTimestamp: "2023-08-11T08:42:20Z"
+  generateName: kube-prometheus-stack-kube-scheduler-
+  generation: 1
+  labels:
+    app: kube-prometheus-stack-kube-scheduler
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 48.3.1
+    chart: kube-prometheus-stack-48.3.1
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    heritage: Helm
+    jobLabel: kube-scheduler
+    kubernetes.io/service-name: kube-prometheus-stack-kube-scheduler
+    release: kube-prometheus-stack
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:heritage: {}
+          f:jobLabel: {}
+          f:kubernetes.io/service-name: {}
+          f:release: {}
+          f:service.kubernetes.io/headless: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1dfd7ce3-6699-4f2c-8c03-11f00d3b3df6"}: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:20Z"
+  name: kube-prometheus-stack-kube-scheduler-sqbd8
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-prometheus-stack-kube-scheduler
+    uid: 1dfd7ce3-6699-4f2c-8c03-11f00d3b3df6
+  resourceVersion: "4999"
+  uid: 4585c81c-b99c-44e7-86c7-1918177f9b4a
+ports: null

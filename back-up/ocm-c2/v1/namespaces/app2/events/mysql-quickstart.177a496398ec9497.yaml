@@ -1,0 +1,42 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:15:02Z"
+involvedObject:
+  apiVersion: kubedb.com/v1alpha2
+  kind: MySQL
+  name: mysql-quickstart
+  namespace: app2
+  resourceVersion: "8468"
+  uid: 563d7630-0615-4e8e-8c26-9a9a3c7c566a
+kind: Event
+lastTimestamp: "2023-08-11T09:15:02Z"
+message: 'phase changed from  to Provisioning reason:'
+metadata:
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:02Z"
+  name: mysql-quickstart.177a496398ec9497
+  namespace: app2
+  resourceVersion: "8471"
+  uid: 383e29a9-1252-4000-b79f-f44f1432e843
+reason: Phase Changed
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: KubeDB Operator
+type: Normal

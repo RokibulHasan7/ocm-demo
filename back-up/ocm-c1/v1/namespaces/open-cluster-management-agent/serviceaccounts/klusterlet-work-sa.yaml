@@ -1,0 +1,29 @@
+apiVersion: v1
+imagePullSecrets:
+- name: open-cluster-management-image-pull-credentials
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:20:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:secrets:
+        .: {}
+        k:{"name":"klusterlet-work-sa-token-gb4xd"}: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:20:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:20:49Z"
+  name: klusterlet-work-sa
+  namespace: open-cluster-management-agent
+  resourceVersion: "2266"
+  uid: ad2b4f3c-11e6-42f8-847d-0083b20393b4
+secrets:
+- name: klusterlet-work-sa-token-gb4xd

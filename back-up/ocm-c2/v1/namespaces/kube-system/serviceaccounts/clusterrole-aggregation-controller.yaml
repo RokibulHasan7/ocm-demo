@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:01:38Z"
+  name: clusterrole-aggregation-controller
+  namespace: kube-system
+  resourceVersion: "437"
+  uid: c825fc0d-ad63-40d3-a011-38414c0eded5
+secrets:
+- name: clusterrole-aggregation-controller-token-kstcw

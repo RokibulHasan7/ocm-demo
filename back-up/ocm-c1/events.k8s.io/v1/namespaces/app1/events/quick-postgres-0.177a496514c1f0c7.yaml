@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-08-11T09:15:08.519815Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:15:08Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-08-11T09:15:08Z"
+  name: quick-postgres-0.177a496514c1f0c7
+  namespace: app1
+  resourceVersion: "8639"
+  uid: 454cac29-57aa-47a2-b67f-541941ff54ed
+note: Successfully assigned app1/quick-postgres-0 to lke124212-183842-64d5ea637f43
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: quick-postgres-0
+  namespace: app1
+  resourceVersion: "8610"
+  uid: 9ad3d940-1f39-4264-a7ba-7bafe787187b
+reportingController: default-scheduler
+reportingInstance: default-scheduler-kube-scheduler-866fc84f78-mbvvc
+type: Normal

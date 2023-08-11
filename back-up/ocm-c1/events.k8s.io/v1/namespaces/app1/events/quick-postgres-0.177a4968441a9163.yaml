@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-08-11T09:15:22Z"
+deprecatedLastTimestamp: "2023-08-11T09:15:22Z"
+deprecatedSource:
+  component: kubelet
+  host: lke124212-183842-64d5ea637f43
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:15:22Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T09:15:22Z"
+  name: quick-postgres-0.177a4968441a9163
+  namespace: app1
+  resourceVersion: "8676"
+  uid: 87c7a545-6e5f-4fc0-9d9b-3af7401c7048
+note: Successfully pulled image "postgres:13.2-alpine@sha256:c4c7a1585974706b5f72b8ab595e47399b23b2e03d93bbf75c1b0904be1803dc"
+  in 3.806539595s (3.806553365s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{postgres}
+  kind: Pod
+  name: quick-postgres-0
+  namespace: app1
+  resourceVersion: "8638"
+  uid: 9ad3d940-1f39-4264-a7ba-7bafe787187b
+type: Normal

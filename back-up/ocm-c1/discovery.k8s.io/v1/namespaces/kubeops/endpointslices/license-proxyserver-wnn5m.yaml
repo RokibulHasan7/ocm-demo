@@ -1,0 +1,79 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.2.6
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea637f43
+  targetRef:
+    kind: Pod
+    name: license-proxyserver-6fbb476b4b-7jjfb
+    namespace: kubeops
+    uid: e66258ef-b53d-45a0-a81c-babb63099337
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:38Z"
+  creationTimestamp: "2023-08-11T08:42:21Z"
+  generateName: license-proxyserver-
+  generation: 2
+  labels:
+    app.kubernetes.io/instance: license-proxyserver
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: license-proxyserver
+    app.kubernetes.io/version: v0.0.4
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: license-proxyserver-v2023.03.23
+    helm.toolkit.fluxcd.io/name: license-proxyserver
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    kubernetes.io/service-name: license-proxyserver
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"59e1197c-e4e4-4653-bb7c-c2c601396d06"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:38Z"
+  name: license-proxyserver-wnn5m
+  namespace: kubeops
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: license-proxyserver
+    uid: 59e1197c-e4e4-4653-bb7c-c2c601396d06
+  resourceVersion: "4372"
+  uid: 3cc23235-345b-477e-a8a0-cb904e35fc4c
+ports:
+- name: api
+  port: 8443
+  protocol: TCP
+- name: telemetry
+  port: 8081
+  protocol: TCP

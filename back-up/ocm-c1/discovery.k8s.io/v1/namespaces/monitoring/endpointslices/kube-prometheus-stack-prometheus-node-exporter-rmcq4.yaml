@@ -1,0 +1,108 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 192.168.193.227
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea63a57f
+  targetRef:
+    kind: Pod
+    name: kube-prometheus-stack-prometheus-node-exporter-rd846
+    namespace: monitoring
+    uid: f1d5a178-255e-42db-abec-d8e062a432d5
+- addresses:
+  - 192.168.193.108
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea637f43
+  targetRef:
+    kind: Pod
+    name: kube-prometheus-stack-prometheus-node-exporter-7qjwh
+    namespace: monitoring
+    uid: abefc2f1-7a77-4201-86cd-34617ff764e5
+- addresses:
+  - 192.168.193.246
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea639250
+  targetRef:
+    kind: Pod
+    name: kube-prometheus-stack-prometheus-node-exporter-r8qs6
+    namespace: monitoring
+    uid: 04a6507c-f144-4a4a-afea-113b2546add2
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:43:46Z"
+  creationTimestamp: "2023-08-11T08:43:39Z"
+  generateName: kube-prometheus-stack-prometheus-node-exporter-
+  generation: 7
+  labels:
+    app.kubernetes.io/component: metrics
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: prometheus-node-exporter
+    app.kubernetes.io/part-of: prometheus-node-exporter
+    app.kubernetes.io/version: 1.6.0
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: prometheus-node-exporter-4.21.0
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    jobLabel: node-exporter
+    kubernetes.io/service-name: kube-prometheus-stack-prometheus-node-exporter
+    release: kube-prometheus-stack
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:jobLabel: {}
+          f:kubernetes.io/service-name: {}
+          f:release: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"917ddfd3-0036-4900-9461-278761a8e301"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:43:48Z"
+  name: kube-prometheus-stack-prometheus-node-exporter-rmcq4
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-prometheus-stack-prometheus-node-exporter
+    uid: 917ddfd3-0036-4900-9461-278761a8e301
+  resourceVersion: "5515"
+  uid: aaacee03-f464-4a54-a2cd-0844b3741204
+ports:
+- name: http-metrics
+  port: 9100
+  protocol: TCP

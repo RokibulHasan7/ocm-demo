@@ -1,0 +1,41 @@
+apiVersion: crd.projectcalico.org/v1
+kind: GlobalNetworkPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"crd.projectcalico.org/v1","kind":"GlobalNetworkPolicy","metadata":{"annotations":{},"name":"default-allow"},"spec":{"egress":[{"action":"Allow"}],"ingress":[{"action":"Allow","destination":{"notPorts":[179]},"protocol":"TCP"},{"action":"Deny"},{"action":"Log"}],"order":1000,"selector":"has(lke.linode.com/pool-id)"}}
+  creationTimestamp: "2023-08-11T08:00:15Z"
+  generation: 1
+  managedFields:
+  - apiVersion: crd.projectcalico.org/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:egress: {}
+        f:ingress: {}
+        f:order: {}
+        f:selector: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:00:15Z"
+  name: default-allow
+  resourceVersion: "267"
+  uid: fb645a57-9241-4125-99dd-be307f91c512
+spec:
+  egress:
+  - action: Allow
+  ingress:
+  - action: Allow
+    destination:
+      notPorts:
+      - 179
+    protocol: TCP
+  - action: Deny
+  - action: Log
+  order: 1000
+  selector: has(lke.linode.com/pool-id)

@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:43:25Z"
+  creationTimestamp: "2023-08-11T08:43:10Z"
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: stash-enterprise
+    app.kubernetes.io/version: v0.30.1
+    helm.sh/chart: stash-enterprise-v0.30.0
+    helm.toolkit.fluxcd.io/name: stash
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:subsets: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:43:25Z"
+  name: stash-stash-enterprise
+  namespace: stash
+  resourceVersion: "5209"
+  uid: b4efca6d-ab1a-4067-ae49-ad60d7df59f7
+subsets:
+- addresses:
+  - ip: 10.2.2.8
+    nodeName: lke124212-183842-64d5ea637f43
+    targetRef:
+      kind: Pod
+      name: stash-stash-enterprise-5ccdcc5c86-4vn7r
+      namespace: stash
+      uid: 40330e9b-110a-4481-b070-cf5b636845dc
+  ports:
+  - name: pushgateway
+    port: 56789
+    protocol: TCP
+  - name: api
+    port: 8443
+    protocol: TCP

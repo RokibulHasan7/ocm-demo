@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-08-11T08:19:41Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:19:41Z"
+  name: open-cluster-management:cluster-manager-work:webhook
+  resourceVersion: "2194"
+  uid: ac0770f4-e985-4aaa-807c-ec3bc2a7b429
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-cluster-management:cluster-manager-work:webhook
+subjects:
+- kind: ServiceAccount
+  name: work-webhook-sa
+  namespace: open-cluster-management-hub

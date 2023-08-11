@@ -1,0 +1,53 @@
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"cluster.open-cluster-management.io/v1beta1","kind":"Placement","metadata":{"annotations":{},"name":"app2","namespace":"app2"},"spec":{"clusterSets":["app2"]}}
+  creationTimestamp: "2023-08-11T08:46:50Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:clusterSets: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:46:50Z"
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:numberOfSelectedClusters: {}
+    manager: placement
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:46:50Z"
+  name: app2
+  namespace: app2
+  resourceVersion: "4954"
+  uid: 31cf8f7d-b1bf-4fcd-a1c2-3b29d2adef3d
+spec:
+  clusterSets:
+  - app2
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:46:50Z"
+    message: Placement configurations check pass
+    reason: Succeedconfigured
+    status: "False"
+    type: PlacementMisconfigured
+  - lastTransitionTime: "2023-08-11T08:46:50Z"
+    message: All cluster decisions scheduled
+    reason: AllDecisionsScheduled
+    status: "True"
+    type: PlacementSatisfied
+  numberOfSelectedClusters: 1

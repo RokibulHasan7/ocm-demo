@@ -1,0 +1,81 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 192.168.193.108
+  conditions:
+    ready: true
+  targetRef:
+    kind: Node
+    name: lke124212-183842-64d5ea637f43
+    uid: 0d47b23c-ffae-473a-a29a-fe19693557e9
+- addresses:
+  - 192.168.193.246
+  conditions:
+    ready: true
+  targetRef:
+    kind: Node
+    name: lke124212-183842-64d5ea639250
+    uid: 4a2f7877-be6d-4495-9187-7948acefa411
+- addresses:
+  - 192.168.193.227
+  conditions:
+    ready: true
+  targetRef:
+    kind: Node
+    name: lke124212-183842-64d5ea63a57f
+    uid: d99a3ae5-a76c-4b31-bd3d-bb7daf1ee02b
+kind: EndpointSlice
+metadata:
+  creationTimestamp: "2023-08-11T08:43:51Z"
+  generateName: kube-prometheus-stack-kubelet-
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: prometheus-operator
+    app.kubernetes.io/name: kubelet
+    endpointslice.kubernetes.io/managed-by: endpointslicemirroring-controller.k8s.io
+    k8s-app: kubelet
+    kubernetes.io/service-name: kube-prometheus-stack-kubelet
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:k8s-app: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"dae343dd-5c24-40ad-8541-3d5291a7b9b8"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:43:51Z"
+  name: kube-prometheus-stack-kubelet-rgxmh
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Endpoints
+    name: kube-prometheus-stack-kubelet
+    uid: dae343dd-5c24-40ad-8541-3d5291a7b9b8
+  resourceVersion: "5563"
+  uid: dc24b116-8556-444e-9148-5b90c27fa7cc
+ports:
+- name: http-metrics
+  port: 10255
+  protocol: TCP
+- name: https-metrics
+  port: 10250
+  protocol: TCP
+- name: cadvisor
+  port: 4194
+  protocol: TCP

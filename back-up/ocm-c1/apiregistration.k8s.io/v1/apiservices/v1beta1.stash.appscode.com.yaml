@@ -1,0 +1,37 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2023-08-11T08:41:45Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: "true"
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kube-aggregator.kubernetes.io/automanaged: {}
+      f:spec:
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-08-11T08:41:45Z"
+  name: v1beta1.stash.appscode.com
+  resourceVersion: "4158"
+  uid: 9fc8efcb-9d71-44e1-a6f5-2ef4721a6a6d
+spec:
+  group: stash.appscode.com
+  groupPriorityMinimum: 1000
+  version: v1beta1
+  versionPriority: 100
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:41:45Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

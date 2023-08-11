@@ -1,0 +1,45 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:15:18Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{postgres}
+  kind: Pod
+  name: quick-postgres-0
+  namespace: app1
+  resourceVersion: "8638"
+  uid: 9ad3d940-1f39-4264-a7ba-7bafe787187b
+kind: Event
+lastTimestamp: "2023-08-11T09:15:18Z"
+message: Pulling image "postgres:13.2-alpine@sha256:c4c7a1585974706b5f72b8ab595e47399b23b2e03d93bbf75c1b0904be1803dc"
+metadata:
+  creationTimestamp: "2023-08-11T09:15:18Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-08-11T09:15:18Z"
+  name: quick-postgres-0.177a49676136d384
+  namespace: app1
+  resourceVersion: "8666"
+  uid: 5a9cd1e9-a731-4980-97c4-6e3526085cb4
+reason: Pulling
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: lke124212-183842-64d5ea637f43
+type: Normal

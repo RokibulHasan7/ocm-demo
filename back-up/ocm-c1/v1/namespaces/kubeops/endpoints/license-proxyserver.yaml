@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:38Z"
+  creationTimestamp: "2023-08-11T08:42:21Z"
+  labels:
+    app.kubernetes.io/instance: license-proxyserver
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: license-proxyserver
+    app.kubernetes.io/version: v0.0.4
+    helm.sh/chart: license-proxyserver-v2023.03.23
+    helm.toolkit.fluxcd.io/name: license-proxyserver
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:subsets: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:38Z"
+  name: license-proxyserver
+  namespace: kubeops
+  resourceVersion: "4373"
+  uid: a0d12b95-49ab-4969-87ed-ace9c664df46
+subsets:
+- addresses:
+  - ip: 10.2.2.6
+    nodeName: lke124212-183842-64d5ea637f43
+    targetRef:
+      kind: Pod
+      name: license-proxyserver-6fbb476b4b-7jjfb
+      namespace: kubeops
+      uid: e66258ef-b53d-45a0-a81c-babb63099337
+  ports:
+  - name: api
+    port: 8443
+    protocol: TCP
+  - name: telemetry
+    port: 8081
+    protocol: TCP

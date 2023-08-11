@@ -1,0 +1,208 @@
+apiVersion: apps/v1
+data:
+  spec:
+    template:
+      $patch: replace
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: csi-linode-controller
+          role: csi-linode
+      spec:
+        containers:
+        - args:
+          - --volume-name-prefix=pvc
+          - --volume-name-uuid-length=16
+          - --csi-address=$(ADDRESS)
+          - --default-fstype=ext4
+          - --v=2
+          env:
+          - name: ADDRESS
+            value: /var/lib/csi/sockets/pluginproxy/csi.sock
+          - name: KUBERNETES_SERVICE_HOST
+            value: 117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net
+          - name: KUBERNETES_SERVICE_PORT
+            value: "443"
+          image: linode/csi-provisioner:v3.0.0
+          imagePullPolicy: IfNotPresent
+          name: csi-provisioner
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/lib/csi/sockets/pluginproxy/
+            name: socket-dir
+        - args:
+          - --v=2
+          - --csi-address=$(ADDRESS)
+          env:
+          - name: ADDRESS
+            value: /var/lib/csi/sockets/pluginproxy/csi.sock
+          - name: KUBERNETES_SERVICE_HOST
+            value: 117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net
+          - name: KUBERNETES_SERVICE_PORT
+            value: "443"
+          image: linode/csi-attacher:v3.3.0
+          imagePullPolicy: IfNotPresent
+          name: csi-attacher
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/lib/csi/sockets/pluginproxy/
+            name: socket-dir
+        - args:
+          - --v=2
+          - --csi-address=$(ADDRESS)
+          env:
+          - name: ADDRESS
+            value: /var/lib/csi/sockets/pluginproxy/csi.sock
+          - name: KUBERNETES_SERVICE_HOST
+            value: 117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net
+          - name: KUBERNETES_SERVICE_PORT
+            value: "443"
+          image: linode/csi-resizer:v1.3.0
+          imagePullPolicy: IfNotPresent
+          name: csi-resizer
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/lib/csi/sockets/pluginproxy/
+            name: socket-dir
+        - args:
+          - --endpoint=$(CSI_ENDPOINT)
+          - --token=$(LINODE_TOKEN)
+          - --url=$(LINODE_API_URL)
+          - --node=$(NODE_NAME)
+          - --bs-prefix=$(LINODE_BS_PREFIX)
+          - --v=2
+          env:
+          - name: CSI_ENDPOINT
+            value: unix:///var/lib/csi/sockets/pluginproxy/csi.sock
+          - name: LINODE_API_URL
+            valueFrom:
+              secretKeyRef:
+                key: apiurl
+                name: linode
+          - name: LINODE_BS_PREFIX
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
+          - name: LINODE_TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: linode
+          - name: KUBERNETES_SERVICE_HOST
+            value: 117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net
+          - name: KUBERNETES_SERVICE_PORT
+            value: "443"
+          - name: LINODE_URL
+            valueFrom:
+              secretKeyRef:
+                key: apiurl
+                name: linode
+          image: linode/linode-blockstorage-csi-driver:v0.5.2
+          imagePullPolicy: IfNotPresent
+          name: linode-csi-plugin
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /linode-info
+            name: linode-info
+          - mountPath: /scripts
+            name: get-linode-id
+          - mountPath: /var/lib/csi/sockets/pluginproxy/
+            name: socket-dir
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - /scripts/get-linode-id.sh
+          env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
+          image: bitnami/kubectl:1.16.3-debian-10-r36
+          imagePullPolicy: IfNotPresent
+          name: init
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /linode-info
+            name: linode-info
+          - mountPath: /scripts
+            name: get-linode-id
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: csi-controller-sa
+        serviceAccountName: csi-controller-sa
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          operator: Exists
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          operator: Exists
+        volumes:
+        - emptyDir: {}
+          name: socket-dir
+        - emptyDir: {}
+          name: linode-info
+        - configMap:
+            defaultMode: 493
+            name: get-linode-id
+          name: get-linode-id
+kind: ControllerRevision
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"labels":{"app":"csi-linode-controller"},"name":"csi-linode-controller","namespace":"kube-system"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"csi-linode-controller"}},"serviceName":"csi-linode","template":{"metadata":{"labels":{"app":"csi-linode-controller","role":"csi-linode"}},"spec":{"containers":[{"args":["--volume-name-prefix=pvc","--volume-name-uuid-length=16","--csi-address=$(ADDRESS)","--default-fstype=ext4","--v=2"],"env":[{"name":"ADDRESS","value":"/var/lib/csi/sockets/pluginproxy/csi.sock"},{"name":"KUBERNETES_SERVICE_HOST","value":"117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net"},{"name":"KUBERNETES_SERVICE_PORT","value":"443"}],"image":"linode/csi-provisioner:v3.0.0","imagePullPolicy":"IfNotPresent","name":"csi-provisioner","volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]},{"args":["--v=2","--csi-address=$(ADDRESS)"],"env":[{"name":"ADDRESS","value":"/var/lib/csi/sockets/pluginproxy/csi.sock"},{"name":"KUBERNETES_SERVICE_HOST","value":"117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net"},{"name":"KUBERNETES_SERVICE_PORT","value":"443"}],"image":"linode/csi-attacher:v3.3.0","imagePullPolicy":"IfNotPresent","name":"csi-attacher","volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]},{"args":["--v=2","--csi-address=$(ADDRESS)"],"env":[{"name":"ADDRESS","value":"/var/lib/csi/sockets/pluginproxy/csi.sock"},{"name":"KUBERNETES_SERVICE_HOST","value":"117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net"},{"name":"KUBERNETES_SERVICE_PORT","value":"443"}],"image":"linode/csi-resizer:v1.3.0","name":"csi-resizer","volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]},{"args":["--endpoint=$(CSI_ENDPOINT)","--token=$(LINODE_TOKEN)","--url=$(LINODE_API_URL)","--node=$(NODE_NAME)","--bs-prefix=$(LINODE_BS_PREFIX)","--v=2"],"env":[{"name":"CSI_ENDPOINT","value":"unix:///var/lib/csi/sockets/pluginproxy/csi.sock"},{"name":"LINODE_API_URL","valueFrom":{"secretKeyRef":{"key":"apiurl","name":"linode"}}},{"name":"LINODE_BS_PREFIX","value":null},{"name":"NODE_NAME","valueFrom":{"fieldRef":{"fieldPath":"spec.nodeName"}}},{"name":"LINODE_TOKEN","valueFrom":{"secretKeyRef":{"key":"token","name":"linode"}}},{"name":"KUBERNETES_SERVICE_HOST","value":"117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net"},{"name":"KUBERNETES_SERVICE_PORT","value":"443"},{"name":"LINODE_URL","valueFrom":{"secretKeyRef":{"key":"apiurl","name":"linode"}}}],"image":"linode/linode-blockstorage-csi-driver:v0.5.2","imagePullPolicy":"IfNotPresent","name":"linode-csi-plugin","volumeMounts":[{"mountPath":"/linode-info","name":"linode-info"},{"mountPath":"/scripts","name":"get-linode-id"},{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]}],"initContainers":[{"command":["/scripts/get-linode-id.sh"],"env":[{"name":"NODE_NAME","valueFrom":{"fieldRef":{"fieldPath":"spec.nodeName"}}}],"image":"bitnami/kubectl:1.16.3-debian-10-r36","name":"init","volumeMounts":[{"mountPath":"/linode-info","name":"linode-info"},{"mountPath":"/scripts","name":"get-linode-id"}]}],"serviceAccount":"csi-controller-sa","tolerations":[{"effect":"NoSchedule","operator":"Exists"},{"key":"CriticalAddonsOnly","operator":"Exists"},{"effect":"NoExecute","operator":"Exists"}],"volumes":[{"emptyDir":{},"name":"socket-dir"},{"emptyDir":{},"name":"linode-info"},{"configMap":{"defaultMode":493,"name":"get-linode-id"},"name":"get-linode-id"}]}}}}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:00:55Z"
+  labels:
+    app: csi-linode-controller
+    controller.kubernetes.io/hash: c5fcf866c
+    role: csi-linode
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:controller.kubernetes.io/hash: {}
+          f:role: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"47a3c884-31e3-4c19-8abf-46dd8666f822"}: {}
+      f:revision: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:00:55Z"
+  name: csi-linode-controller-c5fcf866c
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: csi-linode-controller
+    uid: 47a3c884-31e3-4c19-8abf-46dd8666f822
+  resourceVersion: "457"
+  uid: e357e20d-7c01-44d6-a732-3899226afa74
+revision: 1

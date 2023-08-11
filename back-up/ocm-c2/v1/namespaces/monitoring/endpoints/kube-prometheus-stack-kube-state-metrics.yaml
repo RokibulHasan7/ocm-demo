@@ -1,0 +1,58 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:42:32Z"
+  creationTimestamp: "2023-08-11T08:42:21Z"
+  labels:
+    app.kubernetes.io/component: metrics
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kube-state-metrics
+    app.kubernetes.io/part-of: kube-state-metrics
+    app.kubernetes.io/version: 2.9.2
+    helm.sh/chart: kube-state-metrics-5.10.1
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    release: kube-prometheus-stack
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:release: {}
+      f:subsets: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:42:33Z"
+  name: kube-prometheus-stack-kube-state-metrics
+  namespace: monitoring
+  resourceVersion: "5500"
+  uid: 078fa872-8411-4363-ae85-1a555e7a1adf
+subsets:
+- addresses:
+  - ip: 10.2.1.9
+    nodeName: lke124213-183843-64d5ea8ec8eb
+    targetRef:
+      kind: Pod
+      name: kube-prometheus-stack-kube-state-metrics-58d9cc69bf-n4ftt
+      namespace: monitoring
+      uid: 706ea792-676d-4755-8b8a-7fa964014d7d
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP

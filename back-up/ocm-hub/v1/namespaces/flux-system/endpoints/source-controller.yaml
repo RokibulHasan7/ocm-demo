@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:19:12Z"
+  creationTimestamp: "2023-08-11T08:19:08Z"
+  labels:
+    app.kubernetes.io/instance: flux-system
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: flux
+    app.kubernetes.io/version: 2.0.1
+    control-plane: controller
+    helm.sh/chart: flux2-2.9.2
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:control-plane: {}
+          f:helm.sh/chart: {}
+      f:subsets: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:19:12Z"
+  name: source-controller
+  namespace: flux-system
+  resourceVersion: "2039"
+  uid: 20c86eae-871a-499c-bc75-3909e47c0219
+subsets:
+- addresses:
+  - ip: 10.2.2.3
+    nodeName: lke124210-183840-64d5ea4d7de8
+    targetRef:
+      kind: Pod
+      name: source-controller-6bc6fb78bd-4ljhs
+      namespace: flux-system
+      uid: 0ff7a1bb-66be-4fe7-a1b2-0c39566db529
+  ports:
+  - name: http
+    port: 9090
+    protocol: TCP

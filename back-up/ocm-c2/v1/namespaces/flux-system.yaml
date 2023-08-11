@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-08-11T08:19:05Z"
+  labels:
+    kubernetes.io/metadata.name: flux-system
+    name: flux-system
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:name: {}
+    manager: helm
+    operation: Update
+    time: "2023-08-11T08:19:05Z"
+  name: flux-system
+  resourceVersion: "1890"
+  uid: d52d880d-9003-47b0-966c-b2fcfdf706ec
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

@@ -1,0 +1,105 @@
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: MySQLVersion
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:43:08Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-catalog
+    app.kubernetes.io/version: v2023.06.13-rc.0
+    helm.sh/chart: kubedb-catalog-v2023.06.13-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: catalog.kubedb.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:coordinator:
+          .: {}
+          f:image: {}
+        f:db:
+          .: {}
+          f:image: {}
+        f:distribution: {}
+        f:exporter:
+          .: {}
+          f:image: {}
+        f:initContainer:
+          .: {}
+          f:image: {}
+        f:podSecurityPolicies:
+          .: {}
+          f:databasePolicyName: {}
+        f:replicationModeDetector:
+          .: {}
+          f:image: {}
+        f:stash:
+          .: {}
+          f:addon:
+            .: {}
+            f:backupTask:
+              .: {}
+              f:name: {}
+            f:restoreTask:
+              .: {}
+              f:name: {}
+        f:updateConstraints:
+          .: {}
+          f:denylist:
+            .: {}
+            f:groupReplication: {}
+            f:standalone: {}
+        f:version: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:08Z"
+  name: 5.7.41
+  resourceVersion: "4796"
+  uid: de8ba2f8-426a-4c97-b017-f9f3d568d2f6
+spec:
+  coordinator:
+    image: ghcr.io/kubedb/mysql-coordinator:v0.12.0-rc.0
+  db:
+    image: mysql:5.7.41
+  distribution: Official
+  exporter:
+    image: ghcr.io/kubedb/mysqld-exporter:v0.13.1
+  initContainer:
+    image: ghcr.io/kubedb/mysql-init:5.7-v2
+  podSecurityPolicies:
+    databasePolicyName: mysql-db
+  replicationModeDetector:
+    image: ghcr.io/kubedb/replication-mode-detector:v0.21.0-rc.0
+  stash:
+    addon:
+      backupTask:
+        name: mysql-backup-5.7.25
+      restoreTask:
+        name: mysql-restore-5.7.25
+  updateConstraints:
+    denylist:
+      groupReplication:
+      - < 5.7.41
+      standalone:
+      - < 5.7.41
+  version: 5.7.41

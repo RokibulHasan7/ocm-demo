@@ -1,0 +1,67 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.0.7
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  hostname: prometheus-kube-prometheus-stack-prometheus-0
+  nodeName: lke124212-183842-64d5ea63a57f
+  targetRef:
+    kind: Pod
+    name: prometheus-kube-prometheus-stack-prometheus-0
+    namespace: monitoring
+    uid: 5e160172-94e4-4b77-9cfa-5e62f06c8896
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:44:16Z"
+  creationTimestamp: "2023-08-11T08:43:58Z"
+  generateName: prometheus-operated-
+  generation: 3
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: prometheus-operated
+    operated-prometheus: "true"
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+          f:operated-prometheus: {}
+          f:service.kubernetes.io/headless: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"45947e0d-ed8f-4a73-af55-666240b4ccdd"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:44:17Z"
+  name: prometheus-operated-zv6kt
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: prometheus-operated
+    uid: 45947e0d-ed8f-4a73-af55-666240b4ccdd
+  resourceVersion: "5763"
+  uid: 3084e37b-f3ad-4744-96a6-f50fabcd5dd9
+ports:
+- name: http-web
+  port: 9090
+  protocol: TCP

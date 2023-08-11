@@ -1,0 +1,110 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 192.168.193.227
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea63a57f
+  targetRef:
+    kind: Pod
+    name: kube-proxy-wz56s
+    namespace: kube-system
+    uid: 1fde31fc-4f6d-4469-9e54-42fdac4b46f1
+- addresses:
+  - 192.168.193.246
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea639250
+  targetRef:
+    kind: Pod
+    name: kube-proxy-ql9cj
+    namespace: kube-system
+    uid: e0449609-5e2e-44be-b6f7-cb9a736319f8
+- addresses:
+  - 192.168.193.108
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: lke124212-183842-64d5ea637f43
+  targetRef:
+    kind: Pod
+    name: kube-proxy-ckgpx
+    namespace: kube-system
+    uid: 87ba2508-bfc5-46bf-8acd-2790ce4f0a1f
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:43:36Z"
+  creationTimestamp: "2023-08-11T08:43:37Z"
+  generateName: kube-prometheus-stack-kube-proxy-
+  generation: 1
+  labels:
+    app: kube-prometheus-stack-kube-proxy
+    app.kubernetes.io/instance: kube-prometheus-stack
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 48.3.1
+    chart: kube-prometheus-stack-48.3.1
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+    helm.toolkit.fluxcd.io/namespace: kubeops
+    heritage: Helm
+    jobLabel: kube-proxy
+    kubernetes.io/service-name: kube-prometheus-stack-kube-proxy
+    release: kube-prometheus-stack
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+          f:heritage: {}
+          f:jobLabel: {}
+          f:kubernetes.io/service-name: {}
+          f:release: {}
+          f:service.kubernetes.io/headless: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1c0e2d93-b0d0-4cff-bc80-55083c4f0e73"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:43:37Z"
+  name: kube-prometheus-stack-kube-proxy-p9ndj
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-prometheus-stack-kube-proxy
+    uid: 1c0e2d93-b0d0-4cff-bc80-55083c4f0e73
+  resourceVersion: "5348"
+  uid: d7317d45-4454-4090-8507-b98318d1e1a3
+ports:
+- name: http-metrics
+  port: 10249
+  protocol: TCP

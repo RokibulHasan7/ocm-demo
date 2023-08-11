@@ -1,0 +1,406 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    checksum/apiregistration.yaml: bb4a53890e245e7a87a28cec001f609adf0428c34edba3b4e210170534dd916e
+    cni.projectcalico.org/containerID: ed736db81fccef25920a8b77825df5c2975224cb0463905e907e0cd7063feeca
+    cni.projectcalico.org/podIP: 10.2.2.8/32
+    cni.projectcalico.org/podIPs: 10.2.2.8/32
+  creationTimestamp: "2023-08-11T08:43:11Z"
+  generateName: stash-stash-enterprise-5ccdcc5c86-
+  labels:
+    app.kubernetes.io/instance: stash
+    app.kubernetes.io/name: stash-enterprise
+    pod-template-hash: 5ccdcc5c86
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:checksum/apiregistration.yaml: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"8f0c075b-4ffa-434c-b6db-378614b88836"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"operator"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+              f:runAsUser: {}
+              f:seccompProfile:
+                .: {}
+                f:type: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/tmp"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"pushgateway"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":56789,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+            f:resources: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+              f:runAsUser: {}
+              f:seccompProfile:
+                .: {}
+                f:type: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/tmp"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/pv"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:fsGroup: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"data-volume"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"stash-scratchdir"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:43:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:cni.projectcalico.org/containerID: {}
+          f:cni.projectcalico.org/podIP: {}
+          f:cni.projectcalico.org/podIPs: {}
+    manager: calico
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:43:16Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.2.2.8"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:43:25Z"
+  name: stash-stash-enterprise-5ccdcc5c86-4vn7r
+  namespace: stash
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: stash-stash-enterprise-5ccdcc5c86
+    uid: 8f0c075b-4ffa-434c-b6db-378614b88836
+  resourceVersion: "5208"
+  uid: 40330e9b-110a-4481-b070-cf5b636845dc
+spec:
+  containers:
+  - args:
+    - run
+    - --v=3
+    - --docker-registry=ghcr.io/stashed
+    - --image=stash-enterprise
+    - --image-tag=v0.30.1
+    - --secure-port=8443
+    - --authentication-configmap-namespace=kube-system
+    - --audit-log-path=-
+    - --tls-cert-file=/var/serving-cert/tls.crt
+    - --tls-private-key-file=/var/serving-cert/tls.key
+    - --pushgateway-url=http://stash-stash-enterprise.stash.svc:56789
+    - --enable-mutating-webhook=true
+    - --enable-validating-webhook=true
+    - --bypass-validating-webhook-xray=false
+    - --use-kubeapiserver-fqdn-for-aks=true
+    - --nva-cpu=100m
+    - --nva-memory=128Mi
+    - --nva-user=2000
+    - --nva-privileged-mode=false
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    image: ghcr.io/stashed/stash-enterprise:v0.30.1
+    imagePullPolicy: IfNotPresent
+    name: operator
+    ports:
+    - containerPort: 8443
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 100m
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 65534
+      seccompProfile:
+        type: RuntimeDefault
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/serving-cert
+      name: serving-cert
+    - mountPath: /tmp
+      name: stash-scratchdir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-ff7r6
+      readOnly: true
+  - args:
+    - --web.listen-address=:56789
+    - --persistence.file=/var/pv/pushgateway.dat
+    image: prom/pushgateway:v1.4.2
+    imagePullPolicy: IfNotPresent
+    name: pushgateway
+    ports:
+    - containerPort: 56789
+      protocol: TCP
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 65534
+      seccompProfile:
+        type: RuntimeDefault
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/pv
+      name: data-volume
+    - mountPath: /tmp
+      name: stash-scratchdir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-ff7r6
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: lke124212-183842-64d5ea637f43
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 65535
+  serviceAccount: stash-stash-enterprise
+  serviceAccountName: stash-stash-enterprise
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir: {}
+    name: data-volume
+  - emptyDir: {}
+    name: stash-scratchdir
+  - name: serving-cert
+    secret:
+      defaultMode: 420
+      secretName: stash-stash-enterprise-apiserver-cert
+  - name: kube-api-access-ff7r6
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:43:11Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:43:25Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:43:25Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-08-11T08:43:11Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://909b3b9ccebfc2f8653baa735521842dafcf5be0388291d4b48699b89c1c27ef
+    image: ghcr.io/stashed/stash-enterprise:v0.30.1
+    imageID: ghcr.io/stashed/stash-enterprise@sha256:0b3de294c0747252d307252d27480af60819c0dc9f1be11446432df06a6d99f0
+    lastState: {}
+    name: operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T08:43:23Z"
+  - containerID: containerd://e07dd6ce5df9f987a24d0464ecb10be76ba4a4e6ccc18f6896ff8ebf3345c570
+    image: docker.io/prom/pushgateway:v1.4.2
+    imageID: docker.io/prom/pushgateway@sha256:a684e7c830a4b19e564a93bfc3bf713e85b04ab9dfcab5633c14cbba241f9231
+    lastState: {}
+    name: pushgateway
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-08-11T08:43:25Z"
+  hostIP: 192.168.193.108
+  phase: Running
+  podIP: 10.2.2.8
+  podIPs:
+  - ip: 10.2.2.8
+  qosClass: Burstable
+  startTime: "2023-08-11T08:43:11Z"

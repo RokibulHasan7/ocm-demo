@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-08-11T08:00:13Z"
+  labels:
+    kubernetes.io/metadata.name: default
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-08-11T08:00:13Z"
+  name: default
+  resourceVersion: "188"
+  uid: 0617b138-8744-4192-b9f8-b5b72ab042f2
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

@@ -1,0 +1,27 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-08-11T08:21:15Z"
+  labels:
+    open-cluster-management.io/cluster-name: ocm-c1
+  managedFields:
+  - apiVersion: coordination.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:open-cluster-management.io/cluster-name: {}
+      f:spec:
+        f:holderIdentity: {}
+        f:renewTime: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T09:57:16Z"
+  name: managed-cluster-lease
+  namespace: ocm-c1
+  resourceVersion: "11219"
+  uid: d75df988-7c4a-431c-81f4-9e920a976b6b
+spec:
+  holderIdentity: managed-cluster-lease
+  renewTime: "2023-08-11T09:57:16.873991Z"

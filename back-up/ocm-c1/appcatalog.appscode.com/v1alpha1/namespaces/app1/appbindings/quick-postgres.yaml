@@ -1,0 +1,98 @@
+apiVersion: appcatalog.appscode.com/v1alpha1
+kind: AppBinding
+metadata:
+  creationTimestamp: "2023-08-11T09:15:00Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: quick-postgres
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: postgreses.kubedb.com
+  managedFields:
+  - apiVersion: appcatalog.appscode.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1e8afd0b-667d-4e7c-af0d-611f3d8e10cc"}: {}
+      f:spec:
+        .: {}
+        f:appRef:
+          .: {}
+          f:apiGroup: {}
+          f:kind: {}
+          f:name: {}
+          f:namespace: {}
+        f:clientConfig:
+          .: {}
+          f:service:
+            .: {}
+            f:name: {}
+            f:path: {}
+            f:port: {}
+            f:query: {}
+            f:scheme: {}
+        f:parameters:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:stash:
+            .: {}
+            f:addon:
+              .: {}
+              f:backupTask:
+                .: {}
+                f:name: {}
+              f:restoreTask:
+                .: {}
+                f:name: {}
+        f:secret: {}
+        f:type: {}
+        f:version: {}
+    manager: kubedb-provisioner
+    operation: Update
+    time: "2023-08-11T09:15:00Z"
+  name: quick-postgres
+  namespace: app1
+  ownerReferences:
+  - apiVersion: kubedb.com/v1alpha2
+    blockOwnerDeletion: true
+    controller: true
+    kind: Postgres
+    name: quick-postgres
+    uid: 1e8afd0b-667d-4e7c-af0d-611f3d8e10cc
+  resourceVersion: "8618"
+  uid: 299a8328-f248-4a35-b3cf-3eb1d3af6977
+spec:
+  appRef:
+    apiGroup: kubedb.com
+    kind: Postgres
+    name: quick-postgres
+    namespace: app1
+  clientConfig:
+    service:
+      name: quick-postgres
+      path: /
+      port: 5432
+      query: sslmode=disable
+      scheme: postgresql
+  parameters:
+    apiVersion: appcatalog.appscode.com/v1alpha1
+    kind: StashAddon
+    stash:
+      addon:
+        backupTask:
+          name: postgres-backup-13.1
+        restoreTask:
+          name: postgres-restore-13.1
+  secret:
+    name: quick-postgres-auth
+  type: kubedb.com/postgres
+  version: "13.2"

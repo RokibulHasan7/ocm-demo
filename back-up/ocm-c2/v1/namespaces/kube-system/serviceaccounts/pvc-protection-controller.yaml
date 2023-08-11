@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-08-11T08:01:37Z"
+  name: pvc-protection-controller
+  namespace: kube-system
+  resourceVersion: "404"
+  uid: b2dbb290-2d40-4782-bb18-931d0aedb656
+secrets:
+- name: pvc-protection-controller-token-b682b

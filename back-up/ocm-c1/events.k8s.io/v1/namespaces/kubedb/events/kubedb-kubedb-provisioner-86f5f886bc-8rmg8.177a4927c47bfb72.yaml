@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-08-11T09:10:45.180045Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T09:10:45Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-08-11T09:10:45Z"
+  name: kubedb-kubedb-provisioner-86f5f886bc-8rmg8.177a4927c47bfb72
+  namespace: kubedb
+  resourceVersion: "8166"
+  uid: c9c02a03-cb8c-4d78-a82f-1644c05de825
+note: Successfully assigned kubedb/kubedb-kubedb-provisioner-86f5f886bc-8rmg8 to lke124212-183842-64d5ea639250
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kubedb-kubedb-provisioner-86f5f886bc-8rmg8
+  namespace: kubedb
+  resourceVersion: "8158"
+  uid: 59326816-e1bd-446c-8f02-93eaf27fff79
+reportingController: default-scheduler
+reportingInstance: default-scheduler-kube-scheduler-866fc84f78-mbvvc
+type: Normal

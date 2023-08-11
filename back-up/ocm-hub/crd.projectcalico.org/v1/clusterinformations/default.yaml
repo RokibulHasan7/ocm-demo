@@ -1,0 +1,32 @@
+apiVersion: crd.projectcalico.org/v1
+kind: ClusterInformation
+metadata:
+  annotations:
+    projectcalico.org/metadata: '{"uid":"01b16093-278c-4ed6-b194-144bfe826fa2","creationTimestamp":"2023-08-11T08:01:30Z"}'
+  creationTimestamp: "2023-08-11T08:01:30Z"
+  generation: 1
+  managedFields:
+  - apiVersion: crd.projectcalico.org/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:projectcalico.org/metadata: {}
+      f:spec:
+        .: {}
+        f:calicoVersion: {}
+        f:clusterGUID: {}
+        f:clusterType: {}
+        f:datastoreReady: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T08:01:30Z"
+  name: default
+  resourceVersion: "678"
+  uid: 60cb047b-aff3-4574-987d-c819ca123128
+spec:
+  calicoVersion: v3.25.0
+  clusterGUID: 600e149ceb0746898b7f53086d6df616
+  clusterType: k8s,bgp,kubeadm,kdd
+  datastoreReady: true

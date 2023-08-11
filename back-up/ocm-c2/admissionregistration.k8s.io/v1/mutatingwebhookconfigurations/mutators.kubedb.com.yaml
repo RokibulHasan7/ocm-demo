@@ -1,0 +1,715 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:42:10Z"
+  generation: 2
+  labels:
+    app.kubernetes.io/component: kubedb-provisioner
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-webhook-server
+    app.kubernetes.io/version: v0.10.0-rc.0
+    helm.sh/chart: kubedb-webhook-server-v0.10.0-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"elasticsearchwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"etcdwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"kafkawebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"mariadbwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"memcachedwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"mongodbwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"mysqlwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"perconaxtradbwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"pgbouncerwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"postgreswebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"proxysqlwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"redissentinelwebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"rediswebhook.mutators.kubedb.com"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:reinvocationPolicy: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:42:10Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"elasticsearchwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"etcdwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"kafkawebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"mariadbwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"memcachedwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"mongodbwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"mysqlwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"perconaxtradbwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"pgbouncerwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"postgreswebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"proxysqlwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"redissentinelwebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"rediswebhook.mutators.kubedb.com"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: kubedb-webhook-server
+    operation: Update
+    time: "2023-08-11T08:42:18Z"
+  name: mutators.kubedb.com
+  resourceVersion: "4883"
+  uid: a4888c51-559f-4194-8a21-d987ef0b7843
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/elasticsearchwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: elasticsearchwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - elasticsearches
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/postgreswebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: postgreswebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - postgreses
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/mysqlwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: mysqlwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - mysqls
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/perconaxtradbwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: perconaxtradbwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - perconaxtradbs
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/mongodbwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: mongodbwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - mongodbs
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/rediswebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: rediswebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - redises
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/redissentinelwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: redissentinelwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - redissentinels
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/memcachedwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: memcachedwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - memcacheds
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/etcdwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: etcdwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - etcds
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/pgbouncerwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: pgbouncerwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - pgbouncers
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/proxysqlwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: proxysqlwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - proxysqls
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/mariadbwebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: mariadbwebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - mariadbs
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EZ3hNVEE0TURBeE4xb1hEVE16TURnd09EQTRNREF4TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTDB2CnAxSitCbDVRb0tla20zL0xvM1BUSTFGVVIvcGxWSU5KZDU0aER5SWQxZFZWZzFhT3YyUVZ0YnVHbWVpTUdGUkYKZ3FYQnJPaWx1ZkMydktyRU5sNFl6NUdsTTlVRVdWNDVzWGlNWHhReU1FbGNnM3I2QXZZdmcvcU5XTzR3anBqRQpaaXdtYWhRQ0RHUVY2SnFmYUN2R2FuUDRzd1ZoVUhQSlFKcTFPNGUydnlDVHcreHZqczlkWWFIc2xJU3ltWFpDCndxV1RSc0FaN081Y1BDZHdCZHdGM0I0dTZmcGV1Yk8zUkx5MmJHMHlqdkszR0x3SElCQklJZi9sV0dSbzJnS1UKdFV5NTlodmRoeGRnWkpNRitkQmszOXJINTJObGthUDd4MmNaSmlZMkFnZzQ0dEZVMEg1Ly9yU0xZRElubW8zbgpIVWc5WXY3eEd3T2dWMXdYYzRzQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZQRlUvWWFiU0dTK2w0bTc2N0U2eG1wUVZ2TkpNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSUFZd2hQcUpxaU90RXFZdWFadwpvVjZiazRoUnhyclZTaHg0OWxJQXNtSUgxaWxCQTl2ZHNOWjVVSk5May9zRm5taFgxS2JJdmVscWVpSWNteHdOCkt4WTU2MkRETE9iOExVYjl5NUpQcXR5NFBsUVlWc3VqaEZza2dpY0ZVQ1ljMjVaanBzUDlNQnJZWFcyMVF5SUYKNXRyTVdsTlV0dEpnYUFjNVExOUlwYURERFBpa2ROekFveEU0SjlGWi9rZnc1WEg1WVZoSzhiNDBvaEdjS1lGZQpIbGhmMVBNRktXbGQ4ZHlwMkJOSlhHYW1xUmcyVTV2YTY3Wm5iYlpPU3B3RXZMdUkxN0pWNEtlMFpjWmR0TDI5CnRFZFQxbVMyQW9TV1pkS01raUR2SFZnSjRUb0JHWml1eXIyWkFDazBJbzJMQWRUQXowTlh4U0gvTlNaUFBEYkYKODdrPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: kubernetes
+      namespace: default
+      path: /apis/mutators.kubedb.com/v1alpha1/kafkawebhooks
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: kafkawebhook.mutators.kubedb.com
+  namespaceSelector: {}
+  objectSelector: {}
+  reinvocationPolicy: Never
+  rules:
+  - apiGroups:
+    - kubedb.com
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - kafkas
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

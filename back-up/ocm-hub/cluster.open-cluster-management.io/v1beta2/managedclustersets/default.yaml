@@ -1,0 +1,40 @@
+apiVersion: cluster.open-cluster-management.io/v1beta2
+kind: ManagedClusterSet
+metadata:
+  creationTimestamp: "2023-08-11T08:20:19Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterSelector:
+          .: {}
+          f:selectorType: {}
+    manager: registration
+    operation: Update
+    time: "2023-08-11T08:20:19Z"
+  - apiVersion: cluster.open-cluster-management.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: registration
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:21:55Z"
+  name: default
+  resourceVersion: "2652"
+  uid: 34d65392-869c-4f93-9ed6-002ab32ae7ac
+spec:
+  clusterSelector:
+    selectorType: ExclusiveClusterSetLabel
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:21:55Z"
+    message: No ManagedCluster selected
+    reason: NoClusterMatched
+    status: "True"
+    type: ClusterSetEmpty

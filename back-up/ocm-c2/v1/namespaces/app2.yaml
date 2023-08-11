@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-08-11T08:46:50Z"
+  labels:
+    kubernetes.io/metadata.name: app2
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f2170e66-e9a4-4109-aae8-1347a9f4ed73"}: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:46:50Z"
+  name: app2
+  ownerReferences:
+  - apiVersion: work.open-cluster-management.io/v1
+    kind: AppliedManifestWork
+    name: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833-db
+    uid: f2170e66-e9a4-4109-aae8-1347a9f4ed73
+  resourceVersion: "6092"
+  uid: 14366af9-1dfc-4408-8406-d2e514ebf3b1
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

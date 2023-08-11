@@ -1,0 +1,33 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"annotations":{"lke.linode.com/caplke-version":"v1.26.7-001"},"name":"linode-csi-binding"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"linode-csi-role"},"subjects":[{"kind":"ServiceAccount","name":"csi-node-sa","namespace":"kube-system"}]}
+    lke.linode.com/caplke-version: v1.26.7-001
+  creationTimestamp: "2023-08-11T08:01:19Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:lke.linode.com/caplke-version: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-08-11T08:01:19Z"
+  name: linode-csi-binding
+  resourceVersion: "287"
+  uid: b9cb41a5-7b32-4633-a4a0-a42fd8ced876
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: linode-csi-role
+subjects:
+- kind: ServiceAccount
+  name: csi-node-sa
+  namespace: kube-system

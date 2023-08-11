@@ -1,0 +1,134 @@
+apiVersion: work.open-cluster-management.io/v1
+kind: ManifestWork
+metadata:
+  creationTimestamp: "2023-08-11T08:46:50Z"
+  finalizers:
+  - cluster.open-cluster-management.io/manifest-work-cleanup
+  generation: 2
+  labels:
+    work.open-cluster-management.io/manifestworkreplicaset: app2.db
+  managedFields:
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster.open-cluster-management.io/manifest-work-cleanup": {}
+        f:labels:
+          .: {}
+          f:work.open-cluster-management.io/manifestworkreplicaset: {}
+      f:spec:
+        .: {}
+        f:workload:
+          .: {}
+          f:manifests: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T09:15:01Z"
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:resourceStatus:
+          .: {}
+          f:manifests: {}
+    manager: work
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:15:02Z"
+  name: db
+  namespace: ocm-c2
+  resourceVersion: "7472"
+  uid: 04b16211-2003-405e-9503-11d0e1a84e84
+spec:
+  workload:
+    manifests:
+    - apiVersion: v1
+      kind: Namespace
+      metadata:
+        name: app2
+    - apiVersion: kubedb.com/v1alpha2
+      kind: MySQL
+      metadata:
+        name: mysql-quickstart
+        namespace: app2
+      spec:
+        storage:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
+          storageClassName: linode-block-storage-retain
+        storageType: Durable
+        terminationPolicy: Delete
+        version: 8.0.29
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T09:15:01Z"
+    message: Apply manifest work complete
+    observedGeneration: 2
+    reason: AppliedManifestWorkComplete
+    status: "True"
+    type: Applied
+  - lastTransitionTime: "2023-08-11T09:15:02Z"
+    message: All resources are available
+    observedGeneration: 2
+    reason: ResourcesAvailable
+    status: "True"
+    type: Available
+  resourceStatus:
+    manifests:
+    - conditions:
+      - lastTransitionTime: "2023-08-11T08:46:50Z"
+        message: Apply manifest complete
+        reason: AppliedManifestComplete
+        status: "True"
+        type: Applied
+      - lastTransitionTime: "2023-08-11T08:46:50Z"
+        message: Resource is available
+        reason: ResourceAvailable
+        status: "True"
+        type: Available
+      - lastTransitionTime: "2023-08-11T08:46:50Z"
+        message: ""
+        reason: NoStatusFeedbackSynced
+        status: "True"
+        type: StatusFeedbackSynced
+      resourceMeta:
+        group: ""
+        kind: Namespace
+        name: app2
+        namespace: ""
+        ordinal: 0
+        resource: namespaces
+        version: v1
+      statusFeedback: {}
+    - conditions:
+      - lastTransitionTime: "2023-08-11T09:15:01Z"
+        message: Apply manifest complete
+        reason: AppliedManifestComplete
+        status: "True"
+        type: Applied
+      - lastTransitionTime: "2023-08-11T09:15:02Z"
+        message: Resource is available
+        reason: ResourceAvailable
+        status: "True"
+        type: Available
+      - lastTransitionTime: "2023-08-11T09:15:02Z"
+        message: ""
+        reason: NoStatusFeedbackSynced
+        status: "True"
+        type: StatusFeedbackSynced
+      resourceMeta:
+        group: kubedb.com
+        kind: MySQL
+        name: mysql-quickstart
+        namespace: app2
+        ordinal: 1
+        resource: mysqls
+        version: v1alpha2
+      statusFeedback: {}

@@ -1,0 +1,46 @@
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: PlacementDecision
+metadata:
+  creationTimestamp: "2023-08-11T08:46:50Z"
+  generation: 1
+  labels:
+    cluster.open-cluster-management.io/placement: app2
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:cluster.open-cluster-management.io/placement: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"31cf8f7d-b1bf-4fcd-a1c2-3b29d2adef3d"}: {}
+    manager: placement
+    operation: Update
+    time: "2023-08-11T08:46:50Z"
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:decisions: {}
+    manager: placement
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:46:50Z"
+  name: app2-decision-1
+  namespace: app2
+  ownerReferences:
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Placement
+    name: app2
+    uid: 31cf8f7d-b1bf-4fcd-a1c2-3b29d2adef3d
+  resourceVersion: "4950"
+  uid: 9e260516-53af-4551-b738-4679f54d134e
+status:
+  decisions:
+  - clusterName: ocm-c2
+    reason: ""

@@ -1,0 +1,73 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.2.1.12
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  hostname: mysql-quickstart-0
+  nodeName: lke124213-183843-64d5ea8ec8eb
+  targetRef:
+    kind: Pod
+    name: mysql-quickstart-0
+    namespace: app2
+    uid: 0f67d004-79c3-417d-b856-c19e3e9c292f
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T09:15:32Z"
+  creationTimestamp: "2023-08-11T09:15:02Z"
+  generateName: mysql-quickstart-pods-
+  generation: 3
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: mysql-quickstart
+    app.kubernetes.io/managed-by: kubedb.com
+    app.kubernetes.io/name: mysqls.kubedb.com
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: mysql-quickstart-pods
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+          f:service.kubernetes.io/headless: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"ad906197-5ce7-4494-8191-a31566ebfe49"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:15:32Z"
+  name: mysql-quickstart-pods-rkxl7
+  namespace: app2
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: mysql-quickstart-pods
+    uid: ad906197-5ce7-4494-8191-a31566ebfe49
+  resourceVersion: "8585"
+  uid: 00683748-648b-462c-a431-7e518ea33e29
+ports:
+- name: db
+  port: 3306
+  protocol: TCP

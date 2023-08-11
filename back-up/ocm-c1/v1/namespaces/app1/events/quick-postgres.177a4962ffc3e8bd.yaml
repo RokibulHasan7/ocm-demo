@@ -1,0 +1,42 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:14:59Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: StatefulSet
+  name: quick-postgres
+  namespace: app1
+  resourceVersion: "8602"
+  uid: c83bddb9-abea-43de-973d-e45f07805132
+kind: Event
+lastTimestamp: "2023-08-11T09:14:59Z"
+message: create Pod quick-postgres-0 in StatefulSet quick-postgres successful
+metadata:
+  creationTimestamp: "2023-08-11T09:14:59Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T09:14:59Z"
+  name: quick-postgres.177a4962ffc3e8bd
+  namespace: app1
+  resourceVersion: "8607"
+  uid: 19914c51-396d-4c0e-b38d-86a8c26b10b3
+reason: SuccessfulCreate
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: statefulset-controller
+type: Normal

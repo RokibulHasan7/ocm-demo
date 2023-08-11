@@ -1,0 +1,159 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  managedFields:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"finalizers.fluxcd.io": {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0b924118-729a-4aa9-93c1-859f38a470f6"}: {}
+      f:spec:
+        .: {}
+        f:chart:
+          .: {}
+          f:spec:
+            .: {}
+            f:chart: {}
+            f:reconcileStrategy: {}
+            f:sourceRef:
+              .: {}
+              f:kind: {}
+              f:name: {}
+              f:namespace: {}
+            f:version: {}
+        f:install:
+          .: {}
+          f:crds: {}
+          f:createNamespace: {}
+          f:remediation:
+            .: {}
+            f:retries: {}
+        f:interval: {}
+        f:releaseName: {}
+        f:storageNamespace: {}
+        f:targetNamespace: {}
+        f:timeout: {}
+        f:upgrade:
+          .: {}
+          f:crds: {}
+          f:remediation:
+            .: {}
+            f:retries: {}
+        f:values:
+          .: {}
+          f:kubedb-autoscaler:
+            .: {}
+            f:enabled: {}
+          f:kubedb-catalog:
+            .: {}
+            f:enabled: {}
+          f:kubedb-dashboard:
+            .: {}
+            f:enabled: {}
+          f:kubedb-ops-manager:
+            .: {}
+            f:enabled: {}
+          f:kubedb-provisioner:
+            .: {}
+            f:enabled: {}
+          f:kubedb-schema-manager:
+            .: {}
+            f:enabled: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:helmChart: {}
+        f:lastAppliedRevision: {}
+        f:lastAttemptedRevision: {}
+        f:lastAttemptedValuesChecksum: {}
+        f:lastReleaseRevision: {}
+        f:observedGeneration: {}
+    manager: helm-controller
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:47:17Z"
+  name: kubedb
+  namespace: kubeops
+  ownerReferences:
+  - apiVersion: work.open-cluster-management.io/v1
+    kind: AppliedManifestWork
+    name: 9817658e1634093b51306d2167783ce3fc0b11a58d19dbebe33eff8e94cdd833-operators
+    uid: 0b924118-729a-4aa9-93c1-859f38a470f6
+  resourceVersion: "6158"
+  uid: 96c38a99-cb14-41ef-ab84-83f85d83dcae
+spec:
+  chart:
+    spec:
+      chart: kubedb
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: appscode
+        namespace: kubeops
+      version: v2023.06.13-rc.0
+  install:
+    crds: CreateReplace
+    createNamespace: true
+    remediation:
+      retries: -1
+  interval: 5m
+  releaseName: kubedb
+  storageNamespace: kubedb
+  targetNamespace: kubedb
+  timeout: 30m
+  upgrade:
+    crds: CreateReplace
+    remediation:
+      retries: -1
+  values:
+    kubedb-autoscaler:
+      enabled: false
+    kubedb-catalog:
+      enabled: true
+    kubedb-dashboard:
+      enabled: false
+    kubedb-ops-manager:
+      enabled: true
+    kubedb-provisioner:
+      enabled: true
+    kubedb-schema-manager:
+      enabled: false
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:47:17Z"
+    message: Release reconciliation succeeded
+    reason: ReconciliationSucceeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2023-08-11T08:47:16Z"
+    message: Helm install succeeded
+    reason: InstallSucceeded
+    status: "True"
+    type: Released
+  helmChart: kubeops/kubeops-kubedb
+  lastAppliedRevision: v2023.06.13-rc.0
+  lastAttemptedRevision: v2023.06.13-rc.0
+  lastAttemptedValuesChecksum: 2174fbdefb5321afa27a33e542b49b49ad9368b4
+  lastReleaseRevision: 1
+  observedGeneration: 1

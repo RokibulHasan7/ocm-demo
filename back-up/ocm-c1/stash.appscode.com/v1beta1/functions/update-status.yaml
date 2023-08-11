@@ -1,0 +1,43 @@
+apiVersion: stash.appscode.com/v1beta1
+kind: Function
+metadata:
+  creationTimestamp: "2023-08-11T08:43:41Z"
+  generation: 1
+  managedFields:
+  - apiVersion: stash.appscode.com/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:args: {}
+        f:image: {}
+    manager: stash-enterprise
+    operation: Update
+    time: "2023-08-11T08:43:41Z"
+  name: update-status
+  resourceVersion: "5405"
+  uid: 4289fb29-8d34-4fa2-a8af-0405b634a40f
+spec:
+  args:
+  - update-status
+  - --provider=${REPOSITORY_PROVIDER:=}
+  - --bucket=${REPOSITORY_BUCKET:=}
+  - --endpoint=${REPOSITORY_ENDPOINT:=}
+  - --region=${REPOSITORY_REGION:=}
+  - --path=${REPOSITORY_PREFIX:=}
+  - --enable-cache=${ENABLE_CACHE:=true}
+  - --max-connections=${MAX_CONNECTIONS:=0}
+  - --namespace=${NAMESPACE:=default}
+  - --backupsession=${BACKUP_SESSION:=}
+  - --storage-secret-name=${REPOSITORY_SECRET_NAME}
+  - --storage-secret-namespace=${REPOSITORY_SECRET_NAMESPACE}
+  - --invoker-kind=${INVOKER_KIND:=}
+  - --invoker-name=${INVOKER_NAME:=}
+  - --target-kind=${TARGET_KIND:=}
+  - --target-name=${TARGET_NAME:=}
+  - --target-namespace=${TARGET_NAMESPACE:=}
+  - --output-dir=${outputDir:=}
+  - --metrics-enabled=true
+  - --scratch-dir=/stash-tmp
+  - --metrics-pushgateway-url=http://stash-stash-enterprise.stash.svc:56789
+  image: ghcr.io/stashed/stash-enterprise:v0.30.1

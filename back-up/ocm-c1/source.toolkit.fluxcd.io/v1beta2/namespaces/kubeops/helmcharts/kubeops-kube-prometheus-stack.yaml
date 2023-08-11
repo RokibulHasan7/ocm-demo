@@ -1,0 +1,92 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmChart
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  managedFields:
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:chart: {}
+        f:interval: {}
+        f:reconcileStrategy: {}
+        f:sourceRef:
+          .: {}
+          f:kind: {}
+          f:name: {}
+        f:version: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"finalizers.fluxcd.io": {}
+    manager: source-controller
+    operation: Update
+    time: "2023-08-11T08:41:43Z"
+  - apiVersion: source.toolkit.fluxcd.io/v1beta2
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:artifact:
+          .: {}
+          f:digest: {}
+          f:lastUpdateTime: {}
+          f:path: {}
+          f:revision: {}
+          f:size: {}
+          f:url: {}
+        f:conditions: {}
+        f:observedChartName: {}
+        f:observedGeneration: {}
+        f:observedSourceArtifactRevision: {}
+        f:url: {}
+    manager: source-controller
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:41:47Z"
+  name: kubeops-kube-prometheus-stack
+  namespace: kubeops
+  resourceVersion: "4186"
+  uid: 9d550cd7-9d51-48d2-bcca-ac719499f4e4
+spec:
+  chart: kube-prometheus-stack
+  interval: 1h0m0s
+  reconcileStrategy: ChartVersion
+  sourceRef:
+    kind: HelmRepository
+    name: prometheus-community
+  version: '*'
+status:
+  artifact:
+    digest: sha256:cb793adf544377bdb5b1941d14c79fb51c545439f7b341dc09c9c553105edf8e
+    lastUpdateTime: "2023-08-11T08:41:46Z"
+    path: helmchart/kubeops/kubeops-kube-prometheus-stack/kube-prometheus-stack-48.3.1.tgz
+    revision: 48.3.1
+    size: 477361
+    url: http://source-controller.flux-system.svc.cluster.local./helmchart/kubeops/kubeops-kube-prometheus-stack/kube-prometheus-stack-48.3.1.tgz
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:41:46Z"
+    message: pulled 'kube-prometheus-stack' chart with version '48.3.1'
+    observedGeneration: 1
+    reason: ChartPullSucceeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2023-08-11T08:41:46Z"
+    message: pulled 'kube-prometheus-stack' chart with version '48.3.1'
+    observedGeneration: 1
+    reason: ChartPullSucceeded
+    status: "True"
+    type: ArtifactInStorage
+  observedChartName: kube-prometheus-stack
+  observedGeneration: 1
+  observedSourceArtifactRevision: sha256:687a979559bcd6167ff47fdee8cd52a67bb9ca7365edec9895220072c5faf675
+  url: http://source-controller.flux-system.svc.cluster.local./helmchart/kubeops/kubeops-kube-prometheus-stack/latest.tar.gz

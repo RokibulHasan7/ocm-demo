@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 30
+deprecatedFirstTimestamp: "2023-08-11T08:46:50Z"
+deprecatedLastTimestamp: "2023-08-11T09:15:01Z"
+deprecatedSource:
+  component: work-agent-manifestworkagent
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T08:46:50Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T09:15:01Z"
+  name: klusterlet-registration-agent.177a47d9cc4941af
+  namespace: open-cluster-management-agent
+  resourceVersion: "8465"
+  uid: c6c7e1bf-04b5-4252-8354-9724ea6ce17c
+note: Created app2/mysql-quickstart because it was missing
+reason: MySQL Created
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: klusterlet-registration-agent
+  namespace: open-cluster-management-agent
+  uid: 49c78708-e80c-4e2a-b365-31c97507a8d6
+type: Normal

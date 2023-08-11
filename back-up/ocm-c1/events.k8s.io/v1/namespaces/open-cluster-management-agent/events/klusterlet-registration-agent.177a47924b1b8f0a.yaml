@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 33
+deprecatedFirstTimestamp: "2023-08-11T08:41:43Z"
+deprecatedLastTimestamp: "2023-08-11T09:59:16Z"
+deprecatedSource:
+  component: work-agent-manifestworkagent
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-08-11T08:41:43Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T09:59:16Z"
+  name: klusterlet-registration-agent.177a47924b1b8f0a
+  namespace: open-cluster-management-agent
+  resourceVersion: "12482"
+  uid: 14f01013-cd74-4877-b68a-9c24a375ddf6
+note: Updated kubeops/kube-prometheus-stack
+reason: HelmRelease Updated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: klusterlet-registration-agent
+  namespace: open-cluster-management-agent
+  uid: e81dbb65-61f2-4c5b-b49e-c2cafb1e5642
+type: Normal

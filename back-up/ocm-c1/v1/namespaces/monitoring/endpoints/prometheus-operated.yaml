@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-08-11T08:44:16Z"
+  creationTimestamp: "2023-08-11T08:43:58Z"
+  labels:
+    operated-prometheus: "true"
+    service.kubernetes.io/headless: ""
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:labels:
+          .: {}
+          f:operated-prometheus: {}
+          f:service.kubernetes.io/headless: {}
+      f:subsets: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-08-11T08:44:17Z"
+  name: prometheus-operated
+  namespace: monitoring
+  resourceVersion: "5762"
+  uid: 5e4240fa-4dd5-4685-9d40-f10244091d3e
+subsets:
+- addresses:
+  - hostname: prometheus-kube-prometheus-stack-prometheus-0
+    ip: 10.2.0.7
+    nodeName: lke124212-183842-64d5ea63a57f
+    targetRef:
+      kind: Pod
+      name: prometheus-kube-prometheus-stack-prometheus-0
+      namespace: monitoring
+      uid: 5e160172-94e4-4b77-9cfa-5e62f06c8896
+  ports:
+  - name: http-web
+    port: 9090
+    protocol: TCP

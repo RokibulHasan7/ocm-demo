@@ -1,0 +1,42 @@
+action: Scheduling
+apiVersion: v1
+eventTime: "2023-08-11T09:15:03.303896Z"
+firstTimestamp: null
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: mysql-quickstart-0
+  namespace: app2
+  resourceVersion: "8499"
+  uid: 0f67d004-79c3-417d-b856-c19e3e9c292f
+kind: Event
+lastTimestamp: null
+message: '0/3 nodes are available: pod has unbound immediate PersistentVolumeClaims.
+  preemption: 0/3 nodes are available: 3 No preemption victims found for incoming
+  pod..'
+metadata:
+  creationTimestamp: "2023-08-11T09:15:03Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-08-11T09:15:03Z"
+  name: mysql-quickstart-0.177a4963dddd4600
+  namespace: app2
+  resourceVersion: "8503"
+  uid: a191c9d3-f8b2-4a30-9cc0-a4508bd6715e
+reason: FailedScheduling
+reportingComponent: default-scheduler
+reportingInstance: default-scheduler-kube-scheduler-554c86d78c-mrm58
+source: {}
+type: Warning

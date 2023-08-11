@@ -1,0 +1,82 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-08-11T08:43:52Z"
+  labels:
+    operated-alertmanager: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operated-alertmanager: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5d711a49-dfcf-4d6e-916d-155c70a00ec1"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":9093,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":9094,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":9094,"protocol":"UDP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: PrometheusOperator
+    operation: Update
+    time: "2023-08-11T08:43:52Z"
+  name: alertmanager-operated
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: monitoring.coreos.com/v1
+    kind: Alertmanager
+    name: kube-prometheus-stack-alertmanager
+    uid: 5d711a49-dfcf-4d6e-916d-155c70a00ec1
+  resourceVersion: "5569"
+  uid: 216230d8-6377-4b1e-898e-9b066988be5b
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http-web
+    port: 9093
+    protocol: TCP
+    targetPort: http-web
+  - name: tcp-mesh
+    port: 9094
+    protocol: TCP
+    targetPort: 9094
+  - name: udp-mesh
+    port: 9094
+    protocol: UDP
+    targetPort: 9094
+  selector:
+    app.kubernetes.io/name: alertmanager
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

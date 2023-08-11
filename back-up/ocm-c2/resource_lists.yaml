@@ -1,0 +1,2962 @@
+- groupVersion: v1
+  resources:
+  - kind: Secret
+    name: secrets
+    namespaced: true
+    singularName: ""
+    storageVersionHash: S6u1pOWzb84=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: Endpoints
+    name: endpoints
+    namespaced: true
+    shortNames:
+    - ep
+    singularName: ""
+    storageVersionHash: fWeeMqaN/OA=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: Pod
+    name: pods
+    namespaced: true
+    shortNames:
+    - po
+    singularName: ""
+    storageVersionHash: xPOwRZ+Yhw8=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: ServiceAccount
+    name: serviceaccounts
+    namespaced: true
+    shortNames:
+    - sa
+    singularName: ""
+    storageVersionHash: pbx9ZvyFpBE=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: PodTemplate
+    name: podtemplates
+    namespaced: true
+    singularName: ""
+    storageVersionHash: LIXB2x4IFpk=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: Binding
+    name: bindings
+    namespaced: true
+    singularName: ""
+    verbs:
+    - create
+  - kind: PersistentVolume
+    name: persistentvolumes
+    namespaced: false
+    shortNames:
+    - pv
+    singularName: ""
+    storageVersionHash: HN/zwEC+JgM=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: PersistentVolumeClaim
+    name: persistentvolumeclaims
+    namespaced: true
+    shortNames:
+    - pvc
+    singularName: ""
+    storageVersionHash: QWTyNDq0dC4=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: ResourceQuota
+    name: resourcequotas
+    namespaced: true
+    shortNames:
+    - quota
+    singularName: ""
+    storageVersionHash: 8uhSgffRX6w=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: ComponentStatus
+    name: componentstatuses
+    namespaced: false
+    shortNames:
+    - cs
+    singularName: ""
+    verbs:
+    - get
+    - list
+  - kind: Namespace
+    name: namespaces
+    namespaced: false
+    shortNames:
+    - ns
+    singularName: ""
+    storageVersionHash: Q3oi5N2YM8M=
+    verbs:
+    - create
+    - delete
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: Event
+    name: events
+    namespaced: true
+    shortNames:
+    - ev
+    singularName: ""
+    storageVersionHash: r2yiGXH7wu8=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: LimitRange
+    name: limitranges
+    namespaced: true
+    shortNames:
+    - limits
+    singularName: ""
+    storageVersionHash: EBKMFVe6cwo=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: Service
+    name: services
+    namespaced: true
+    shortNames:
+    - svc
+    singularName: ""
+    storageVersionHash: 0/CO1lhkEBI=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: ReplicationController
+    name: replicationcontrollers
+    namespaced: true
+    shortNames:
+    - rc
+    singularName: ""
+    storageVersionHash: Jond2If31h0=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: Node
+    name: nodes
+    namespaced: false
+    shortNames:
+    - "no"
+    singularName: ""
+    storageVersionHash: XwShjMxG9Fs=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: ConfigMap
+    name: configmaps
+    namespaced: true
+    shortNames:
+    - cm
+    singularName: ""
+    storageVersionHash: qFsyl6wFWjQ=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: apiregistration.k8s.io/v1
+  resources:
+  - categories:
+    - api-extensions
+    kind: APIService
+    name: apiservices
+    namespaced: false
+    singularName: ""
+    storageVersionHash: InPBPD7+PqM=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: apps/v1
+  resources:
+  - kind: ControllerRevision
+    name: controllerrevisions
+    namespaced: true
+    singularName: ""
+    storageVersionHash: 85nkx63pcBU=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: Deployment
+    name: deployments
+    namespaced: true
+    shortNames:
+    - deploy
+    singularName: ""
+    storageVersionHash: 8aSe+NMegvE=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: ReplicaSet
+    name: replicasets
+    namespaced: true
+    shortNames:
+    - rs
+    singularName: ""
+    storageVersionHash: P1RzHs8/mWQ=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: StatefulSet
+    name: statefulsets
+    namespaced: true
+    shortNames:
+    - sts
+    singularName: ""
+    storageVersionHash: H+vl74LkKdo=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: DaemonSet
+    name: daemonsets
+    namespaced: true
+    shortNames:
+    - ds
+    singularName: ""
+    storageVersionHash: dd7pWHUlMKQ=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: events.k8s.io/v1
+  resources:
+  - kind: Event
+    name: events
+    namespaced: true
+    shortNames:
+    - ev
+    singularName: ""
+    storageVersionHash: r2yiGXH7wu8=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: authentication.k8s.io/v1
+  resources:
+  - kind: TokenReview
+    name: tokenreviews
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+- groupVersion: authorization.k8s.io/v1
+  resources:
+  - kind: SelfSubjectAccessReview
+    name: selfsubjectaccessreviews
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+  - kind: SelfSubjectRulesReview
+    name: selfsubjectrulesreviews
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+  - kind: SubjectAccessReview
+    name: subjectaccessreviews
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+  - kind: LocalSubjectAccessReview
+    name: localsubjectaccessreviews
+    namespaced: true
+    singularName: ""
+    verbs:
+    - create
+- groupVersion: autoscaling/v2
+  resources:
+  - categories:
+    - all
+    kind: HorizontalPodAutoscaler
+    name: horizontalpodautoscalers
+    namespaced: true
+    shortNames:
+    - hpa
+    singularName: ""
+    storageVersionHash: oQlkt7f5j/A=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: autoscaling/v1
+  resources: null
+- groupVersion: batch/v1
+  resources:
+  - categories:
+    - all
+    kind: Job
+    name: jobs
+    namespaced: true
+    singularName: ""
+    storageVersionHash: mudhfqk/qZY=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - all
+    kind: CronJob
+    name: cronjobs
+    namespaced: true
+    shortNames:
+    - cj
+    singularName: ""
+    storageVersionHash: sd5LIXh4Fjs=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: certificates.k8s.io/v1
+  resources:
+  - kind: CertificateSigningRequest
+    name: certificatesigningrequests
+    namespaced: false
+    shortNames:
+    - csr
+    singularName: ""
+    storageVersionHash: 95fRKMXA+00=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: networking.k8s.io/v1
+  resources:
+  - kind: Ingress
+    name: ingresses
+    namespaced: true
+    shortNames:
+    - ing
+    singularName: ""
+    storageVersionHash: 39NQlfNR+bo=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: NetworkPolicy
+    name: networkpolicies
+    namespaced: true
+    shortNames:
+    - netpol
+    singularName: ""
+    storageVersionHash: YpfwF18m1G8=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: IngressClass
+    name: ingressclasses
+    namespaced: false
+    singularName: ""
+    storageVersionHash: l/iqIbDgFyQ=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: policy/v1
+  resources:
+  - kind: PodDisruptionBudget
+    name: poddisruptionbudgets
+    namespaced: true
+    shortNames:
+    - pdb
+    singularName: ""
+    storageVersionHash: 6BGBu0kpHtk=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: rbac.authorization.k8s.io/v1
+  resources:
+  - kind: Role
+    name: roles
+    namespaced: true
+    singularName: ""
+    storageVersionHash: 7FuwZcIIItM=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: RoleBinding
+    name: rolebindings
+    namespaced: true
+    singularName: ""
+    storageVersionHash: eGsCzGH6b1g=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: ClusterRole
+    name: clusterroles
+    namespaced: false
+    singularName: ""
+    storageVersionHash: bYE5ZWDrJ44=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: ClusterRoleBinding
+    name: clusterrolebindings
+    namespaced: false
+    singularName: ""
+    storageVersionHash: 48tpQ8gZHFc=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: storage.k8s.io/v1
+  resources:
+  - kind: StorageClass
+    name: storageclasses
+    namespaced: false
+    shortNames:
+    - sc
+    singularName: ""
+    storageVersionHash: K+m6uJwbjGY=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: VolumeAttachment
+    name: volumeattachments
+    namespaced: false
+    singularName: ""
+    storageVersionHash: tJx/ezt6UDU=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: CSIStorageCapacity
+    name: csistoragecapacities
+    namespaced: true
+    singularName: ""
+    storageVersionHash: xeVl+2Ly1kE=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: CSINode
+    name: csinodes
+    namespaced: false
+    singularName: ""
+    storageVersionHash: Pe62DkZtjuo=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: CSIDriver
+    name: csidrivers
+    namespaced: false
+    singularName: ""
+    storageVersionHash: hL6j/rwBV5w=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: storage.k8s.io/v1beta1
+  resources: null
+- groupVersion: admissionregistration.k8s.io/v1
+  resources:
+  - categories:
+    - api-extensions
+    kind: MutatingWebhookConfiguration
+    name: mutatingwebhookconfigurations
+    namespaced: false
+    singularName: ""
+    storageVersionHash: Sqi0GUgDaX0=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - categories:
+    - api-extensions
+    kind: ValidatingWebhookConfiguration
+    name: validatingwebhookconfigurations
+    namespaced: false
+    singularName: ""
+    storageVersionHash: B0wHjQmsGNk=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: apiextensions.k8s.io/v1
+  resources:
+  - categories:
+    - api-extensions
+    kind: CustomResourceDefinition
+    name: customresourcedefinitions
+    namespaced: false
+    shortNames:
+    - crd
+    - crds
+    singularName: ""
+    storageVersionHash: jfWCUB31mvA=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: scheduling.k8s.io/v1
+  resources:
+  - kind: PriorityClass
+    name: priorityclasses
+    namespaced: false
+    shortNames:
+    - pc
+    singularName: ""
+    storageVersionHash: 1QwjyaZjj3Y=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: coordination.k8s.io/v1
+  resources:
+  - kind: Lease
+    name: leases
+    namespaced: true
+    singularName: ""
+    storageVersionHash: gqkMMb/YqFM=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: node.k8s.io/v1
+  resources:
+  - kind: RuntimeClass
+    name: runtimeclasses
+    namespaced: false
+    singularName: ""
+    storageVersionHash: WQTu1GL3T2Q=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: discovery.k8s.io/v1
+  resources:
+  - kind: EndpointSlice
+    name: endpointslices
+    namespaced: true
+    singularName: ""
+    storageVersionHash: Nx3SIv6I0mE=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: flowcontrol.apiserver.k8s.io/v1beta3
+  resources:
+  - kind: FlowSchema
+    name: flowschemas
+    namespaced: false
+    singularName: ""
+    storageVersionHash: G+8IkrqFuJw=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+  - kind: PriorityLevelConfiguration
+    name: prioritylevelconfigurations
+    namespaced: false
+    singularName: ""
+    storageVersionHash: wltM4WMeeXs=
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+    - watch
+- groupVersion: flowcontrol.apiserver.k8s.io/v1beta2
+  resources: null
+- groupVersion: admission.stash.appscode.com/v1beta1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: restoresessionmutators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: backupconfigurationvalidators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: restorebatchvalidators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: backupbatchvalidators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: backupblueprintvalidators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: restoresessionvalidators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: admission.stash.appscode.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: daemonsetmutators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: repositoryvalidators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: statefulsetmutators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: deploymentmutators
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: mutators.autoscaling.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: redissentinelautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: elasticsearchautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: perconaxtradbautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mysqlautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mongodbautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: proxysqlautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mariadbautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: postgresautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: redisautoscalerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: mutators.dashboard.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: elasticsearchdashboardwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: mutators.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: postgreswebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: redissentinelwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: perconaxtradbwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mongodbwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: elasticsearchwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: rediswebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mariadbwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: proxysqlwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: kafkawebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mysqlwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: memcachedwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: pgbouncerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: mutators.ops.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mysqlopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: mutators.schema.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mongodbdatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: postgresdatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mysqldatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mariadbdatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: proxyserver.licenses.appscode.com/v1alpha1
+  resources:
+  - group: proxyserver.licenses.appscode.com
+    kind: LicenseStatus
+    name: licensestatuses
+    namespaced: false
+    singularName: ""
+    verbs:
+    - get
+    - list
+    version: v1alpha1
+  - group: proxyserver.licenses.appscode.com
+    kind: LicenseRequest
+    name: licenserequests
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1alpha1
+- groupVersion: repositories.stash.appscode.com/v1alpha1
+  resources:
+  - categories:
+    - storage
+    - appscode
+    - all
+    group: repositories.stash.appscode.com
+    kind: Snapshot
+    name: snapshots
+    namespaced: true
+    singularName: ""
+    verbs:
+    - delete
+    - get
+    - list
+    version: v1alpha1
+- groupVersion: validators.dashboard.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: elasticsearchdashboardwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: validators.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: perconaxtradbwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: redissentinelwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: rediswebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: elasticsearchwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: memcachedwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mariadbwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: namespaces
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: proxysqlwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: kafkawebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: pgbouncerwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mysqlwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mongodbwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: postgreswebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: validators.ops.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mongodbopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mysqlopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: redisopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: proxysqlopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: elasticsearchopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: perconaxtradbopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: redissentinelopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mariadbopsrequestwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: validators.postgres.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: subscriberwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: publisherwebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: validators.schema.kubedb.com/v1alpha1
+  resources:
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mysqldatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mariadbdatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: postgresdatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+  - group: admission.k8s.io
+    kind: AdmissionReview
+    name: mongodbdatabasewebhooks
+    namespaced: false
+    singularName: ""
+    verbs:
+    - create
+    version: v1beta1
+- groupVersion: crd.projectcalico.org/v1
+  resources:
+  - kind: NetworkSet
+    name: networksets
+    namespaced: true
+    singularName: networkset
+    storageVersionHash: v3eqVp2rlK0=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: IPAMConfig
+    name: ipamconfigs
+    namespaced: false
+    singularName: ipamconfig
+    storageVersionHash: Ey7CGwJ1xJ4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: BlockAffinity
+    name: blockaffinities
+    namespaced: false
+    singularName: blockaffinity
+    storageVersionHash: qxZn+fNKF0o=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: BGPPeer
+    name: bgppeers
+    namespaced: false
+    singularName: bgppeer
+    storageVersionHash: LEh3VkcJdMA=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: ClusterInformation
+    name: clusterinformations
+    namespaced: false
+    singularName: clusterinformation
+    storageVersionHash: IwzLAc88EAI=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: BGPConfiguration
+    name: bgpconfigurations
+    namespaced: false
+    singularName: bgpconfiguration
+    storageVersionHash: APoTH7a/ve0=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: HostEndpoint
+    name: hostendpoints
+    namespaced: false
+    singularName: hostendpoint
+    storageVersionHash: lcuper2cjNA=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: IPReservation
+    name: ipreservations
+    namespaced: false
+    singularName: ipreservation
+    storageVersionHash: XCaaJMEOtSw=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: IPAMHandle
+    name: ipamhandles
+    namespaced: false
+    singularName: ipamhandle
+    storageVersionHash: 1flM+RLQVBQ=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: GlobalNetworkPolicy
+    name: globalnetworkpolicies
+    namespaced: false
+    singularName: globalnetworkpolicy
+    storageVersionHash: zve4ObHFE9A=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: NetworkPolicy
+    name: networkpolicies
+    namespaced: true
+    singularName: networkpolicy
+    storageVersionHash: vyIiswN6deY=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: CalicoNodeStatus
+    name: caliconodestatuses
+    namespaced: false
+    singularName: caliconodestatus
+    storageVersionHash: Sva+TIGMPEk=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: FelixConfiguration
+    name: felixconfigurations
+    namespaced: false
+    singularName: felixconfiguration
+    storageVersionHash: 3qRBCjXVVr0=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: IPPool
+    name: ippools
+    namespaced: false
+    singularName: ippool
+    storageVersionHash: 3/m0Z1pQb+k=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: GlobalNetworkSet
+    name: globalnetworksets
+    namespaced: false
+    singularName: globalnetworkset
+    storageVersionHash: v7TCLk56Q+4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: IPAMBlock
+    name: ipamblocks
+    namespaced: false
+    singularName: ipamblock
+    storageVersionHash: DC5UT/Mf3xs=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: KubeControllersConfiguration
+    name: kubecontrollersconfigurations
+    namespaced: false
+    singularName: kubecontrollersconfiguration
+    storageVersionHash: SNq1jmkokTw=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: monitoring.coreos.com/v1
+  resources:
+  - categories:
+    - prometheus-operator
+    kind: Alertmanager
+    name: alertmanagers
+    namespaced: true
+    shortNames:
+    - am
+    singularName: alertmanager
+    storageVersionHash: NshW3zg1K7o=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: Prometheus
+    name: prometheuses
+    namespaced: true
+    shortNames:
+    - prom
+    singularName: prometheus
+    storageVersionHash: C8naPY4eojU=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: Probe
+    name: probes
+    namespaced: true
+    shortNames:
+    - prb
+    singularName: probe
+    storageVersionHash: x4d99qNb5YI=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: PrometheusRule
+    name: prometheusrules
+    namespaced: true
+    shortNames:
+    - promrule
+    singularName: prometheusrule
+    storageVersionHash: RSJ8iG+KDOo=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: ServiceMonitor
+    name: servicemonitors
+    namespaced: true
+    shortNames:
+    - smon
+    singularName: servicemonitor
+    storageVersionHash: JLhPcfa+5xE=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: PodMonitor
+    name: podmonitors
+    namespaced: true
+    shortNames:
+    - pmon
+    singularName: podmonitor
+    storageVersionHash: t6BHpUAzPig=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: ThanosRuler
+    name: thanosrulers
+    namespaced: true
+    shortNames:
+    - ruler
+    singularName: thanosruler
+    storageVersionHash: YBxpg/kA6UI=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: monitoring.coreos.com/v1alpha1
+  resources:
+  - categories:
+    - prometheus-operator
+    kind: AlertmanagerConfig
+    name: alertmanagerconfigs
+    namespaced: true
+    shortNames:
+    - amcfg
+    singularName: alertmanagerconfig
+    storageVersionHash: 95DNJ6wsUCg=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: ScrapeConfig
+    name: scrapeconfigs
+    namespaced: true
+    shortNames:
+    - scfg
+    singularName: scrapeconfig
+    storageVersionHash: kAKYOPsAdCU=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - prometheus-operator
+    kind: PrometheusAgent
+    name: prometheusagents
+    namespaced: true
+    shortNames:
+    - promagent
+    singularName: prometheusagent
+    storageVersionHash: lATxwg5UEm8=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: operator.open-cluster-management.io/v1
+  resources:
+  - kind: Klusterlet
+    name: klusterlets
+    namespaced: false
+    singularName: klusterlet
+    storageVersionHash: JUpIAK8QYN4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: source.toolkit.fluxcd.io/v1
+  resources:
+  - kind: GitRepository
+    name: gitrepositories
+    namespaced: true
+    shortNames:
+    - gitrepo
+    singularName: gitrepository
+    storageVersionHash: agejlvI8FcU=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: source.toolkit.fluxcd.io/v1beta2
+  resources:
+  - kind: Bucket
+    name: buckets
+    namespaced: true
+    singularName: bucket
+    storageVersionHash: ZqLgBZev3dE=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: HelmRepository
+    name: helmrepositories
+    namespaced: true
+    shortNames:
+    - helmrepo
+    singularName: helmrepository
+    storageVersionHash: MZHL8CYjvYI=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: OCIRepository
+    name: ocirepositories
+    namespaced: true
+    shortNames:
+    - ocirepo
+    singularName: ocirepository
+    storageVersionHash: 1P7j9bmgFOA=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: HelmChart
+    name: helmcharts
+    namespaced: true
+    shortNames:
+    - hc
+    singularName: helmchart
+    storageVersionHash: SRBdZ3OMghg=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: source.toolkit.fluxcd.io/v1beta1
+  resources: null
+- groupVersion: work.open-cluster-management.io/v1
+  resources:
+  - kind: AppliedManifestWork
+    name: appliedmanifestworks
+    namespaced: false
+    singularName: appliedmanifestwork
+    storageVersionHash: hmt/H3Tl1O0=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: appcatalog.appscode.com/v1alpha1
+  resources:
+  - categories:
+    - catalog
+    - appscode
+    - all
+    kind: AppBinding
+    name: appbindings
+    namespaced: true
+    singularName: appbinding
+    storageVersionHash: KAKcFppiDIo=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: catalog.kubedb.com/v1alpha1
+  resources:
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: EtcdVersion
+    name: etcdversions
+    namespaced: false
+    shortNames:
+    - etcversion
+    singularName: etcdversion
+    storageVersionHash: pk463HXmH4Q=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: PerconaXtraDBVersion
+    name: perconaxtradbversions
+    namespaced: false
+    shortNames:
+    - pxversion
+    singularName: perconaxtradbversion
+    storageVersionHash: RZwCmFzrMwM=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: PgBouncerVersion
+    name: pgbouncerversions
+    namespaced: false
+    shortNames:
+    - pbversion
+    singularName: pgbouncerversion
+    storageVersionHash: bVf3dzTxXKs=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: KafkaVersion
+    name: kafkaversions
+    namespaced: false
+    shortNames:
+    - kfversion
+    singularName: kafkaversion
+    storageVersionHash: 970lmZNkiLQ=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: MemcachedVersion
+    name: memcachedversions
+    namespaced: false
+    shortNames:
+    - mcversion
+    singularName: memcachedversion
+    storageVersionHash: ra0Fvsnm0+M=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: MariaDBVersion
+    name: mariadbversions
+    namespaced: false
+    shortNames:
+    - mariaversion
+    singularName: mariadbversion
+    storageVersionHash: yHd0Dzr1G2U=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: PostgresVersion
+    name: postgresversions
+    namespaced: false
+    shortNames:
+    - pgversion
+    singularName: postgresversion
+    storageVersionHash: 9uK/OB6c4lQ=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: RedisVersion
+    name: redisversions
+    namespaced: false
+    shortNames:
+    - rdversion
+    singularName: redisversion
+    storageVersionHash: eTOxiIKf7wE=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: ProxySQLVersion
+    name: proxysqlversions
+    namespaced: false
+    singularName: proxysqlversion
+    storageVersionHash: 9RZvgOu/8vI=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: MongoDBVersion
+    name: mongodbversions
+    namespaced: false
+    shortNames:
+    - mgversion
+    singularName: mongodbversion
+    storageVersionHash: HynGx6WlZio=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: ElasticsearchVersion
+    name: elasticsearchversions
+    namespaced: false
+    shortNames:
+    - esversion
+    singularName: elasticsearchversion
+    storageVersionHash: vN/F3keaDVQ=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: MySQLVersion
+    name: mysqlversions
+    namespaced: false
+    shortNames:
+    - myversion
+    singularName: mysqlversion
+    storageVersionHash: VlwQTNpFJSA=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: cluster.open-cluster-management.io/v1alpha1
+  resources:
+  - kind: ClusterClaim
+    name: clusterclaims
+    namespaced: false
+    singularName: clusterclaim
+    storageVersionHash: oFrn6WuHc5Q=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: metrics.appscode.com/v1alpha1
+  resources:
+  - categories:
+    - metrics
+    - appscode
+    - all
+    kind: MetricsConfiguration
+    name: metricsconfigurations
+    namespaced: false
+    singularName: metricsconfiguration
+    storageVersionHash: yw1QG3in0U0=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: ops.kubedb.com/v1alpha1
+  resources:
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: ProxySQLOpsRequest
+    name: proxysqlopsrequests
+    namespaced: true
+    shortNames:
+    - prxops
+    singularName: proxysqlopsrequest
+    storageVersionHash: NB+mhKrES7g=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: PostgresOpsRequest
+    name: postgresopsrequests
+    namespaced: true
+    shortNames:
+    - pgops
+    singularName: postgresopsrequest
+    storageVersionHash: GNnN0+yorpg=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: PerconaXtraDBOpsRequest
+    name: perconaxtradbopsrequests
+    namespaced: true
+    shortNames:
+    - pxcops
+    singularName: perconaxtradbopsrequest
+    storageVersionHash: KCJ+9YnO3iY=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: MySQLOpsRequest
+    name: mysqlopsrequests
+    namespaced: true
+    shortNames:
+    - myops
+    singularName: mysqlopsrequest
+    storageVersionHash: rl8I4PRLv9w=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: MariaDBOpsRequest
+    name: mariadbopsrequests
+    namespaced: true
+    shortNames:
+    - mariaops
+    singularName: mariadbopsrequest
+    storageVersionHash: 48FcDpxt8Ac=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: RedisSentinelOpsRequest
+    name: redissentinelopsrequests
+    namespaced: true
+    shortNames:
+    - rdsops
+    singularName: redissentinelopsrequest
+    storageVersionHash: UlacrHCtA/s=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: MongoDBOpsRequest
+    name: mongodbopsrequests
+    namespaced: true
+    shortNames:
+    - mgops
+    singularName: mongodbopsrequest
+    storageVersionHash: 8E8ZcKYknbI=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: RedisOpsRequest
+    name: redisopsrequests
+    namespaced: true
+    shortNames:
+    - rdops
+    singularName: redisopsrequest
+    storageVersionHash: 7hSFqCxcwGQ=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    kind: ElasticsearchOpsRequest
+    name: elasticsearchopsrequests
+    namespaced: true
+    shortNames:
+    - esops
+    singularName: elasticsearchopsrequest
+    storageVersionHash: 8CCNbCUNRak=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: postgres.kubedb.com/v1alpha1
+  resources:
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: Subscriber
+    name: subscribers
+    namespaced: true
+    shortNames:
+    - sub
+    singularName: subscriber
+    storageVersionHash: XxEGjgRE2Zw=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: Publisher
+    name: publishers
+    namespaced: true
+    shortNames:
+    - pub
+    singularName: publisher
+    storageVersionHash: ObbKbWs8z18=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: stash.appscode.com/v1beta1
+  resources:
+  - categories:
+    - stash
+    - appscode
+    - all
+    kind: RestoreBatch
+    name: restorebatches
+    namespaced: true
+    singularName: restorebatch
+    storageVersionHash: IF+1iDS5xH4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - stash
+    - appscode
+    - all
+    kind: BackupSession
+    name: backupsessions
+    namespaced: true
+    singularName: backupsession
+    storageVersionHash: JAWNGG7vYGY=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - stash
+    - appscode
+    kind: BackupBlueprint
+    name: backupblueprints
+    namespaced: false
+    shortNames:
+    - bb
+    singularName: backupblueprint
+    storageVersionHash: tE3Rku80zVw=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - stash
+    - appscode
+    kind: Task
+    name: tasks
+    namespaced: false
+    shortNames:
+    - task
+    singularName: task
+    storageVersionHash: LOumf7cfwsk=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - stash
+    - appscode
+    - all
+    kind: BackupConfiguration
+    name: backupconfigurations
+    namespaced: true
+    shortNames:
+    - bc
+    singularName: backupconfiguration
+    storageVersionHash: MCCz+rGHK40=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - stash
+    - appscode
+    kind: Function
+    name: functions
+    namespaced: false
+    shortNames:
+    - fn
+    singularName: function
+    storageVersionHash: ZLjRo/d5ACU=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - stash
+    - appscode
+    - all
+    kind: BackupBatch
+    name: backupbatches
+    namespaced: true
+    singularName: backupbatch
+    storageVersionHash: 2hvocwb6BF4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - stash
+    - appscode
+    - all
+    kind: RestoreSession
+    name: restoresessions
+    namespaced: true
+    shortNames:
+    - restore
+    singularName: restoresession
+    storageVersionHash: VfzEoNQJ6lk=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: stash.appscode.com/v1alpha1
+  resources:
+  - categories:
+    - stash
+    - appscode
+    kind: Repository
+    name: repositories
+    namespaced: true
+    shortNames:
+    - repo
+    singularName: repository
+    storageVersionHash: bYn/4zk+tR4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: supervisor.appscode.com/v1alpha1
+  resources:
+  - kind: Recommendation
+    name: recommendations
+    namespaced: true
+    singularName: recommendation
+    storageVersionHash: M6JtJzWuqO4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: kubedb.com/v1alpha2
+  resources:
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: Postgres
+    name: postgreses
+    namespaced: true
+    shortNames:
+    - pg
+    singularName: postgres
+    storageVersionHash: v0lUIOblwlg=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: MongoDB
+    name: mongodbs
+    namespaced: true
+    shortNames:
+    - mg
+    singularName: mongodb
+    storageVersionHash: Ky3B5oPnryM=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: MySQL
+    name: mysqls
+    namespaced: true
+    shortNames:
+    - my
+    singularName: mysql
+    storageVersionHash: +pdkIiMVtrY=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - kind: Kafka
+    name: kafkas
+    namespaced: true
+    shortNames:
+    - kf
+    singularName: kafka
+    storageVersionHash: SsOVC5DolYc=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: ProxySQL
+    name: proxysqls
+    namespaced: true
+    shortNames:
+    - prx
+    singularName: proxysql
+    storageVersionHash: c48uIKF/Ns8=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: Etcd
+    name: etcds
+    namespaced: true
+    shortNames:
+    - etc
+    singularName: etcd
+    storageVersionHash: r1rq4pGtYh4=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: RedisSentinel
+    name: redissentinels
+    namespaced: true
+    singularName: redissentinel
+    storageVersionHash: UbXfbglthkE=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - proxy
+    - kubedb
+    - appscode
+    - all
+    kind: PgBouncer
+    name: pgbouncers
+    namespaced: true
+    shortNames:
+    - pb
+    singularName: pgbouncer
+    storageVersionHash: dlLq9+sg76k=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: PerconaXtraDB
+    name: perconaxtradbs
+    namespaced: true
+    shortNames:
+    - px
+    singularName: perconaxtradb
+    storageVersionHash: Fgg8nCHpAyE=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: Redis
+    name: redises
+    namespaced: true
+    shortNames:
+    - rd
+    singularName: redis
+    storageVersionHash: 9eJyKoU/VPU=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: Memcached
+    name: memcacheds
+    namespaced: true
+    shortNames:
+    - mc
+    singularName: memcached
+    storageVersionHash: BpCo1E7u2Z8=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: Elasticsearch
+    name: elasticsearches
+    namespaced: true
+    shortNames:
+    - es
+    singularName: elasticsearch
+    storageVersionHash: dIJ0O4bFq8E=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+  - categories:
+    - datastore
+    - kubedb
+    - appscode
+    - all
+    kind: MariaDB
+    name: mariadbs
+    namespaced: true
+    shortNames:
+    - md
+    singularName: mariadb
+    storageVersionHash: xgDu1Kn+k1c=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch
+- groupVersion: helm.toolkit.fluxcd.io/v2beta1
+  resources:
+  - kind: HelmRelease
+    name: helmreleases
+    namespaced: true
+    shortNames:
+    - hr
+    singularName: helmrelease
+    storageVersionHash: 08YCiPNyiSQ=
+    verbs:
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - create
+    - update
+    - watch

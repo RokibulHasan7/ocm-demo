@@ -1,0 +1,48 @@
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: PlacementDecision
+metadata:
+  creationTimestamp: "2023-08-11T08:24:19Z"
+  generation: 1
+  labels:
+    cluster.open-cluster-management.io/placement: global
+  managedFields:
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:cluster.open-cluster-management.io/placement: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9196d559-4ff3-4945-a9de-4a629702211b"}: {}
+    manager: placement
+    operation: Update
+    time: "2023-08-11T08:24:19Z"
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:decisions: {}
+    manager: placement
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:24:19Z"
+  name: global-decision-1
+  namespace: kubeops
+  ownerReferences:
+  - apiVersion: cluster.open-cluster-management.io/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Placement
+    name: global
+    uid: 9196d559-4ff3-4945-a9de-4a629702211b
+  resourceVersion: "2902"
+  uid: 899afbc4-a366-4790-ae76-7641dac4042c
+status:
+  decisions:
+  - clusterName: ocm-c1
+    reason: ""
+  - clusterName: ocm-c2
+    reason: ""

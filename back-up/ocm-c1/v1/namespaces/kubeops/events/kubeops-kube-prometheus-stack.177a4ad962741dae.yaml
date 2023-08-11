@@ -1,0 +1,42 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-08-11T09:41:47Z"
+involvedObject:
+  apiVersion: source.toolkit.fluxcd.io/v1beta2
+  kind: HelmChart
+  name: kubeops-kube-prometheus-stack
+  namespace: kubeops
+  resourceVersion: "4186"
+  uid: 9d550cd7-9d51-48d2-bcca-ac719499f4e4
+kind: Event
+lastTimestamp: "2023-08-11T09:41:47Z"
+message: 'artifact up-to-date with remote revision: ''48.3.1'''
+metadata:
+  creationTimestamp: "2023-08-11T09:41:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-08-11T09:41:47Z"
+  name: kubeops-kube-prometheus-stack.177a4ad962741dae
+  namespace: kubeops
+  resourceVersion: "10986"
+  uid: 021f9914-d8ef-406d-b827-0c7449bd9249
+reason: ArtifactUpToDate
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: source-controller
+type: Normal

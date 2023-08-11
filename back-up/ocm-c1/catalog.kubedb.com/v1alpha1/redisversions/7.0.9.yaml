@@ -1,0 +1,86 @@
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: RedisVersion
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kubedb
+    meta.helm.sh/release-namespace: kubedb
+  creationTimestamp: "2023-08-11T08:43:10Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: kubedb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kubedb-catalog
+    app.kubernetes.io/version: v2023.06.13-rc.0
+    helm.sh/chart: kubedb-catalog-v2023.06.13-rc.0
+    helm.toolkit.fluxcd.io/name: kubedb
+    helm.toolkit.fluxcd.io/namespace: kubeops
+  managedFields:
+  - apiVersion: catalog.kubedb.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:helm.toolkit.fluxcd.io/name: {}
+          f:helm.toolkit.fluxcd.io/namespace: {}
+      f:spec:
+        .: {}
+        f:coordinator:
+          .: {}
+          f:image: {}
+        f:db:
+          .: {}
+          f:image: {}
+        f:exporter:
+          .: {}
+          f:image: {}
+        f:initContainer:
+          .: {}
+          f:image: {}
+        f:podSecurityPolicies:
+          .: {}
+          f:databasePolicyName: {}
+        f:stash:
+          .: {}
+          f:addon:
+            .: {}
+            f:backupTask:
+              .: {}
+              f:name: {}
+            f:restoreTask:
+              .: {}
+              f:name: {}
+        f:version: {}
+    manager: helm-controller
+    operation: Update
+    time: "2023-08-11T08:43:10Z"
+  name: 7.0.9
+  resourceVersion: "4904"
+  uid: c9eb4a05-2e53-4753-8bdd-f965d1c3d91e
+spec:
+  coordinator:
+    image: ghcr.io/kubedb/redis-coordinator:v0.13.0-rc.0
+  db:
+    image: redis:7.0.9
+  exporter:
+    image: ghcr.io/kubedb/redis_exporter:1.9.0
+  initContainer:
+    image: ghcr.io/kubedb/redis-init:0.7.0
+  podSecurityPolicies:
+    databasePolicyName: redis-db
+  stash:
+    addon:
+      backupTask:
+        name: redis-backup-7.0.5
+      restoreTask:
+        name: redis-restore-7.0.5
+  version: 7.0.9

@@ -1,0 +1,134 @@
+apiVersion: work.open-cluster-management.io/v1
+kind: ManifestWork
+metadata:
+  creationTimestamp: "2023-08-11T08:46:41Z"
+  finalizers:
+  - cluster.open-cluster-management.io/manifest-work-cleanup
+  generation: 2
+  labels:
+    work.open-cluster-management.io/manifestworkreplicaset: app1.db
+  managedFields:
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster.open-cluster-management.io/manifest-work-cleanup": {}
+        f:labels:
+          .: {}
+          f:work.open-cluster-management.io/manifestworkreplicaset: {}
+      f:spec:
+        .: {}
+        f:workload:
+          .: {}
+          f:manifests: {}
+    manager: work
+    operation: Update
+    time: "2023-08-11T09:14:57Z"
+  - apiVersion: work.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:resourceStatus:
+          .: {}
+          f:manifests: {}
+    manager: work
+    operation: Update
+    subresource: status
+    time: "2023-08-11T09:14:57Z"
+  name: db
+  namespace: ocm-c1
+  resourceVersion: "7458"
+  uid: 439799b0-d6fe-4176-a3ae-b492449f186f
+spec:
+  workload:
+    manifests:
+    - apiVersion: v1
+      kind: Namespace
+      metadata:
+        name: app1
+    - apiVersion: kubedb.com/v1alpha2
+      kind: Postgres
+      metadata:
+        name: quick-postgres
+        namespace: app1
+      spec:
+        storage:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
+          storageClassName: linode-block-storage-retain
+        storageType: Durable
+        terminationPolicy: Delete
+        version: "13.2"
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T09:14:57Z"
+    message: Apply manifest work complete
+    observedGeneration: 2
+    reason: AppliedManifestWorkComplete
+    status: "True"
+    type: Applied
+  - lastTransitionTime: "2023-08-11T09:14:57Z"
+    message: All resources are available
+    observedGeneration: 2
+    reason: ResourcesAvailable
+    status: "True"
+    type: Available
+  resourceStatus:
+    manifests:
+    - conditions:
+      - lastTransitionTime: "2023-08-11T08:46:41Z"
+        message: Apply manifest complete
+        reason: AppliedManifestComplete
+        status: "True"
+        type: Applied
+      - lastTransitionTime: "2023-08-11T08:46:41Z"
+        message: Resource is available
+        reason: ResourceAvailable
+        status: "True"
+        type: Available
+      - lastTransitionTime: "2023-08-11T08:46:41Z"
+        message: ""
+        reason: NoStatusFeedbackSynced
+        status: "True"
+        type: StatusFeedbackSynced
+      resourceMeta:
+        group: ""
+        kind: Namespace
+        name: app1
+        namespace: ""
+        ordinal: 0
+        resource: namespaces
+        version: v1
+      statusFeedback: {}
+    - conditions:
+      - lastTransitionTime: "2023-08-11T09:14:57Z"
+        message: Apply manifest complete
+        reason: AppliedManifestComplete
+        status: "True"
+        type: Applied
+      - lastTransitionTime: "2023-08-11T09:14:57Z"
+        message: Resource is available
+        reason: ResourceAvailable
+        status: "True"
+        type: Available
+      - lastTransitionTime: "2023-08-11T09:14:57Z"
+        message: ""
+        reason: NoStatusFeedbackSynced
+        status: "True"
+        type: StatusFeedbackSynced
+      resourceMeta:
+        group: kubedb.com
+        kind: Postgres
+        name: quick-postgres
+        namespace: app1
+        ordinal: 1
+        resource: postgreses
+        version: v1alpha2
+      statusFeedback: {}

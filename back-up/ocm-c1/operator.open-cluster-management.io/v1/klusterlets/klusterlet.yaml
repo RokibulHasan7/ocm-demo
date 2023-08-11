@@ -1,0 +1,242 @@
+apiVersion: operator.open-cluster-management.io/v1
+kind: Klusterlet
+metadata:
+  creationTimestamp: "2023-08-11T08:20:46Z"
+  finalizers:
+  - operator.open-cluster-management.io/klusterlet-cleanup
+  generation: 2
+  managedFields:
+  - apiVersion: operator.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterName: {}
+        f:deployOption:
+          .: {}
+          f:mode: {}
+        f:externalServerURLs: {}
+        f:namespace: {}
+        f:registrationConfiguration:
+          .: {}
+          f:featureGates: {}
+        f:registrationImagePullSpec: {}
+        f:workImagePullSpec: {}
+    manager: clusteradm
+    operation: Update
+    time: "2023-08-11T08:20:46Z"
+  - apiVersion: operator.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"operator.open-cluster-management.io/klusterlet-cleanup": {}
+      f:spec:
+        f:nodePlacement: {}
+    manager: registration-operator
+    operation: Update
+    time: "2023-08-11T08:20:48Z"
+  - apiVersion: operator.open-cluster-management.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:observedGeneration: {}
+        f:relatedResources: {}
+    manager: registration-operator
+    operation: Update
+    subresource: status
+    time: "2023-08-11T08:26:28Z"
+  name: klusterlet
+  resourceVersion: "2857"
+  uid: 46754a2f-063f-42a7-999f-1cb2e10b26e2
+spec:
+  clusterName: ocm-c1
+  deployOption:
+    mode: Default
+  externalServerURLs:
+  - url: https://117dd043-4dfd-429c-8590-fd22dee4cf06.us-southeast-1.linodelke.net:443
+  namespace: open-cluster-management-agent
+  nodePlacement: {}
+  registrationConfiguration:
+    featureGates:
+    - feature: AddonManagement
+      mode: Enable
+  registrationImagePullSpec: quay.io/open-cluster-management/registration:v0.11.0
+  workImagePullSpec: quay.io/open-cluster-management/work:v0.11.0
+status:
+  conditions:
+  - lastTransitionTime: "2023-08-11T08:26:28Z"
+    message: Hub kubeconfig secret open-cluster-management-agent/hub-kubeconfig-secret
+      to apiserver https://f6975947-27fb-4397-8cd0-0f8baf1cb50a.us-southeast-1.linodelke.net:443
+      is working
+    observedGeneration: 2
+    reason: HubConnectionFunctional
+    status: "False"
+    type: HubConnectionDegraded
+  - lastTransitionTime: "2023-08-11T08:20:54Z"
+    message: Feature gates are all valid
+    reason: FeatureGatesAllValid
+    status: "True"
+    type: ValidFeatureGates
+  - lastTransitionTime: "2023-08-11T08:20:54Z"
+    message: Klusterlet Component Applied
+    reason: KlusterletApplied
+    status: "True"
+    type: Applied
+  - lastTransitionTime: "2023-08-11T08:21:40Z"
+    message: 'deployments are ready: klusterlet-registration-agent,klusterlet-work-agent'
+    observedGeneration: 2
+    reason: klusterletAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-08-11T08:21:35Z"
+    message: 'deployments replicas are desired: 1'
+    observedGeneration: 2
+    reason: DeploymentsFunctional
+    status: "False"
+    type: RegistrationDesiredDegraded
+  - lastTransitionTime: "2023-08-11T08:21:40Z"
+    message: 'deployments replicas are desired: 1'
+    observedGeneration: 2
+    reason: DeploymentsFunctional
+    status: "False"
+    type: WorkDesiredDegraded
+  generations:
+  - group: apps
+    lastGeneration: 1
+    name: klusterlet-registration-agent
+    namespace: open-cluster-management-agent
+    resource: deployments
+    version: v1
+  - group: apps
+    lastGeneration: 2
+    name: klusterlet-work-agent
+    namespace: open-cluster-management-agent
+    resource: deployments
+    version: v1
+  observedGeneration: 2
+  relatedResources:
+  - group: apiextensions.k8s.io
+    name: appliedmanifestworks.work.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: apiextensions.k8s.io
+    name: clusterclaims.cluster.open-cluster-management.io
+    namespace: ""
+    resource: customresourcedefinitions
+    version: v1
+  - group: ""
+    name: klusterlet-registration-sa
+    namespace: open-cluster-management-agent
+    resource: serviceaccounts
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-registration:agent
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-registration:addon-management
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-registration:agent
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-registration:addon-management
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: ""
+    name: klusterlet-work-sa
+    namespace: open-cluster-management-agent
+    resource: serviceaccounts
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-work:agent
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-work:execution
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-work:agent
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-work:execution
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:klusterlet-work:execution-admin
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet:extension-apiserver
+    namespace: kube-system
+    resource: roles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-registration:agent
+    namespace: open-cluster-management-agent
+    resource: roles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-registration:agent
+    namespace: open-cluster-management-agent
+    resource: rolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-registration:agent
+    namespace: kube-system
+    resource: rolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-registration:addon-management
+    namespace: ""
+    resource: clusterroles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-registration:addon-management
+    namespace: ""
+    resource: clusterrolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-work:agent
+    namespace: open-cluster-management-agent
+    resource: roles
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-work:agent
+    namespace: open-cluster-management-agent
+    resource: rolebindings
+    version: v1
+  - group: rbac.authorization.k8s.io
+    name: open-cluster-management:management:klusterlet-work:agent
+    namespace: kube-system
+    resource: rolebindings
+    version: v1
+  - group: apps
+    name: klusterlet-registration-agent
+    namespace: open-cluster-management-agent
+    resource: deployments
+    version: v1
+  - group: apps
+    name: klusterlet-work-agent
+    namespace: open-cluster-management-agent
+    resource: deployments
+    version: v1
