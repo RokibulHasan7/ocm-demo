@@ -7,6 +7,11 @@
 - helm
 - clusteradm
 
+### Install clusteradm
+```
+curl -L https://raw.githubusercontent.com/open-cluster-management-io/clusteradm/main/install.sh | bash 
+```
+
 ```
 sudo apt install python-is-python3
 
